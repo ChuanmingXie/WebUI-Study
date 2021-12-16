@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=" utf-8">
+		<title>1.3.1 onload和$(function(){})的区别</title>
+		<script type="text/javascript">
+			function t() {
+				alert("test1");
+			}
+
+			function b() {
+				alert("test2");
+			}
+			window.onload = t;
+			window.onload = b;
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>

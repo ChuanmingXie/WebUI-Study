@@ -1,0 +1,15 @@
+/* 多元素选择器 */
+p,div{font-size:14px;}
+
+/* 后代选择器 */
+div p{background-color: #CCC;}
+
+/* 子选择器 */
+div>p{font-size: bold;border: solid 2px #066;}
+
+/* 相邻兄弟选择器 */
+h3+P{font-weight: bold;}
+
+/* 普通兄弟选择器 */
+h3~p{background: #CCC;}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品销售系统</title>
+		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/10-17sqlite.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="inputDiv">
+			商品名称：<input type="text" id="goodsName" /> <br>
+			商品价格：<input type="text" id="goodsPrice" /> <br>
+			商品数量：<input type="text" id="goodsNum" /> <br>
+			<input type="button" id="btnAdd" value="新增销售记录" onclick="saveData()" /> |
+			<input type="button" id="btnShow" value="显示销售记录" onclick="showData()" /> |
+			<input type="button" id="btnClear" value="清空销售记录" onclick="deleteData()" />
+		</div>
+		<hr>
+		<div id="resultDiv">
+			<table border="1">
+				<tr>
+					<th>商品名称</th>
+					<th>商品价格</th>
+					<th>销售数量</th>
+					<th>销售时间</th>
+				</tr>
+				<tbody id="showBody">
+					
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5中的拖放</title>
+		<link rel="stylesheet" type="text/css" href="css/9-4drag-drop.css"/>
+		<script src="scripts/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/9-4drap-drop-copy.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="goodlist" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<h2>商品列表</h2>
+			<hr >
+			<img id="images1" src="images/dress1.jpg" ondragstart="drag(event)" >
+			<img id="images2" src="images/dress2.jpg" ondragstart="drag(event)" >
+			<img id="images3" src="images/dress3.jpg" ondragstart="drag(event)" >
+			<img id="images4" src="images/dress4.jpg" ondragstart="drag(event)" >
+		</div>
+		<div class="shoppingCart" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<h2>购物车</h2>
+			<hr >
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+div{color: blue;font-size: 12px;}
+
+h1{color:#033;border: dashed 1px #6600CC;}
+hr{width: 95%;text-align: center;}
+span{font-weight: bold;}
+/* span{color: red;border: thin dotted #FF0099;font-weight: bold;font-family: 楷体;} */

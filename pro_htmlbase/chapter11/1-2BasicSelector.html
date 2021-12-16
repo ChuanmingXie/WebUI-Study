@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>基本选择器</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+	</head>
+	<body>
+		<div id="idDiv">DOM对象与jQuery对象的相互化</div>
+		<div class="classDiv">jQuery对象不能直接使用DOM对象的方法</div>
+		<div class="classDiv">可以通过将jQuery对象转化成DOM对象在调用其他方法</div>
+		<span class="classSpan">基本选择器是jQuery最常见的选择器</span>
+		<script type="text/javascript">
+			$(function(e){
+				$("#idDiv").css("color","blue");
+				$('.classDiv').css("background-color","#dddddd");
+				$('span').CSS("background","gray").CSS("color","white");
+				$('*').css("font-size","20px");
+				$('#idDiv,.classSpan').css("font-style","italic");
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导入外部样式表的使用</title>
+		<style type="text/css">
+			@import css/4-3Style.css;  /*此种方法只支持IE*/
+			@import url("css/4-3Style.css"); /*此方法支持IE,火狐，欧朋等 */
+			
+			body{
+				background-color: #FCF;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>导入外部样式表的使用</h1>
+		<hr />
+		综上所述，一般不同站点在调用外部样式表时，还是应该尽量选在link链入外部样式表比较好
+		<hr />
+	</body>
+</html>

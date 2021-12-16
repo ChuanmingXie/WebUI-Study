@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>内容过滤选择器</title>
+		<script type="text/javascript" src="js/jquery-1.x.js"></script>
+	</head>
+	<body>
+		<div>
+			<table>
+				<tr>
+					<td>商品名</td>
+					<td>商品价格</td>
+					<td>商品数量</td>
+				</tr>
+				<tr>
+					<td>太阳镜</td>
+					<td>299</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>平安扣</td>
+					<td>1280</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td>皮带</td>
+					<td><span>198</span></td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td>滑雪眼镜</td>
+					<td>149</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>滑雪服装</td>
+					<td>1298</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>发饰</td>
+					<td><span>89</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="3">共计6件商品</td>
+				</tr>
+			</table>
+		</div>
+		<script type="text/javascript">
+			$(function(e){
+				$("td:contains('滑雪')").css('font-weight','bold');
+				$('td:parent').css('background-color','#dddddd');
+				$('td:empty').css('background-color','red');
+				//$("td:has('span')").css('background-color','gray');
+				$('td').has('span').css('background-color','gray');
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+/* 相邻兄弟选择器 */
+h3+p{font-weight: bold;}
+
+/* 普通兄弟选择器 */
+h3~p{background:#CCC;}

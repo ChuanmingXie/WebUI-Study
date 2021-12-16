@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>表单语法</title>
+	</head>
+	<body>
+		<code>
+			&lt;form action="处理数据程序的URL地址" method="get|post" name="表单名称"&gt; <br>
+				&nbsp;&nbsp;表单内容 <br>
+			&lt;/form&gt;
+		</code>
+		
+		<!-- action是web服务器山数据处理程序的URL地址，或者Email地址 -->
+		<form action="http://www.itshixun.com/web/login.jsp" method="" enctype=""></form>
+		<form action="/web/login.jsp" method=""></form>
+		<form action="mailto:chuanmingxie@outlook.com" method=""></form>
+		
+		<!-- get传值的示例 -->
+		http://www.itshixun.com/web/login.jsp?userName=groupy&userPwd=123456
+		
+		<!-- post数据分装 -->
+		POST/web/login.jsp HTTP/1.1
+		HOST:itshixun.com
+		userName=groupy&userPwd=123456
+		
+		<!-- enctype的取值 -->
+		<form action="" method="" enctype="application/x-www-form-urlencoded">
+			
+			userName=zhang san
+			userPwd=&
+			编码后变为 userName=zhang+san&userPwd=%26
+			
+		</form>
+		
+		<form action="" method="post" enctype="multipart/form-data">
+			
+		</form>
+		
+		<form action="" method="" enctype="text/plain">
+			
+		</form>
+		
+		
+	</body>
+</html>
