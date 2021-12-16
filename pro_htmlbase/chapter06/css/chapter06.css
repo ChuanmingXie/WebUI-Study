@@ -1,0 +1,19 @@
+#content{
+	padding: 60px 40px 0 40px;
+}
+
+#content a{
+	/* color: green; */
+	display: block;
+	float: none;
+	width: 300px;
+	height: 40px;
+	text-indent: 40px;
+	text-decoration: none;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+a:hover{
+	color: green;
+}

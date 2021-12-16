@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>赋值|算术|比较|逻辑|三元</title>
+		<style type="text/css">
+			div{
+				padding:20px 40px 20px 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var goodsName='护手霜';
+			var productAddress;
+			productAddress="青岛";
+			var tmPrice=jdPrice=ddPrice=88;
+			var price=tmPrice*0.8;
+			
+			document.write("<div>");
+			document.writeln("<h3>下面演示赋值运算符</h3>")
+			document.writeln("商品："+goodsName+"<br />");
+			document.writeln("产地："+productAddress+"<br />");
+			document.writeln("原价："+jdPrice+"<br />");
+			document.writeln("现价："+price+"<br />");
+			
+			document.writeln("<h3>下面演示算术运算符</h3>")
+			document.writeln("<p>9+4="+(9+4)+";</p>")
+			document.writeln("<p>9-4="+(9-4)+";</p>")
+			document.writeln("<p>9*4="+(9*4)+";</p>")
+			document.writeln("<p>9/4="+(9/4)+";</p>")
+			document.writeln("<p>9%4="+(9%4)+";</p>")
+			var a=b=c=d=9;
+			document.writeln(a+"++结果是"+(a++)+";</p>")
+			document.writeln("++"+b+"结果是"+(++b)+";</p>")
+			document.writeln(c+"--结果是"+(c--)+";</p>")
+			document.writeln("--"+d+"结果是"+(--d)+";</p>")
+			document.write("</div>");
+		</script>
+	</body>
+</html>
