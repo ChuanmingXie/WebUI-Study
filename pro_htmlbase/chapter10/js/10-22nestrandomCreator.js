@@ -1,3 +1,4 @@
+// 第一层线程
 onmessage = function(e) {
 	var intArray = new Array(100);
 	for (var i = 0; i < intArray.length; i++) {
@@ -5,6 +6,7 @@ onmessage = function(e) {
 	}
 	console.log(JSON.stringify(intArray));
 
+	// 启动第二层线程
 	var worker = new Worker("10-22nestluckyNum.js");
 
 	worker.postMessage(JSON.stringify(intArray));

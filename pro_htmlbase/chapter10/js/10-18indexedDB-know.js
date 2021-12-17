@@ -57,6 +57,7 @@ var tx = idb.transaction('users', 'readwrite');
 var objectStore = tx.objectStore('users');
 objectStore.add(user);
 
+// 检索读取数据库内容
 var request = objectStore.openCursor();
 request.onsuccess = function(e) {
 	var cursor = e.target.result;

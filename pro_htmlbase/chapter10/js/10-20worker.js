@@ -10,6 +10,7 @@ worker.onmessage=function(e){
 	$("#result").get(0).value=result;
 };
 
+// 停止线程
 function stopWorker(){
 	worker.terminate();
 }

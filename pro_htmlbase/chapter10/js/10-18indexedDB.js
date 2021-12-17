@@ -7,7 +7,9 @@ var idb = null;
 init();
 
 function init() {
+	// 创建数据库
 	var dbRequest = indexedDB.open(dbName, dbversion);
+	// 连接数据库
 	dbRequest.onsuccess = function(e) {
 		idb = e.target.result;
 		alert('数据库连接成功!');
@@ -15,6 +17,7 @@ function init() {
 	dbRequest.onerror = function(e) {
 		alert('数据库连接失败!');
 	};
+	// 更新数据库版本
 	dbRequest.onupgradeneeded = function(e) {
 		idb = e.target.result;
 		if (!idb.objectStoreNames.contains(storeName)) {

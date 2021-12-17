@@ -11,6 +11,8 @@ onmessage = function(e) {
 	// var timespan2 = console.log(new Date().getTime());
 	// date2.getTime()-date1.getTime()
 	var span=new Date(time2-time1);
+	
+	// 统计计算结果用时
 	console.log(span.getMinutes()+":"+span.getSeconds()+"."+span.getMilliseconds());
 	postMessage(sum);
 }
