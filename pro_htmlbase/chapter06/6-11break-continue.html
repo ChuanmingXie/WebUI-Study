@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>break和Continue应用</title>
+		<style type="text/css">
+			img {
+				width: 80px;
+				height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			continue & break语句
+			for (var i = 1; i < 9; i++) {
+				document.write("<img src='img/w" + i + ".png'/>");
+			}
+			document.write('<br />');
+			for (var i = 1; i < 9; i++) {
+				if (i % 3 == 0) {
+					document.write("<img src='img/w.png'/>");
+					continue;
+				}
+				if (i % 8 == 0) {
+					break;
+				}
+				document.write("<img src='img/w" + i + ".png'/>");
+			}
+
+			//continue & break & return 语句的使用后
+			function count() {
+				var sum = 0;
+				for (var i = 100; i < 1000; i++) {
+					sum += i;
+					if (sum < 10000) {
+						document.write('<br/>已统计到:' + i);
+						continue;
+					}
+					if (i > 200) {
+						break;
+					}
+					return sum;
+				}
+				document.write('不会被执行到的代码');
+			}
+			document.write('<br />统计结果为：'+count());
+		</script>
+	</body>
+</html>
