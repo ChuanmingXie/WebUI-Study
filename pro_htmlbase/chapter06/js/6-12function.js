@@ -1,16 +1,22 @@
-// 整数转换函数
-// parseInt(string,[radix])
+/*
+整数转换函数
+parseInt(string,[radix])
 
-// // 浮点数转换函数
-// parseFloat(string)
+// 浮点数转换函数
+parseFloat(string)
 
-// // 检查是否为数字函数
-// isNaN(value)
+// 检查是否为数字函数
+isNaN(value)
 
-// // 表达式(算术)执行函数
-// eval(string)
+// 表达式(算术)执行函数
+eval(string)
 
 // 对话框函数
+alert()
+confirm()
+prompt()
+
+*/
 
 function Predefined(){
 	document.write('parseInt("88.9")的执行结果是：'+parseInt("88.9")+'<br/>');
