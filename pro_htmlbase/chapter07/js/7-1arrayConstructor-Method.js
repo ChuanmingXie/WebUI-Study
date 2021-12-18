@@ -43,12 +43,14 @@ function arrayMehod1() {
 	})(hotMoive, "热映电影");
 }
 
-/* 用于演示push、pop、shift、sort */
+/* 用于演示push、pop、shift、sort 等方法*/
 function arrayMehod2() {
+	//匿名函数
 	var sortNumber = function(a, b) {
 		return b - a;
 	}
 	
+	//匿名函数
 	var showFoodsByJoin = function(foods) {
 		document.write("<hr>中国美食：\t");
 		document.write(foods.join(','));
