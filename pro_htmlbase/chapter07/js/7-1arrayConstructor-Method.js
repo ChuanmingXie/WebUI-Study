@@ -45,12 +45,12 @@ function arrayMehod1() {
 
 /* 用于演示push、pop、shift、sort 等方法*/
 function arrayMehod2() {
-	//匿名函数
+	//匿名函数 定义一个排序规则
 	var sortNumber = function(a, b) {
 		return b - a;
 	}
 	
-	//匿名函数
+	//匿名函数 定义一个连接子串
 	var showFoodsByJoin = function(foods) {
 		document.write("<hr>中国美食：\t");
 		document.write(foods.join(','));
@@ -94,6 +94,4 @@ function arrayMehod2() {
 	document.write("<hr>排序前的数组：" + prices);
 	document.write("<hr>默认的排序方式：" + prices.sort());
 	document.write("<hr>指定排序方式的排序：" + prices.sort(sortNumber));
-
-
 }
