@@ -87,11 +87,11 @@ function arrayMehod2() {
 	showFoodsByJoin(foods);
 
 	var betterFood = foods.slice(1, 4);
-	document.write("<hr />获赞的美食：" + betterFood);
+	document.write("<hr>获赞的美食：" + betterFood);
 	document.write("<hr>获赞的美食反向显示：" + betterFood.reverse());
 
 	var prices = [35, 82, 10, 16, 55];
-	document.write("<hr> 排序前的数组：" + prices);
+	document.write("<hr>排序前的数组：" + prices);
 	document.write("<hr>默认的排序方式：" + prices.sort());
 	document.write("<hr>指定排序方式的排序：" + prices.sort(sortNumber));
 
