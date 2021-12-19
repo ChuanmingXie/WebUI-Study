@@ -94,6 +94,4 @@ function arrayMehod2() {
 	document.write("<hr> 排序前的数组：" + prices);
 	document.write("<hr>默认的排序方式：" + prices.sort());
 	document.write("<hr>指定排序方式的排序：" + prices.sort(sortNumber));
-
-
 }
