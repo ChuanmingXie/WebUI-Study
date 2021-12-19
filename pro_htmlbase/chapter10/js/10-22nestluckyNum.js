@@ -1,3 +1,4 @@
+// 最内层的计算线程
 onmessage = function(e) {
 	var intArray = JSON.parse(e.data);
 	console.log(e.data);

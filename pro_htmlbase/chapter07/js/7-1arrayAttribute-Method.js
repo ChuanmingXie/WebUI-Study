@@ -49,13 +49,13 @@ function arrayMehod2() {
 	var sortNumber = function(a, b) {
 		return b - a;
 	}
-	
+
 	//匿名函数 定义一个连接子串
 	var showFoodsByJoin = function(foods) {
 		document.write("<hr>中国美食：\t");
 		document.write(foods.join(','));
 	}
-	
+
 	var foods = new Array();
 	foods[0] = "兰州拉面";
 	foods[1] = "肉夹馍";
@@ -94,4 +94,29 @@ function arrayMehod2() {
 	document.write("<hr>排序前的数组：" + prices);
 	document.write("<hr>默认的排序方式：" + prices.sort());
 	document.write("<hr>指定排序方式的排序：" + prices.sort(sortNumber));
+}
+
+/* 演示二维数组的实现 */
+function matrixArray() {
+	var title = new Array("电影类型", "电影名称", "票价");
+	var movies = [
+		["科幻", "流浪地球", 57.9],
+		["动漫", "巫山五行", 27.9],
+		["战争", "长津湖", 87.9],
+		["历史", "我和我的父辈", 97.9],
+	];
+	document.write('<table width="400px" border="1" rules="all">');
+	document.write("<tr>");
+	for (var i = 0; i < title.length; i++) {
+		document.write("<th>" + title[i] + "</th>");
+	}
+	document.write('</tr>');
+	for (var i = 0; i < movies.length; i++) {
+		document.write('<tr>');
+		for (var j = 0; j < movies[i].length; j++) {
+			document.write('<td>' + movies[i][j] + '</td>')
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
 }
