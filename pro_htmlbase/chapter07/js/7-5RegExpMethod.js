@@ -49,4 +49,5 @@ function contentValidate(content) {
 
 	var content = "Qingdao, located in the southEast part of Shandong Province, is a beautiful SEASIDE city with clear air and enchanting SEA view";
 	contentValidate(content);
+	document.write("<br />")
 })()
