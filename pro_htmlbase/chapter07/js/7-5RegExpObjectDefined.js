@@ -14,4 +14,6 @@
 	// exec()方法
 	var result=RegExpObject.exec(string);
 	// test()方法
-	RegExpObject.test(string)
+	RegExpObject.test(string);
+	// compile()方法
+
