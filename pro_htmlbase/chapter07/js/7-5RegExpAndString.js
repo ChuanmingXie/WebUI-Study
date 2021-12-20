@@ -64,5 +64,5 @@ function matchContent(matchTxt,position){
 	document.write("<hr />"+matchTxt+"<br />")
 	matchContent(matchTxt,true);	//不进行全局匹配
 	document.write("<br />");
-	matchContent(matchTxt);			//进行全局匹配
+	matchContent(matchTxt);		//进行全局匹配
 })()
