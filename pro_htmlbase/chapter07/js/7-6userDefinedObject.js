@@ -11,22 +11,25 @@
 		methodName表示为object对象添加的方法名，其值可以是预先定义好的函数名或者匿名函数
 		*/
 	// 示例：
-		var goods = new Object();
-		goods.name = "男士白领衬衫";
-		goods.type = "男装";
-		goods.price = "580";
-		goods.color = "white";
-		goods.showInfo() = function() {
-			alert("商品名称为：" + goods.name +
-				"\n商品类型为：" + goods.type +
-				"\n商品价格为：" + goods.price +
-				"\n商品颜色为：" + goods.color);
+		var goodsOrigin = new Object();
+		goodsOrigin.name = "男士白领衬衫";
+		goodsOrigin.type = "男装";
+		goodsOrigin.price = "580";
+		goodsOrigin.color = "white";
+		goodsOrigin.showInfo = function() {
+			alert("商品名称为：" + goodsOrigin.name +
+				"\n商品类型为：" + goodsOrigin.type +
+				"\n商品价格为：" + goodsOrigin.price +
+				"\n商品颜色为：" + goodsOrigin.color);
 		}
-		goods.showColor = showColor;
+		goodsOrigin.showColor = showColor;
 
 		function showColor() {
-			alert("商品颜色为：" + goods.color);
+			alert("商品颜色为：" + goodsOrigin.color);
 		}
+		//调用
+		goodsOrigin.showInfo();
+		goodsOrigin.showColor();
 
 	// 2.构造函数方式：
 	// 通过构造函数(constructor function)创建一个JS对象。构造函数名即为类名，使用时通过new运算符和构造函数参数创建
@@ -39,26 +42,26 @@
 		}
 	// 示例:
 	// 通过构造函数创建对象
-		function Goods(name, type, type, color) {
+		function Goods(name, type, price, color) {
 			this.name = name;
 			this.type = type;
-			this.type = type;
+			this.price = price;
 			this.color = color;
 			this.showInfo = function() {
-				alert("商品名称为：" + goods.name +
-					"\n商品类型为：" + goods.type +
-					"\n商品价格为：" + goods.price +
-					"\n商品颜色为：" + goods.color);
+				alert("商品名称为：" + this.name +
+					"\n商品类型为：" + this.type +
+					"\n商品价格为：" + this.price +
+					"\n商品颜色为：" + this.color);
 			}
 			this.showColor = showColor;
 
 			function showColor() {
-				alert("商品颜色为：" + goods.color);
+				alert("商品颜色为：" + this.color);
 			}
 		}
 		// 使用对象
-		var goods1 = new Goods("男士衬衫", "男装", "200", "白色");
-		var goods2 = new Goods("女士花裙", "女装", "700", "红色");
+		var goods1 = new Goods("男士衬衫", "男装", 200, "白色");
+		var goods2 = new Goods("女士花裙", "女装", 700, "红色");
 		// 调用方法
 		goods1.showInfo();
 		goods2.showColor();
@@ -79,22 +82,22 @@
 		Goods.prototype.price = "1200";
 		Goods.prototype.color = "白色";
 		Goods.prototype.showInfo = function() {
-			alert("商品名称为：" + goods.name +
-				"\n商品类型为：" + goods.type +
-				"\n商品价格为：" + goods.price +
-				"\n商品颜色为：" + goods.color);
+			alert("商品名称为：" + this.name +
+				"\n商品类型为：" + this.type +
+				"\n商品价格为：" + this.price +
+				"\n商品颜色为：" + this.color);
 		}
 		Goods.prototype.showColor = showColor;
 
 		function showColor() {
-			alert("商品颜色为：" + goods.color);
+			alert("商品颜色为：" + this.color);
 		}
 		// 使用自定义的对象
 		var goods = new Goods();
 		goods.showInfo();
 	
 	// 示例 2 为Date和Array 对象添加方法
-		Date.prototype.showTime() = function() {
+		Date.prototype.showTime = function() {
 			var year = this.getFullYear();
 			var month = this.getMonth() + 1;
 			var date = this.getDate();
@@ -141,20 +144,20 @@
 			this.color=color;
 		}
 		Goods.prototype.showInfo=function(){
-			alert("商品名称为：" + goods.name +
-				"\n商品类型为：" + goods.type +
-				"\n商品价格为：" + goods.price +
-				"\n商品颜色为：" + goods.color);
+			alert("商品名称为：" + this.name +
+				"\n商品类型为：" + this.type +
+				"\n商品价格为：" + this.price +
+				"\n商品颜色为：" + this.color);
 		}
 		Goos.prototype.showColor = showColor;
 	
 		function showColor() {
-			alert("商品颜色为：" + goods.color);
+			alert("商品颜色为：" + this.color);
 		}
 	
 		// 使用对象
-		var goods1 = new Goods("男士衬衫", "男装", "200", "白色");
-		var goods2 = new Goods("女士花裙", "女装", "700", "红色");
+		var goods1 = new Goods("男士衬衫", "男装", 200, "白色");
+		var goods2 = new Goods("女士花裙", "女装", 700, "红色");
 		// 调用方法
 		goods1.showInfo();
 		goods2.showColor();
@@ -170,14 +173,14 @@
 		type:"男装";
 		price:200,
 		color:"白色",
-		showInfo:function(){
-			alert("商品名称为：" + goods.name +
-				"\n商品类型为：" + goods.type +
-				"\n商品价格为：" + goods.price +
-				"\n商品颜色为：" + goods.color);
+		showInfo: function() {
+			alert("商品名称为：" + this.name +
+				"\n商品类型为：" + this.type +
+				"\n商品价格为：" + this.price +
+				"\n商品颜色为：" + this.color);
 		},
-		showColor:function(){
-			alert("商品颜色为：" + goods.color);
+		showColor: function() {
+			alert("商品颜色为：" + this.color);
 		}
 	}
 	goods.showInfo();
@@ -207,6 +210,36 @@
 	所以在页面中需要通过JavaScript中的 eval() 方法或者Function对象的方式将字符串解析成JavaScript
 	
 	// evel()方式 ：将字符串解析为JSON对象
-	
+	var movieStr='{' +
+		'name:"长津湖",' +
+		'type:"战争",' +
+		'price:80,' +
+		'showInfo:function(){' +
+			'document.write("影片名称："+this.name+"，影片类型："+this.type+"，票价："+this.price+"<br />");' +
+			'}' +
+	'}';
+	var movie=eval("("+movieStr+")");
+	movie.showInfo();
+	// 注意：
+		alert(typeof(eval("{}")))		//return undefined
+		alert(typeof(eval("({})"))		//return object[object]
+		即，进行JSON转换时，要添加一对小括号才能进行正常转化
+		
 	// Function对象方式将字符串转换为JSON对象
+	// 在创建Function对象时，第一个参数是一个列表，用于传递数据，第二个参数作为函数的执行体；在执行中使用return返回JSON内容即可
+	var movieStr='{' +
+		'name:"长津湖",' +
+		'type:"战争",' +
+		'price:80,' +
+		'showInfo:function(){' +
+			'document.write("影片名称："+this.name+"，影片类型："+this.type+"，票价："+this.price+"<br />");' +
+			'}' +
+	'}';
+	// 转换方式 1
+	var movie=(new Function("","return"+movieStr))();
+	movie.showInfo();
+	// 转换方式 2
+	var movieFun=new Function("","return"+movieStr);
+	var movie=movieFun();
+	movie.showInfo();
 		
