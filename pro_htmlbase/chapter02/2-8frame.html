@@ -3,18 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<title>框架的属性</title>
+		<title>2-8框架的定义-框架的属性</title>
 	</head>
-	<frame src="url" name="" ... />
-	
+	<!-- 框架的定义 -->
+	<!-- <frame src="url" name="" ... /> -->
+
 	<frameset rows="60,*,70">
-		<frame src="frameset/topframe.html"  scrolling="yes" frameborder="yes" noresize="noresize" marginheight="40" marginwidth="60">
-		<frame src="frameset/middleframe.html" >
-		<frame src="frameset/bottomframe.html" >
+		<frame src="frameset/topframe.html" scrolling="yes" frameborder="yes" noresize="noresize" marginheight="40" marginwidth="60">
+		<frame src="frameset/middleframe.html">
+		<frame src="frameset/bottomframe.html">
+		<noframes>
+			<body>
+				浏览器不支持框架集！
+			</body>
+		</noframes>
 	</frameset>
-	<noframes>
-		<body>
-			浏览器不支持框架集！
-		</body>
-	</noframes>
 </html>
