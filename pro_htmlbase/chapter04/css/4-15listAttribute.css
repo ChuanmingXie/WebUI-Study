@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* 4-15CSS样式-列表属性 */
+.listStyle{
+	line-height: 20px;	
+}
+
+.listStyle li{
+	list-style-image: url(../img/eg_arrow.gif);
+	list-style-position: outside;
+}
