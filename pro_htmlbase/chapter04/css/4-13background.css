@@ -20,3 +20,13 @@
 	background:url(../img/bg9.png) content-box 0px -10px;
 	background-size: 300px 200px;
 }
+
+.moreImage{
+	background-color:#FFCCFF;
+	width: 800px;
+	height: 500px;
+	background-image: url(../img/bg8.png),url(../img/bg9.png);
+	background-size: 300px 200px,300px 200px;
+	background-position: left top,right bottom;
+	background-repeat: repeat-y,repeat-x;
+}
