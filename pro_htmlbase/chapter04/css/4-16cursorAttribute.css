@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* 4-16CSS样式属性 - cursor属性 */
+div {
+	height: 30px;
+	width: 200px;
+	border: 1px solid green;
+	margin-top: 10px;
+}
+
+.arrow{cursor: url("../img/cursor/arrow.cur"),default ;}
+.beam{cursor: url("../img/cursor/beam.cur"),default ;}
+.cross{cursor: url("../img/cursor/cross.cur"),default ;}
+.help{cursor: url("../img/cursor/help.cur"),default ;}
+.link{cursor: url("../img/cursor/link.cur"),default ;}
+.no{cursor: url("../img/cursor/no.cur"),default ;}
+.pen{cursor: url("../img/cursor/pen.cur"),default ;}
+.person{cursor: url("../img/cursor/person.cur"),default ;}
+.size1{cursor: url("../img/cursor/size1.cur"),auto ;}
+.size2{cursor: url("../img/cursor/size2.cur"),auto ;}
+.size3{cursor: url("../img/cursor/size3.cur"),auto ;}
+.size4{cursor: url("../img/cursor/size4.cur"),auto ;}
+
+.cell {cursor: cell;}
+.crosshair {cursor: crosshair;}
+.text {cursor: text;}
+.vertical-text {cursor: vertical-text;}
+.alias {cursor: alias;}
+.copy {cursor: copy;}
+.move {
+	/* 导入外部cursor文档 */
+	cursor: url("../img/cursor/move.cur"), url("../img/cursor/up.cur"), url("../img/cursor/wait.cur"), default;
+	/* cursor: move; */
+}
+.no-drop {	cursor: no-drop;}
