@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* 4-13背景属性 */
+
+.backgroundColor{
+	background-color: #CCC;
+	background-image: url(../img/bg8.png);
+	background-size:1020px 900px; 
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	background-position: -400px -380px;
+}
+
+.backgroundImage{
+	/* div class基本属性设置 */
+	width: 300px;
+	height: 200px;
+	padding: 10px;
+	border: thin solid #30F;
+	/* 背景设置 */
+	background:url(../img/bg9.png) content-box 0px -10px;
+	background-size: 300px 200px;
+}
