@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* 4-18 CSS样式属性-定位属性-position */
+
+body {
+	padding: 0px;
+	/* 设置页面的内边距 */
+	margin: 0px;
+	/* 设置页面的外边距 */
+}
+
+.Container {
+	width: 500px;
+	height: 300px;
+	border: solid 1px #000;
+}
+
+.staticStyle {
+	position: static;
+	widthwidth: 60px;
+	;
+	border: solid 2px #666666;
+	top: 100px;
+}
+
+.relativeStyle {
+	position: relative;
+	left: 120px;
+	top: -15px;
+	border: solid 2px #666666;
+	width: 200px;
+}
+
+.inlineStyle {
+	display: inline;
+	background-image: url(../img/bg8.png);
+	border: solid 2px #666666;
+}
+
+.absoluteStyle {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	top: 200px;
+	left: 360px;
+	background-color: #FF9;
+	border: solid 2px #FF0033;
+}
+
+.fixedStyle {
+	position: fixed;
+	width: 100px;
+	height: 200px;
+	top:30px;
+	left:500px;
+	background-color: #CC9;
+	border: solid 2px #FF0033;
+}
+
+.div1 {}
+
+.div2 {}
