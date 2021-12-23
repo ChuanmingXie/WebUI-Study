@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* 4-21 CSS样式属性-伪元素 */
-::first-line{font-weight: bold;text-decoration: underline;
+::first-line{
+	font-weight: bold;
+	text-decoration: underline;
 	font-size: 18px;
 	line-height: 30px;
 }
