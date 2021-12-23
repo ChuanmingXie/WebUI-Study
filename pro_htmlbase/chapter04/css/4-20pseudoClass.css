@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 4-20 CSS样式属性-伪类|伪元素 */
+/* 4-20 CSS样式属性-伪类*/
 a:active{font-size: 20px; background-color: #FF6;color: red;}
 
 /* #name:focus{border: #FF0000 solid 2px;}  这种方法设置文本边框是无效的 */
