@@ -18,14 +18,9 @@ img:hover{border: solid 3px #666666;}
 img:active{border: solid 5px #FF0000;}
 
 :readonly{border: solid 1px #CC0000;}
-
 :checked{outline: solid 2px #336633;}
-
 :disabled{background-color: #999; font-size: 12px;}
-
 #userName:enabled,
-.enanbedButton:enabled{
-	background-color: #FF9;
-	color: #00F;
+.enanbedButton:enabled{background-color: #FF9;color: #00F;
 	font-size: 16px;
 }
