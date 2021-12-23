@@ -1,3 +1,5 @@
+/* 6-2基本语法-变量作用域-全局变量|局部变量 */
+
 var name='漫步时代广场';
 
 function textGlobleScope(){
