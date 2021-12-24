@@ -2,56 +2,56 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>html5新增表单元素</title>
+		<title>9-5HTML5新增表单元素</title>
 	</head>
 	<body>
-		<h1>input 属性</h1>
-		<h2>form 属性</h2>
+		<h2>9-5HTML5新增-input 属性</h2>
+		<h3>form 属性</h3>
 		<form id="goodsForms" action="http://www.itshixun.com" method="">
 			商品名称：<input type="text" name="goodsName" id="" value="" />
 		</form>
 		商品类型：<input type="text" name="goodsType" form="goodsForms" />
 		<input type="submit" name="btnSubmit" form="goodsForms" value="提交" />
 		
-		<h2>formaction 属性</h2>
+		<h3>formaction 属性</h3>
 		<form action="http://www.itshixun.com" method="">
 			<input type="submit" name="btnBaidu" value="百度搜索" formaction="http://www.baidu.com" />
 			<input type="submit" name="btnGoogle" value="谷歌搜素" formaction="www.google.com" />
 			<input type="submit" name="btninnerSearch" value="内部检索"/>
 		</form>
 		
-		<h2>formmethod 属性</h2>
+		<h3>formmethod 属性</h3>
 		<form action="HTML5Structure.html" method="post">
 			用户名：<input type="text" name="userName" /><br>
 			<input type="submit" value="get提交" formmethod="get"/>
 			<input type="submit" value="post提交" formmethod="post"/>
 		</form>
 		
-		<h2>formtarget 属性</h2>
+		<h3>formtarget 属性</h3>
 		<form action="HTML5Structure" method="post">
 			用户名：<input type="text" name="userName" /><br>
 			<input type="submit" value="self方式" formtarget="_self"/>
 			<input type="submit" value="blank方式" formtarget="_blank"/>
 		</form>
 		
-		<h2>placeholder 属性</h2>
+		<h3>placeholder 属性</h3>
 		<form action="HTML5Structure" method="post">
 			用户名:<input type="text" name="userName" placeholder="请输入用户名" /><br>
 			密　码:<input type="password" name="userPwd" placeholder="请输入密码" /><br>
 			<input type="submit" value="登录"/>
 		</form>
 		
-		<h2>autofocus 属性</h2>
+		<h3>autofocus 属性</h3>
 		<input type="text" name="userName" placeholder="请输入用户名" autofocus />
 		
-		<h2>required 属性</h2>
+		<h3>required 属性</h3>
 		<form action="HTML5Structure.html" method="post">
 			用户名：<input type="text" placeholder="请输入用户名" required="required" /> <br>
 			密　码：<input type="password" placeholder="请输入密码" required="required" /> <br>
 			<input type="submit" value="登录"/>
 		</form>
 		
-		<h2>list 属性</h2>
+		<h3>list 属性</h3>
 		影片类型：<input type="text" name="filmType" list="fileTypeList" />		
 		<datalist id="fileTypeList">
 			<option value ="科幻">科幻</option>
@@ -59,14 +59,14 @@
 			<option value ="动作">动作</option>
 		</datalist>
 		
-		<h2>pattern 属性</h2>
+		<h3>pattern 属性</h3>
 		<form action="HTML5Structure.html" method="post">
 			用户名：<input type="text" name="userName" pattern="[A-z]{5,}"  title="请输入五位以上的英文字符" required/><br>
 			密　码：<input type="password" placeholder="请输入密码" required="required" /> <br>
 			<input type="submit" value="注册"/>
 		</form>
 		
-		<h2>formnovalidate</h2>
+		<h3>formnovalidate</h3>
 		<form action="HTML5Structure.html" method="post">
 			用户名：<input type="text" name="userName" pattern="[A-z]{5,}" required="required" />
 			<input type="submit" value="验证提交" />
@@ -74,13 +74,13 @@
 		</form>
 		
 		<hr >
-		<h1>表单属性</h1>
-		<h2>novalidate 属性</h2>
+		<h2>9-5HTML5新增-表单属性</h2>
+		<h3>novalidate 属性</h3>
 		<form action="HTML5Structure.html" novalidate="novalidate">
 			<input type="submit" value="提交" />
 		</form>
 		
-		<h2>autocomplete 属性</h2>
+		<h3>autocomplete 属性</h3>
 		<form action="HTMLStructure.html" method="post" autocomplete="on">
 			影片名：<input type="text" name="filmName" /><br>
 			影片类型：<input type="text" name="filmType" /><br>
