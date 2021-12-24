@@ -1,4 +1,21 @@
 @charset "utf-8";
+
+/* a{
+	display: block;
+	float: none;
+	text-indent: 40px;
+	text-decoration: none;
+	text-align: left;
+	vertical-align: bottom;
+} */
+
+/*
+a:hover{
+	color: green;
+} */
+a{color:#4a4a4a;outline-style:none;text-decoration:none;}
+a:hover{color:#EB8C14;}
+
 #main{
 	margin: 0 auto;
 	width: 1080px;
