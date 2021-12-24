@@ -1,4 +1,4 @@
-/*  */
+/* 7-3Date对象-演示示例 */
 
 var filePrefix = "<img src='img/Number_";
 var fileSuffix = ".png'/>";
