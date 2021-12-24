@@ -1,3 +1,5 @@
+/* 9-4HTML5中的拖放-移动操作 */
+
 var myIcon=document.createElement("img");
 myIcon.src="images/red4.jpg";
 function drag(e){
