@@ -1,3 +1,5 @@
+/* 10-18本地数据库-IndexedDB数据库-定义与使用过程 */
+
 // 初始化 获取 IndexedDB对象
 var indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB
 

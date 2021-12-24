@@ -1,3 +1,5 @@
+/* 10-18本地数据库-IndexedDB数据库-商品评价系统 */
+
 var indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
 
 var dbName = "goosDB";
@@ -6,6 +8,7 @@ var storeName = "commentStore";
 var idb = null;
 init();
 
+// 代码初始化
 function init() {
 	// 创建数据库
 	var dbRequest = indexedDB.open(dbName, dbversion);
@@ -33,7 +36,7 @@ function init() {
 	};
 }
 
-
+// 定义保存数据函数
 function saveData() {
 	var goodsName = $('#goodsName').get(0);
 	var goodsComment=$('#goodsComment').get(0);
@@ -56,7 +59,9 @@ function saveData() {
 	objectStore.add(comment);
 }
 
+
 function showData() {
+	// 清空数据表格
 	var showBody=$('#showBody').get(0);
 	showBody.innerHTML="";
 	var tx=idb.transaction(storeName,'readonly');
@@ -82,6 +87,7 @@ function showData() {
 
 function deleteData(databaseName) {
 	var request=indexedDB.deleteDatabase(databaseName);
+	// 清空数据表格
 	var showBody=$('#showBody');
 	showBody.innerHTML="";
 }
