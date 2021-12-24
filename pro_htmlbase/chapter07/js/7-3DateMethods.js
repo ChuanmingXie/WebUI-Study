@@ -1,3 +1,5 @@
+/*  */
+
 var filePrefix = "<img src='img/Number_";
 var fileSuffix = ".png'/>";
 
