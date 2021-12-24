@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>draggable事件使用dataTransfer示例</title>
+		<title>9-4HTML5中的拖放-通过draggable事件使用dataTransfer携带数据</title>
 		<script src="scripts/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<h2>9-4HTML5中的拖放</h2>
+		<h3>通过draggable事件使用dataTransfer携带数据</h3>
 		<div id="myDiv" style="width: 100px;height: 50px;background-color: #eee;" draggable="true" ondragstart="drag(event)">
 			漫步时代广场
 		</div>
@@ -17,7 +19,5 @@
 				alert(e.dataTransfer.getData("text"));
 			}
 		</script>
-		
-		
 	</body>
 </html>
