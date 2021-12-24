@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>子元素过滤选择器</title>
-		<script type="text/javascript" src="js/jquery-1.x.js"></script>
+		<title>11-8jQuery选择器-过滤选择器-子元素过滤选择器</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<h2>11-8jQuery选择器-过滤选择器</h2>
+		<h3>子元素过滤选择器</h3>
 		<table id="dataTable">
 			<tr>
 				<td>序号</td>
@@ -69,8 +71,6 @@
 			$("#dataTable tr td:last-child").css({backgroundColor:"#AAA"});
 			$("#dataTable tr td:only-child").css("border","2px solid #666");
 			$("#dataTable tr td:nth-child(even)").css({fontStyle:"italic",fontWeight:"bold"});
-			
-			
 		</script>
 	</body>
 </html>
