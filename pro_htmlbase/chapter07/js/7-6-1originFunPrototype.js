@@ -1,3 +1,5 @@
+/* 7-6用户自定义对象-原始方式|构造函数方式|原型方式|混合方式 */
+
 /* 1.原始方式定义用户自定义对象 */
 var goodsUserObject = new Object();
 goodsUserObject.name = "男士白领衬衫";

@@ -1,3 +1,4 @@
+/* 7-6自定义对象-JSON方式 */
 // 简单JSON对象
 var goods = {
 	name: "男士衬衫",
