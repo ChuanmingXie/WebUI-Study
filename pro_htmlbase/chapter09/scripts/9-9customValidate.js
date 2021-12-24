@@ -1,3 +1,5 @@
+/* 9-5HTML5自定义控件验证方法 */
+
 function checkForm() {
 	var userName = $('#userName').get(0);
 	var userPwd = $('#userPwd').get(0);
