@@ -1,3 +1,4 @@
+/* 7-5RegExp对象-regExp与string的区别 */
 /* 敏感字符串替换 */
 function replaceContent(replaceText) {
 	var replaceReg = /台独|分裂|破坏/g;

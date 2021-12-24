@@ -1,3 +1,4 @@
+/* 7-5RegExp对象-方法的使用 */
 /* 座机号码验证 */
 function telephoneValidate(telephone) {
 	var telephoneReg = /^((\d{3}-\d{8})|(\d{4}-\d{7}))$/;
