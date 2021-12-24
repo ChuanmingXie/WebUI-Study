@@ -1,3 +1,5 @@
+/* 10-20Web Worker-使用Worker多线程-具体执行内容 */
+
 onmessage = function(e) {
 	var num = e.data;
 	console.log(num);

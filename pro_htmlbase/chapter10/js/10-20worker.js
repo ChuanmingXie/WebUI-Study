@@ -1,3 +1,5 @@
+/* 10-20Web Worker-使用Worker多线程-调用 */
+
 var worker=new Worker("js/10-20workerexec.js");
 function sum(){
 	var num=parseInt($('#num').get(0).value)
