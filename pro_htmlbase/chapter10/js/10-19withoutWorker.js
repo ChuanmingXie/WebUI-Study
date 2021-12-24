@@ -1,3 +1,5 @@
+/* 10-19Web Worker-未使用Worker多线程 */
+
 function sum() {
 	var num=parseInt($('#num').get(0).value);
 	var sum=0;
@@ -7,6 +9,8 @@ function sum() {
 	$('#result').get(0).value=sum;
 }
 /*
+// 10-19Web Worker-使用Worker多线程的步骤
+
 // worker基本应用
 创建worker对象
 var worker=new Worker(URL);
