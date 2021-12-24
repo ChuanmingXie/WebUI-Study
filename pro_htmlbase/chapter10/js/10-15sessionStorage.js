@@ -1,3 +1,5 @@
+/* 10-15Web存储-Session Storage-商品录入系统 */
+
 var i = 1;
 var btnAdd = $('#btnAdd').get(0);
 var btnList = $('#btnList').get(0);
