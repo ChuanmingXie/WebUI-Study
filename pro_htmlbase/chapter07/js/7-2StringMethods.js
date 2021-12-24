@@ -1,3 +1,4 @@
+/* 7-2String字符串对象-方法 */
 // stringMethod1()
 (function() {
 	var address = "中国 青岛 高新区";
