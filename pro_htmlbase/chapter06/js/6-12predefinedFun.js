@@ -1,5 +1,7 @@
 /*
-整数转换函数
+//6-12JS内预定义函数
+
+//整数转换函数
 parseInt(string,[radix])
 
 // 浮点数转换函数
@@ -18,6 +20,8 @@ prompt()
 
 */
 
+/* 6-12预定义函数使用 */
+/* 测试执行转换函数 */
 function Predefined(){
 	document.write('parseInt("88.9")的执行结果是：'+parseInt("88.9")+'<br/>');
 	document.write("parseInt('8T9')的执行结果是："+parseInt('8T9')+"<br />");
@@ -29,6 +33,7 @@ function Predefined(){
 	document.write("表达式"+str+"的结果是："+eval(str));
 }
 
+/* 测试执行对话框函数 */
 do {
 	var money = prompt('请输入您的存款余额：');
 	if (isNaN(money)) {
