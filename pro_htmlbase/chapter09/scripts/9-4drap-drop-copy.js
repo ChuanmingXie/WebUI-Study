@@ -1,4 +1,4 @@
-
+/* 9-4HTML5中的拖放-复制操作 */
 
 function drag (e) {
 	e.dataTransfer.effectAllowed="copy";
