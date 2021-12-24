@@ -1,4 +1,4 @@
-/* Math对象属性的使用 */
+/* Math对象-属性的使用 */
 (function() {
 	document.write('<br />Math.PI=' + Math.PI);
 	document.write('<br />Math.E=' + Math.E);
@@ -19,7 +19,7 @@ function CylinderCapacity(radius, height) {
 }
 
 
-/* Math 对象方法的使用 */
+/* Math 对象-方法的使用 */
 (function() {
 	maxAndMin();
 	var randomNum = 60 + Math.random() * 40;
