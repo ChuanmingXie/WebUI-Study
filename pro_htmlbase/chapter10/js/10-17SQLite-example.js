@@ -1,3 +1,5 @@
+/* 10-17本地数据库-SQLite数据库-定义与使用过程 */
+
 var db = openDatabase(databaseName, version, description, size);
 var db = openDatabase("goodsDB", "1.0", "Walking Fashion E&S Database", 2 * 1024 * 1024);
 
