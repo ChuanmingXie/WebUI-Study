@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>jQuery简单测试</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>11-1jQuery概述-环境引入-简单测试</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<h2>11-1jQuery概述-环境引入-简单测试</h2>
 		<div id="myDiv">Hello World,欢迎漫步时尚广场！</div>
 		<div id="menuDiv">Hello World,我是menu的Div！</div>
 		<div class="baseClass">Hello World,我是类名为baseclass的div！</div>	
 		
-		<script type="text/javascript" src="js/jquery-1.x.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(e){
 				alert($("#myDiv").html())
-			})
-		</script>
-		
-		<script type="text/javascript">
+			});
+			
 			<!-- 获取DOM对象 -->
 			var menuDiv=document.getElementById('menuDiv');
 			var BaseClass=document.getElementsByClassName("baseClass");
