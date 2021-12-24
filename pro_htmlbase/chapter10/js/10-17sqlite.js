@@ -1,3 +1,5 @@
+/* 10-17本地数据库-SQLite数据库-商品销售系统 */
+
 var db = openDatabase("goodsDB", "1.0", "Walking Fashion E&S Database", 2 * 1024 * 1024);
 init();
 
