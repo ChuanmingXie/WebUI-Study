@@ -1,7 +1,10 @@
+/* 10-16Web存储-local Storage-购物车管理系统 */
+
 var inputCart=$("#inputCart").get(0);
 var showCart=$('#showCart').get(0);
 var clearCart=$('#clearCart').get(0);
 
+// 使用localStorage实现购物车
 inputCart.onclick=function(){
 	var goodsName=$('#goodsName').get(0);
 	var goodsPrice=$('#goodsPrice').get(0);
@@ -19,6 +22,7 @@ inputCart.onclick=function(){
 	loadCart();
 }
 
+// 将购物车的商品显示出来
 function loadCart(){
 	var showBody=$('#showBody').get(0);
 	showBody.innerHTML="";
@@ -35,6 +39,8 @@ function loadCart(){
 }
 
 showCart.onclick=loadCart;
+
+// 清空购物车
 clearCart.onclick=function(){
 	localStorage.clear();
 	loadCart();
