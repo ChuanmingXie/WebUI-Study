@@ -1,0 +1,22 @@
+/* 10-1Canvas绘图-绘制图形 */
+
+@charset "utf-8";
+
+/* canvas{
+	width: 210px;
+	height: 210px;
+	border: 1px solid #000;
+} */
+
+#myCanvas{	
+		width: 210;
+		height: 210;
+		border: 1px solid #000;
+}
+
+/* 此处使用内部样式表的效果与行内样式有差异 */
+.can{				
+	width: 350;
+	height: 150;
+	border: 1px solid #000;
+}
