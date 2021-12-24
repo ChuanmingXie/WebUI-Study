@@ -1,3 +1,5 @@
+/* 10-22Web Worker-使用Worker线程嵌套 */
+
 // 第一层线程
 onmessage = function(e) {
 	var intArray = new Array(100);

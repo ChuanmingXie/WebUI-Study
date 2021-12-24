@@ -1,3 +1,5 @@
+/* 10-22Web Worker-使用Worker线程嵌套-调用 */
+
 var size = 6;
 var worker = new Worker("js/10-22nestrandomCreator.js");
 worker.postMessage("");
