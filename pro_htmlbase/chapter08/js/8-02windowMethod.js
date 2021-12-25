@@ -50,9 +50,10 @@ function closeWin() {
 }
 
 
-/* 动态钟表时间 */
+/* 单线程- 动态钟表时间 
 var filePrefix = "<img src='img/Number_";
 var fileSuffix = ".png'/>";
+
 (function() {
 	setInterval("showCurrentTime()", 1000);
 })()
@@ -93,3 +94,4 @@ function fixTime(time) {
 	}
 	return time;
 }
+*/
