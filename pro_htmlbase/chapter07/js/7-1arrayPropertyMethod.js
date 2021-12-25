@@ -1,3 +1,4 @@
+/* 7-1Array对象-应用演示 */
 /* 用于演示数组的属性 */
 function arrayAttribute() {
 	var movie = new Array('飓风营救', '复仇者联盟：无限战争2', '疯狂的麦克斯：狂暴之路', '分歧者2：绝地反击');
