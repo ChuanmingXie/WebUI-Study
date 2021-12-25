@@ -1,4 +1,4 @@
-/* 7-1Array对象-应用演示 */
+/* 7-1Array数组对象-功能演示 */
 /* 用于演示数组的属性 */
 function arrayAttribute() {
 	var movie = new Array('飓风营救', '复仇者联盟：无限战争2', '疯狂的麦克斯：狂暴之路', '分歧者2：绝地反击');
@@ -54,7 +54,7 @@ function arrayMehod2() {
 	//匿名函数 定义一个连接子串
 	var showFoodsByJoin = function(foods) {
 		document.write("<hr>中国美食：\t");
-		document.write(foods.join(','));
+		document.write(foods.join('，'));
 	}
 
 	var foods = new Array();
