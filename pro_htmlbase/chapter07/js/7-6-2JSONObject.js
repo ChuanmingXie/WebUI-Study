@@ -32,8 +32,7 @@ var customer = {
 		{
 			name: "耐克运动鞋",
 			quantity: 2
-		}
-	]
+		}]
 };
 
 
