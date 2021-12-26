@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+span {
+	/* background-color: #ffcc00; */
+	/* 解决设置span宽度失效的问题，使用display的inline-block */
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 50px;
+}
+
+* {
+	margin: 5px 2px;
+}
