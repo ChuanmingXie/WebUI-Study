@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* 8-7document对象-属性和方法 */
 #menuDiv {
 	background-color: #CCC;
 	width: 100%;
@@ -7,11 +7,22 @@
 }
 
 input[type='button'],
-input[type='text']{
+input[type='text'] {
 	padding: 0px 10px;
 	width: 150px;
 }
 
-input[type="checked"]{
+input[type="checked"] {
 	width: 20px;
 }
+
+/* input {
+	margin: 10px 0px;
+	width: 150px;
+}
+/* select 设置 
+select {
+	width: 157px;
+	height: 21px;
+	margin-left: -4px;
+} */
