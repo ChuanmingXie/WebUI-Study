@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8-15事件处理-表单及表单元素事件</title>
+		<style type="text/css">
+			* {
+				margin: 5px;
+			}
+
+			input {
+				width: 150px;
+			}
+
+			select {
+				width: 157px;
+				height: 21px;
+				/* margin-left: -4px; */
+			}
+		</style>
+	</head>
+	<body>
+		<h2>8-15事件处理-表单及表单元素事件</h2>
+		<div id="mainDiv">
+			<form action="http://www.itshixun.com" onreset="return resetForm()" onsubmit="return checkForm()"
+				method="post">
+				<input type="text" value="请输入用户名" id="userName" onfocus="userNameOnFocus()" onblur="userNameOnBlur()"
+					onkeypress="showKeyPress(event)" /><br>
+				<select id="userType" onchange="selectUserType()">
+					<option value="访客">--请选择--</option>
+					<option value="管理员">管理员</option>
+					<option value="普通会员">普通会员</option>
+				</select><br>
+				<input type="button" value="购物" /> |
+				<input type="button" value="影视" /> |
+				<input type="button" value="餐饮" /><br>
+				<input type="submit" value="提交表单" /> |
+				<input type="reset" value="重置表单" />
+			</form>
+		</div>
+	</body>
+</html>
