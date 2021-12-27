@@ -16,6 +16,27 @@ function removeClass() {
 }
 
 /* toggle() | css() */
+
+/* 
+ID为userName的元素添加样式，如果存在focusClass样式则移除，没有样式则添加
+$('userName').toggleClass("focusClass");
+第二个参数为真，样式切换为inverseColor
+$('#saleDept').toggleClass("inverseColor",true);
+
+用于返回第一个匹配元素的样式
+$('img'),css('width');
+设置某一匹配元素的样式，
+$('img').css('width','200px');
+使用 properties(属性键值对) 的方式一次设置多个样式
+$('img').css(backgroundColor:"#CCC",borderColor:"#999");
+使用函数的返回值作为 css() 方法的value值
+$('img').css({
+	width:function(index,value){
+		return parseFloat(value)*0.9;
+	}
+})
+*/
+
 var count = 0;
 //获取焦点
 function userNameOnFocus() {
