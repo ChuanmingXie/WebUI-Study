@@ -2,20 +2,30 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>11-12jQuery基本操作-样式操作</title>
+		<title>11-12jQuery基本操作-样式操作-addClass|removeClass|toggleClass|css</title>
 		<link rel="stylesheet" type="text/css" href="css/11-12classOperator.css"/>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/11-12classOperator.js" type="text/javascript" charset="utf-8"></script>
 		
 	</head>
 	<body>
-		<h2>11-12jQuery基本操作-样式操作</h2>
+		<h2>11-12jQuery基本操作-样式操作-addClass|removeClass</h2>
 		
 		<p id="articleTitle">jQuery样式元素样式</p>
 		<p title="desc">可以使用attr()方法操作元素的class属性，以获取或改变标签的样式</p>
 		<p title="desc">除此之外，jQuery还提供了addClass()、removeClass()方法</p>
 		<p title="desc" id="lastContent">使用addClass为页面追加样式</p>
-		<input type="button" value="移出样式"  onclick="removeClass()"/> |
+		<input type="button" value="移出样式"  onclick="removeClass()"/>
 		
+		<h2>11-12jQuery基本操作-样式操作-toggleClass|css</h2>
+		
+		销售人员：
+		<input type="text"  id="userName" value="请输入销售人员名称" class="baseClass" onfocus="userNameOnFocus()" /> <br>
+		销售部门：
+		<input type="text"  id="saleDept" value="请输入销售部门" /> <br>
+		<input type="button" value="更换销售部门样式(单机3次)" onclick="changeDept()" /> <hr >
+		<img src="img/flower2.jpg" width="300px"> <br>
+		<input type="button" id="" value="图片放大" onclick="enlargeImage()"/>
+		<input type="button" id="" value="图片缩小" onclick="lessenImage()"/>
 	</body>
 </html>
