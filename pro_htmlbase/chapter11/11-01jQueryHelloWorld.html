@@ -1,38 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<title>11-1jQuery概述-环境引入-简单测试</title>
+		<title>11-1搭建jQuery开发环境-测试示例</title>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<h2>11-1jQuery概述-环境引入-简单测试</h2>
-		<div id="myDiv">Hello World,欢迎漫步时尚广场！</div>
-		<div id="menuDiv">Hello World,我是menu的Div！</div>
-		<div class="baseClass">Hello World,我是类名为baseclass的div！</div>	
-		
+		<h2>11-1搭建jQuery开发环境-测试示例</h2>
+		<div id="myDiv"> Hello jQuery，欢迎光临漫步时尚广场! </div>
+		<script src="js/11-01jQueryHelloWorld.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 
 		<script type="text/javascript">
-			$(document).ready(function(e){
-				alert($("#myDiv").html())
+			$().ready(function(e) {
+				alert($('#myDiv').html());
 			});
-			
-			<!-- 获取DOM对象 -->
-			var menuDiv=document.getElementById('menuDiv');
-			var BaseClass=document.getElementsByClassName("baseClass");
-			var span=document.querySelector('#menuDiv');
-		
-			<!-- DOM对象转jQuery对象 -->
-			var domObject = document.getElementById('menuDiv');
-			alert(domObject.innerHTML);
-		
-			var jQueryObject = $(domObject);
-			alert(jQueryObject.html())
-		
-			<!-- jQuery对象转DOM对象 -->
-			var jQueryObject=$('div');
-			var domObject1=jQueryObject[0];
-			var domObject2=jQueryObject.get(1);
-			alert(domObject1.innerHTML+"\n"+domObject2.innerHTML);
-		</script>	
+		</script>
+		 -->
 	</body>
 </html>
