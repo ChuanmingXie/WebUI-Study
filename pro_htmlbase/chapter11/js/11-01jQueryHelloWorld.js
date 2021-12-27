@@ -4,7 +4,7 @@
 window.onload  与 $().ready() 的区别
 
 执行时间：
-	window.onload 必须在页面全部加载完毕后才能执行	在
+	window.onload 必须在页面全部加载完毕后才能执行
 	$(document).ready():页面中所有DOM结构下载完成后执行，此时可能DOM元素关联的内容没有加载完毕
 执行次数:
 	一个页面只能有一个，当页面中存在多个window.onload时，仅输出最后一个结果，无法完成多个结果同时输出
@@ -21,12 +21,12 @@ $().ready(function(e) {
 
 
 /* 11-1jQuery概述-DOM对象和jQuery对象 */
-//DOM对象的获取
+//1.DOM对象的获取
 var menuDiv = document.getElementById('menuDiv');
 var baseSpan = menuDiv.getElementsByClassName('baseClass');
 var span = document.querySelector('#menuDiv');
 
-//DOM转换为jQuery对象
+//2.DOM转换为jQuery对象
 /* 获取DOM对象 */
 var domObject = document.getElementById('myDiv');
 // 获取DOM对象中的innerHTML值
@@ -36,7 +36,7 @@ var jQueryObject = $(domObject);
 /* 调用jQuery对象的html()方法 */
 alert("DOM转换为jQuery："+jQueryObject.html());
 
-//jQuery转化为DOM对象
+//3.jQuery转化为DOM对象
 /* 获取jQuery对象 */
 var jQueryObjects = $('div');
 /* 通过下表获取DOM对象 */
