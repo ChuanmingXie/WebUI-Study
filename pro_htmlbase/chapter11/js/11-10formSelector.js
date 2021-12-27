@@ -1,5 +1,6 @@
 /* 11-10jQuery选择器-表单选择器 */
 
+//考虑这个 参数 e的作用
 $(function(e) {
 	var result = "统计结果如下：<hr>"
 	result += "<br/>&lt;input&gt;标签数量为：" + $(":input").length;
