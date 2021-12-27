@@ -51,8 +51,43 @@
 */
 
 /* 示例演示 */
-function checkFlower(){
-	var flowerSrc=$('#flower1').attr('src');
-	$('#flower1').attr('src',function(){return $('#flower2').attr('src')});
-	$('#flower2').attr('src',flowerSrc);
+// 改变flower的src引用
+function changeFlower() {
+	var flowerSrc = $('#flower1').attr('src');
+	$('#flower1').attr('src', function() {
+		return $('#flower2').attr('src')
+	});
+	$('#flower2').attr('src', flowerSrc);
 }
+
+// 全部选中
+function changeSelect() {
+	$("input[type='checkbox']").prop("checked", true);
+}
+
+// 反选
+function reverseSelect() {
+	$("input[type='checkbox']").prop('checked', function(index, oldValue) {
+		return !oldValue;
+	});
+}
+
+// 禁用
+function disabledSelect() {
+	$("input[type='checkbox']").prop({
+		checked: true,
+		disabled: true
+	});
+}
+
+// 取消禁用
+function enabledSelect() {
+	$("input[type='checkbox']").removeProp('disabled');
+}
+
+/* 
+易错bug：
+ 1. 函数方法 书写错误，名称和调用不对应
+ 2. $()选择器里没有加 双引号 ("")
+ 3. 设置的属性拼写错误，如checked 写成 checkbox等
+ */

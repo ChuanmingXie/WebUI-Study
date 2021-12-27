@@ -3,13 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>11-11jQuery基本操作 - 属性操作</title>
-		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			input{
 				margin: 5px 0px;
 				width: 150px;
 			}
+			input[type='checkbox']{
+				width: 80px;
+			}
 		</style>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/11-11attributeOperator.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<h2>11-11jQuery基本操作 - 属性操作</h2>
@@ -18,7 +22,7 @@
 		<input type="button" value="鲜花交互" onclick="changeFlower()"/><hr >
 		<input type="checkbox" name="flowerType" value="玫瑰" />玫瑰
 		<input type="checkbox" name="flowerType" value="百合" />百合
-		<input type="checkbox" name="flowerType" value="康乃馨" />康乃馨
+		<input type="checkbox" name="flowerType" value="康乃馨"  checked="checked"/>康乃馨
 		<input type="checkbox" name="flowerType" value="马蹄莲" />马蹄莲 <hr>
 		<input type="button" value="全选" onclick="changeSelect()"/>
 		<input type="button" value="反选" onclick="reverseSelect()"/> |
