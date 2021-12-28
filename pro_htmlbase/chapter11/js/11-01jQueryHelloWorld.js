@@ -19,16 +19,18 @@ $().ready(function(e) {
 	alert("$().ready()函数："+$('#myDiv').html());
 });
 
-$().ready(function(){
+
+$(document).ready(function(){
 	alert('第二次执行');
 })
 
-$(document).ready(function(){
-	alert('第三次执行');
+//简写形式 1
+$().ready(function(){
+	alert('第三次执行'); //jQuery处理带啊吗
 })
-
+//简写形式 2
 $(function(){
-	alert("第四次执行");
+	alert("第四次执行"); //jQuery处理带啊吗
 })
 
 
