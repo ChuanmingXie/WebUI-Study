@@ -68,7 +68,6 @@ $('.eventBind3').on('click','#dataBindBtn',{msg:'额外传递数据'},function(e
 });
 
 
-
 7. hover() 方法
 $('td').hover(
 	function(){$(this).addClass('hover');},
