@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* 11-16jQuery事件处理-事件绑定 */
+div{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #666;
+}
+#leftDiv{
+	float: left;
+	margin: 0 auto;
+}
+#rightDiv{
+	float: right;
+}
+.entered{
+	background-color: #66F;
+}
+
+input[type='button']{
+	margin: 5px 0px;
+	width: 200px;
+}
