@@ -26,8 +26,26 @@ $(function(){
 	
 	/* 解除事件绑定 */
 	$('#removeBindBtn').on('click',function(){
+		/* unbind() - off() */
+		// 使用unbind解除click事件绑定
+		$('#manyBindBtn').unbind('click');
+		// 解除该元素上所有的事件绑定
+		$('#manyBindBtn').unbind();
+		// 使用off()解除事件绑定
 		$('#manyBindBtn').off('click');
+		$(document).off('click','#manyBindBtn');
+		$('#manyBindBtn').off();
+		
+		/* undelegate() - off */
+		// 使用undelegate()方法解除delegate()方法绑定的事件
+		$(document).undelegate('#delegateBindBtn','click');
+		// 使用off()方法解除delegate()方法绑定的事件
 		$(document).off('click','#delegateBindBtn');
+		
+		/*  */
+		// 使用off()解除on()方法绑定的事件
+		$('#leftDiv').off('click','#bindBtn');
+		// 使用off()方法解除所有按钮上的事件绑定
 		$("input[type='button']").off();
 	});
 })
