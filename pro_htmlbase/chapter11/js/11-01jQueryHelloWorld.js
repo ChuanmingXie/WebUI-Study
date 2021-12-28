@@ -19,6 +19,18 @@ $().ready(function(e) {
 	alert("$().ready()函数："+$('#myDiv').html());
 });
 
+$().ready(function(){
+	alert('第二次执行');
+})
+
+$(document).ready(function(){
+	alert('第三次执行');
+})
+
+$(function(){
+	alert("第四次执行");
+})
+
 
 /* 11-1jQuery概述-DOM对象和jQuery对象 */
 //1.DOM对象的获取
