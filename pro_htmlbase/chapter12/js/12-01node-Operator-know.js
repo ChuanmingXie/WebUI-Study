@@ -47,8 +47,8 @@ function createNode() {
 		deepEvents		表示是否同时复制元素的所有子元素的附加数据和绑定事件，参数deepEvents取值默认与includeEvents一致
 
 	//示例
-		$('#shirtDiv').clone(false);		//与clone() 效果相同
-		$('#shirtDiv').clone(true);			
-		$('#shirtDiv').clone(true,false);
-		$('#shirtDiv').clone(false,false);	//与clone(false)效果相同
-		$('#shirtDiv').clone(true,true);	//与clone(true)效果相同
+		$('#planetDiv').clone(false);		//与clone() 效果相同
+		$('#planetDiv').clone(true);			
+		$('#planetDiv').clone(true,false);
+		$('#planetDiv').clone(false,false);	//与clone(false)效果相同
+		$('#planetDiv').clone(true,true);	//与clone(true)效果相同
