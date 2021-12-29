@@ -23,7 +23,7 @@ function innerInsertNode(){
 	/* append()方法的使用 */	
 	// 在appendDiv尾部追加一副图像
 	$('#appendDiv').append($("<img src='img/n1.png'/>"));
-	// 根据ID进行匹配，在index 为 0的div 尾部追加衣服图像
+	// 根据ID进行匹配，在index 为 0的div 尾部追加一副图像
 	$('div[id^=append]').append(function(index,htmlCode){
 	// 将匹配的元素的index和原有的内容打印到控制台
 		console.log("append()方法：下标记"+index+",原有的内容："+htmlCode);
