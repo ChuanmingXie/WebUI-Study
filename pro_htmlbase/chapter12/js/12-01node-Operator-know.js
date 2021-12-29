@@ -12,8 +12,9 @@ function createNode() {
 	alert($('#containerDiv span').length);
 }
 
-/* 方法 */
-1. append()	向每个选择器匹配的元素内部追加由参数指定的内容
+/* 2.jQuery-DOM操作-插入 */
+
+1. append()		向每个选择器匹配的元素内部追加由参数指定的内容
 2. prepend()	向每个选择器匹配的元素内部前插入参数指定的内容
 3. after()	在每个选择器匹配的元素之后插入内容
 4. befor()	在每个选择器匹配的元素之前插入内容
@@ -35,4 +36,19 @@ function createNode() {
 	//参数
 		$(selector):选择器选取的对象
 		content：被插入的内容
-		
+
+/* 3.jQuery-DOM操作-复制*/
+1. clone()
+	//语法
+		$(selector).clone(includeEvents[,deepEvents])
+	//参数
+		$(selector)		选择器选中的节点元素
+		includeEvents	可选参数，boolean类型，表示是否同时复制元素的附加节点和绑定事件，默认false
+		deepEvents		表示是否同时复制元素的所有子元素的附加数据和绑定事件，参数deepEvents取值默认与includeEvents一致
+
+	//示例
+		$('#shirtDiv').clone(false);		//与clone() 效果相同
+		$('#shirtDiv').clone(true);			
+		$('#shirtDiv').clone(true,false);
+		$('#shirtDiv').clone(false,false);	//与clone(false)效果相同
+		$('#shirtDiv').clone(true,true);	//与clone(true)效果相同
