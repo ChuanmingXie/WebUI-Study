@@ -1,6 +1,6 @@
 /* 12-1jQuery-DOM节点操作-创建|插入|复制|删除|包裹 */
 
-/* 复制 */
+/* 12-1jQuery-DOM节点操作-复制 */
 $(function(e){
 	// 为planetDiv中的span标签附加数据
 	$('#planetDiv span').data("msg","银河系宇宙星空-图形艺术图");
