@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* 12-05-02jQueryplugin-Table */
+.tableClass{border:3px solid #063; box-shadow: 3px 5px 5px 5px #0C6;}
+.evenClass{background-color: #FDDFFF;}
+.oddClass{background-color: #F3AFFF;}
+.selectedClass{background-color: #F3838F;}
+.hoverClass{background-color: #FFF38F;}
+img{width: 20px;}
