@@ -1,7 +1,7 @@
-/*12-16jQueryPlugin- Global|Object|customPlugin */
+/*12-5-1jQueryPlugin- Global|Object|customPlugin */
 
 
-/* 12-16jQueryplugin-Global-封装全局函数插件 */
+/* 12-5-1jQueryplugin-Global-封装全局函数插件 */
 
 $.extend({
 	sayHello:function(name){
@@ -14,7 +14,7 @@ $.sayHello("chuanmingxie");		//带参调用
 jQuery.sayHello('CloudWhales');	//$==jQuery
 
 
-/* 12-16jQueryplugin-Object-封装对象方法的插件 */
+/* 12-5-1jQueryplugin-Object-封装对象方法的插件 */
 //页面加载时的执行
 $(function (){
 	var options={'color':'#2c9929'};
@@ -49,7 +49,7 @@ $.fn.myPlugin=function(options){
 })(jQuery,window,document);
 
 
-/* 12-16jQueryPlugin- customPlugin */
+/* 12-5-1jQueryPlugin- customPlugin-自定义选择器插件 */
 /* 通过自定义选择器插件 和 自调匿名函数包裹的对象方法插件，定义一个 自定义选择器*/
 ;(function($){
 	$.expr[":"]['color']=function(obj,index,meta){
