@@ -1,8 +1,7 @@
 /* 12-5-2jQueryplugin-Table */
 
-$(function(){
-	
-	/* 调用插件显示数据 */
+/* 调用插件显示数据 */
+$(function(){	
 	var data={
 		tableTitle:{
 			name:"商品名称",
