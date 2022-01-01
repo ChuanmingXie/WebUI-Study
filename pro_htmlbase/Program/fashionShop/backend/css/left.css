@@ -1,12 +1,6 @@
 @charset "utf-8";
 
-*{font-size:9pt;border:0;margin:0;padding:0;}
-body{background: #f0f9fd;font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
-ul{display:block;margin:0;padding:0;list-style:none;}
-li{display:block;margin:0;padding:0;list-style: none;}
-dl,dt,dd{margin:0;padding:0;display:block;}
-a,a:focus{text-decoration:none;color:#000;outline:none;}
-a:hover{color:#00a4ac;text-decoration:none;}
+body{background: #f0f9fd;min-width:980px;}
 
 .lefttop{background: url(../images/lefttop.gif) repeat-x;height: 40px;color: #fff;font-size: 14px;line-height: 40px;}
 .lefttop span{margin-left:8px; margin-top:10px;margin-right:8px;background: url(../images/leftico.png) no-repeat;width: 20px;height: 21px;float: left;}
