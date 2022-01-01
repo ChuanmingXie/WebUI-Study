@@ -3,8 +3,73 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>添加商品</title>
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="css/add.css" />
 	</head>
 	<body>
-		添加商品
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li><a href="main.html" target="_parent">首页</a></li>
+				<li><a href="#">购物后台管理</a></li>
+				<li><a href="#">添加商品</a></li>
+			</ul>
+		</div>
+		<div class="formbody">
+			<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><label>商品缩略图<b>*</b></label></td>
+					<td><input type="file" name="" multiple="multiple" /></td>
+				</tr>
+				<tr>
+					<td><label>商品名称<b>*</b></label></td>
+					<td><input class="dfinput" style="width: 520px" type="text" name="" value="请填写商品名称" /></td>
+				</tr>
+				<tr>
+					<td><label>商品类别<b>*</b></label></td>
+					<td><select class="select3">
+							<option value="">男装</option>
+							<option value="">女装</option>
+							<option value="">童装</option>
+							<option value="">运动</option>
+							<option value="">其他</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td><label>商品价格<b>*</b></label></td>
+					<td><input class="dfinput" style="width: 140px" type="text" name="goodsPrice" value="" /> 元</td>
+				</tr>
+				<tr>
+					<td><label>团购价格<b>*</b></label></td>
+					<td><input class="dfinput" style="width: 140px" type="text" name="groupPrice" value="" /> 元</td>
+				</tr>
+				<tr>
+					<td><label>商品数量<b>*</b></label></td>
+					<td><input class="dfinput" style="width: 140px" type="number" name="amount" value="" /> 件</td>
+				</tr>
+				<tr>
+					<td><label>发布日期<b>*</b></label></td>
+					<td><input class="dfinput" style="width: 160px" type="datetime-local" name="upTime" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>审核状况<b>*</b></label></td>
+					<td><select name="checkup" class="select3">
+							<option value="">已审核</option>
+							<option value="">未审核</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td><label>商品描述<b>*</b></label></td>
+					<td><textarea rows="3" cols="" name="content" id="conetnt"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" class="btn" value="马上发布" /></td>
+				</tr>
+			</table>
+		</div>
 	</body>
+</html>
+
+</body>
 </html>
