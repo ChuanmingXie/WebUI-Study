@@ -1,0 +1,49 @@
+/* searchForm */
+.seachfrom{height: 42px;}
+.seachfrom li{float: left;margin-right:15px;}
+.seachfrom li label{padding-right:10px;float: left;line-height: 32px;}
+.scinput{width:180px;height:32px;line-height:32px;background: url(../images/inputbg.gif) repeat-x; text-indent:10px;color: #999;border-top:solid 1px #a7b5bc;border-left:solid 1px #a7b5bc;border-right: solid 1px #ced9df;border-bottom:solid 1px #ced9df;}
+.scbtn{width:85px;height:35px;background: url(../images/btnbg.png) no-repeat center;font-size:14px;font-weight: bold;color:#fff;cursor:pointer;border-radius: 3px;}
+select{height:32px;padding:5px;background:url(../images/inputbg.gif) repeat-x;_background:none;_border: none;border-top:solid 1px #a7b5bc;border-left:solid 1px #a7b5bc;border-right: solid 1px #ced9df;border-bottom:solid 1px #ced9df;}
+
+/* list-table */
+.tablelist{border:solid 1px #cbcbcb; width: 100%; clear: both;}
+.tablelist th{background: url(../images/th.gif) repeat-x;height: 34px; line-height: 34px;border-bottom:solid 1px #b6cad2;text-indent: 11px;text-align: left;}
+.tablelist td{line-height: 35px;text-indent: 11px;border-right: dotted 1px #C7c7c7;}
+.tablelink{color: #056dae;}
+.tablelist tbody tr.odd{background: #f5faf8;}
+.tablelist tbody tr:hover{background: #e5ebbe;}
+
+/* list-table-page */
+.pagin{position: relative;margin-top:10px;padding: 0 12px;}
+.pagin .blue{color: #056dae; font-style:normal;}
+.pagin .pageList{position: absolute;right: 12px;top: 0;}
+.pagin .pageList .paginItem{float:left;}
+.pagin .pageList .paginItem a{float:left;width:31px;height:28px;border: 1px solid #DDD; text-align:center ;line-height: 30px;border-left: none;border: #3399d5;}
+.pagin .pageList .paginItem:first-child a{border-left: 1px solid #DDD; border-bottom-left-radius: 5px;border-top-left-radius: 5px;}
+.pagin .pageList .paginItem:last-child a{border-right: 1px solid #DDD; border-bottom-right-radius: 5px;border-top-right-radius: 5px;}
+.pagin .pageList .paginItem.current,
+.pagin .pageList .paginItem.current a{background: #f5f5f5;cursor: default;color: #737373;}
+.pagin .pageList .paginItem:hover{background: #f5f5f5;}
+.pagin .pageList .paginItem.more,
+.pagin .pageList .paginItem.more a:hover{cursor: default;}
+.pagin .pageList .paginItem.more:hover{background: #FFF;}
+.pagin .pageList .paginItem.more a{color: #737373;}
+.pagepre{background: url(../images/pre.gif) no-repeat center center;width: 31px;height: 28px;}
+.pagenext{background: url(../images/next.gif) no-repeat center center;width: 31px;height: 28px;}
+
+/* 表格工具栏 */
+.place{height: 40px;background: url(../images/righttop.gif) repeat-x;}
+.place span{line-height: 40px;font-weight: bold;float: left;margin-left: 12px;}
+.placeul li{float: left;line-height: 40px;padding-left:7px ;padding-right: 12px;background: url(../images/rlist.gif) no-repeat right;}
+.placeul li:last-child{background: none;}
+.rightinfo{padding:8px;}
+.tools{clear: both;height: 35px;margin-bottom: 8px;}
+.toolbar{float: right;}
+.toolbar li{background: url(../images/toolbg.gif) repeat-x;line-height: 33px;height: 33px;border: solid 1px #D3dbde; float: left;padding-right: 10px;margin-right: 5px;border-radius: 3px;cursor: pointer;}
+.toolbar li span{float: left;margin-left: 10px;margin-right: 5px;margin-top: 5px;}
+.timeDiv img{width: 10px;}
+
+.imgtd{text-indent:0;}
+.imgtable{width: 100%; border: solid 1px #Cbcbcb;}
+
