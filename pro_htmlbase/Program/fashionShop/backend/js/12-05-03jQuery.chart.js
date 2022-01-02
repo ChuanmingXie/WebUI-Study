@@ -25,6 +25,7 @@ $(function(){
 		}
 	};
 	
+	
 	//使用自定义的样式进行绘制图表	
 	$('#myCanvas1').drawChart(data,options,"PieChart");
 	$('#myCanvas2').drawChart(data,options,"ColumnChart");
