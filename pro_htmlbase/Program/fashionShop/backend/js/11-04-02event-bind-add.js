@@ -35,6 +35,7 @@ $(function() {
 			$(this).select();
 		}
 	});
+	
 	/* 验证时间格式处理函数 */
 	$("input[type='datetime-local']").on("blur", function() {
 		var dateReg = /(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})[ ](\d{1,2})[:](\d{1,2})/;
