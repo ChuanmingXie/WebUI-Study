@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="css/list.css" />
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/11-03-01attributeOperator.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/8-02windowMethod-timeWorker.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -37,7 +38,10 @@
 			<table class="tablelist">
 				<thead>
 					<tr>
-						<th><input type="checkbox" name="" value="" checked="checked" /></th>
+						<th><input name="checkAll" type="checkbox" id="checkAll" onchange="selectAll()"/>全/
+							<input name="checkOther" type="checkbox" id="checkOther" onchange="selectOther()"/>反选
+						</th>
+						<!-- <th><input type="checkbox" name="" value="" checked="checked" /></th> -->
 						<th>缩略图</th>
 						<th>商品名称</th>
 						<th>商品类别</th>
@@ -50,7 +54,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img06.png" ></td>
 						<td>RAX头层头皮户外鞋 男防滑登山鞋减震</td>
 						<td>运动</td>
@@ -61,7 +65,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr class="odd">
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img07.png" ></td>
 						<td>七匹狼休闲裤 春夏新款 男士时尚无皱休闲裤</td>
 						<td>男装</td>
@@ -72,7 +76,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img08.png" ></td>
 						<td>欧美大牌五分袖收腰显瘦睫毛蕾丝连衣裙 粉色</td>
 						<td>女装</td>
@@ -83,7 +87,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr class="odd">
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img09.png" ></td>
 						<td>锐步REEBOK热2015新款线上独家复古GL 2620运动生活休闲鞋男鞋</td>
 						<td>运动</td>
@@ -94,7 +98,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img10.png" ></td>
 						<td>新款中大童荷叶边短袖裙子韩版儿童公主裙女童连衣裙</td>
 						<td>童装</td>

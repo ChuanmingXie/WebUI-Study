@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="css/list.css" />
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/11-03-01attributeOperator.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/8-02windowMethod-timeWorker.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -37,7 +38,10 @@
 			<table class="tablelist">
 				<thead>
 					<tr>
-						<th><input type="checkbox" name="" value="" checked="checked" /></th>
+						<th><input name="checkAll" type="checkbox" id="checkAll" onchange="selectAll()"/>全/
+							<input name="checkOther" type="checkbox" id="checkOther" onchange="selectOther()"/>反选
+						</th>
+						<!-- <th><input type="checkbox" name="" value="" checked="checked" /></th> -->
 						<th>缩略图</th>
 						<th>美食名称</th>
 						<th>美食类别</th>
@@ -50,7 +54,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img11.png" ></td>
 						<td>潮汕名小吃 吉祥大虾海鲜水产 营养健康先吃放后付款 家的味道</td>
 						<td>海鲜</td>
@@ -61,7 +65,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr class="odd">
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img12.png" ></td>
 						<td>日本寿司 源自北海道正宗海产 手工制作匠人之选</td>
 						<td>小吃</td>
@@ -72,7 +76,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img13.png" ></td>
 						<td>内蒙古肥牛卷 源自大自然纯天然牧场 散养牲牛健壮肥硕</td>
 						<td>肉类</td>
@@ -83,7 +87,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr class="odd">
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img14.png" ></td>
 						<td>新疆大盘鸡 火鸡现杀山林散养 秘制调味 肉嫩多汁</td>
 						<td>肉类</td>
@@ -94,7 +98,7 @@
 						<td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" name="" id="" value="" /></td>
+						<td><input type="checkbox" name="checkItem" id="" value="" /></td>
 						<td class="imgtd"><img src="images/product/img15.png" ></td>
 						<td>自助火锅 食物大全 汤底美味 可以喝汤的自助火锅</td>
 						<td>火锅</td>
