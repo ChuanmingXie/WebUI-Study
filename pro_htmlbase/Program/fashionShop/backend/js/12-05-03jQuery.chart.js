@@ -176,5 +176,3 @@ $(function(){
 		 }
 	}
 })(jQuery,window,document);
-
-
