@@ -4,35 +4,31 @@
 $(function(){
 	var data={
 		drawData:[
-			{name:'服装',amount:40},
-			{name:'饰品',amount:80},
-			{name:'影视',amount:50},
-			{name:'儿童',amount:35},
-			{name:'饮食',amount:60},
+			{name:'女装',amount:40},
+			{name:'男装',amount:80},
+			{name:'童装',amount:50},
+			{name:'服饰',amount:35},
+			{name:'内衣',amount:60},
 		],
 	};
 	var options={
 		bgColor:[
-			{drawColor:'#27255F'},
-			{drawColor:'#77D1F6'},
-			{drawColor:'#2F368F'},
-			{drawColor:'#3666BD'},
+			{drawColor:'#9cc507'},
+			{drawColor:'#8b86ca'},
+			{drawColor:'#ff4400'},
+			{drawColor:'#ffb81d'},
 			{drawColor:'#2CABE0'},
 		],
 		frontColor:{
-			font:'bold 16px 宋体',
+			font:'bold 16px misrosoft',
 			color:'black'
 		}
 	};
-	// 使用插件中的默认样式进行绘制图表
-	$('#myCanvas1-1').drawChart(data,null,"PieChart");
-	$('#myCanvas1-2').drawChart(data,null,"ColumnChart");
-	$('#myCanvas1-3').drawChart(data,null,"FoldLineChart");
 	
 	//使用自定义的样式进行绘制图表	
-	$('#myCanvas2-1').drawChart(data,options,"PieChart");
-	$('#myCanvas2-2').drawChart(data,options,"ColumnChart");
-	$('#myCanvas2-3').drawChart(data,options,"FoldLineChart");
+	$('#myCanvas1').drawChart(data,options,"PieChart");
+	$('#myCanvas2').drawChart(data,options,"ColumnChart");
+	$('#myCanvas3').drawChart(data,options,"FoldLineChart");
 });
 
 /* 图标插件的实现 */
