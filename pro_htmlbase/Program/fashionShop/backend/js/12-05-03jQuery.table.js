@@ -3,12 +3,12 @@
 /* 表格操作插件 */
 $(function(){
 	// 为所有行中的删除链接添加事件处理函数（此方法可以在新增元素上绑定事件）
-	$('.tablelist').on('click',"tablelink:contains('删除')",function(){
+	$('.tablelist').on("click",".tablelink:contains('删除')",function(e){
 		$(this).parent().parent().remove();
 	});
-	
+	/* 错误在class未加 点 */
 	// 单击"添加按钮"为表格添加一行
-	$('.toolbar>li:first').on('click',function(e){
+	$('.toolbar>li:first').on("click",function(e){
 		var tablelist=$('.tablelist').append('<tr>'+
 			'<td><input type="checkbox" name="goods" value="" /></td>'+
 			'<td class="imgtd"><img src="images/product/nopic.gif" height="75px" width="100px"><br><input type="file" name="" id="" value="" /></td>'+
@@ -32,30 +32,31 @@ $(function(){
 	});
 	
 	// 为文本框添加focus焦点事件，获得焦点时清空文本框内容
-	$('.tablelist').on('focus',"input[type='text']",function(e){
+	$('.tablelist').on("focus","input[type='text']",function(e){
 		$(this).val("");
 	});
 	
-	$(".tablelist").on('change',"input[type='file']",function(e){
+	$(".tablelist").on("change","input[type='file']",function(e){
 		var that=this;
 		var file=$(".tablelist input[type='file']")[0];
 		if(window.FileReader){
 			var fr=new FileReader();
 			fr.onload=function(e){
-				$(that).prev().prev().attr('src',e.target.result);
+				$(that).prev().prev().attr("src",e.target.result);
 			};
 			fr.readAsDataURL(file.files[0]);
 		}
 	});
 	
 	// 单击新增行的"确定"按钮时触发的事件
-	$('.tablelist').on('click',"tablelink:contains('确定')",function(e){
+	/* 错误在 class未加 点 ; indexOf() 方法 O 大写*/
+	$('.tablelist').on("click",".tablelink:contains('确定')",function(e){
 		var tableRow=$("<tr><td><input name='foods' type='checkbox' value='' /></td></tr>");
 		var goodsImage=$(".tablelist input[type='file']")[0];
 		// fireFox、Chrome等浏览器安全性要求相对较高，返回的实际路径为：c:\fakepath\xx.jpg
 		// 浏览器安全性方面要求不允许直接读取本地文件，
 		//此处仅作演示（IE支持，其他浏览器不支持）实际开发时，是通过Ajax结合服务器来实现的
-		if(goodsImage.value!=""&&goodsImage.value.indexof("fakeopath")==-1){
+		if(goodsImage.value!=""&&goodsImage.value.indexOf("fakepath")==-1){
 			tableRow.append("<td><img src='"+goodsImage.value+"' /></td>");
 		}else{
 			tableRow.append("<td><img src='images/product/nopic.gif' /></td>");
