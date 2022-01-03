@@ -4,7 +4,7 @@
  	setInterval("showCurrentTime()", 1000);
  })()
 
- var timeworker = new Worker('js/8-02windowMethod-woker.js');
+ var timeworker = new Worker('js/08-02windowMethod-woker.js');
 
  function showCurrentTime() {
  	var myDate = new Date();
