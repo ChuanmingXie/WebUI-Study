@@ -1,6 +1,6 @@
 /* 12-5-2jQueryplugin-Chart */
 
-/* 调用插件显示数据 */
+/* 表格操作插件 */
 $(function(){
 	// 为所有行中的删除链接添加事件处理函数（此方法可以在新增元素上绑定事件）
 	$('.tablelist').on('click',"tablelink:contains('删除')",function(){
@@ -106,6 +106,7 @@ function fixedNumber(num){
 	}
 	return num;
 }
+
 // 对下拉列表添加下拉选项
 function initSelect(element,data){
 	// 为select添加option
