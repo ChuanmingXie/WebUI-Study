@@ -27,7 +27,7 @@
 				</tr>
 				<tr>
 					<td><label>商品名称<b>*</b></label></td>
-					<td><input class="dfinput" style="width: 520px" type="text" name="" value="请填写商品名称" /></td>
+					<td><input class="dfinput" name="goodName" id="goodName" style="width: 520px" type="text" value="请填写商品名称" /></td>
 				</tr>
 				<tr>
 					<td><label>商品类别<b>*</b></label></td>
@@ -45,19 +45,19 @@
 				</tr>
 				<tr>
 					<td><label>商品价格<b>*</b></label></td>
-					<td><input class="dfinput" style="width: 140px" type="text" name="goodsPrice" value="" /> 元</td>
+					<td><input class="dfinput" name="goodPrice" id="goodPrice" style="width: 140px" type="text" value="" /> 元</td>
 				</tr>
 				<tr>
 					<td><label>团购价格<b>*</b></label></td>
-					<td><input class="dfinput" style="width: 140px" type="text" name="groupPrice" value="" /> 元</td>
+					<td><input class="dfinput" name="groupPrice" id="groupPrice" style="width: 140px" type="text" value="" /> 元</td>
 				</tr>
 				<tr>
 					<td><label>商品数量<b>*</b></label></td>
-					<td><input class="dfinput" style="width: 140px" type="number" name="amount" value="" /> 件</td>
+					<td><input class="dfinput" name="amount" id="amount" style="width: 140px" type="number" value="" /> 件</td>
 				</tr>
 				<tr>
 					<td><label>发布日期<b>*</b></label></td>
-					<td><input class="dfinput" style="width: 160px" type="datetime-local" name="upTime" value="" /></td>
+					<td><input class="dfinput"name="upTime" id="upTime" style="width: 160px" type="datetime-local" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>审核状况<b>*</b></label></td>
@@ -68,11 +68,11 @@
 				</tr>
 				<tr>
 					<td><label>商品描述<b>*</b></label></td>
-					<td><textarea rows="3" cols="" name="content" id="conetnt"></textarea></td>
+					<td><textarea rows="3" cols="" name="content" id="content"></textarea></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td><input type="button" class="btn" value="马上发布" /></td>
+					<td></td>					
+					<td><input type="submit" class="btn" id="btnPublish" value="马上发布"/></td>
 				</tr>
 			</table>
 		</div>

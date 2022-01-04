@@ -5,6 +5,10 @@
 		<title>添加新片</title>
 		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
 		<link rel="stylesheet" type="text/css" href="css/add.css"/>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/11-04-02event-bind-add.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/12-05-03jQuery.cascadingMenu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cascadingMenu-food.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="place">
@@ -14,6 +18,68 @@
 				<li><a href="#">影视后台管理</a></li>
 				<li><a href="#">添加影片</a></li>
 			</ul>
+		</div>
+		<div class="formbody">
+			<div class="usual">
+				<div class="tabson">
+					<form action="http:www.itshixun" method="post" id="addfoodForm">
+						<ul class="forminfo">
+							<li>
+								<label>商品缩略图<b>*</b></label>
+								<input name="thumbImage" id="thumbImage" type="file" multiple="multiple" />
+							</li>
+							<li>
+								<label>商品名称<b>*</b></label>
+								<input name="goodName" id="goodName" type="text" class="dfinput" value="请填写商品名称" required="required" style="width: 520px;">
+							</li>
+							<li>
+								<label>商品类别<b>*</b></label>
+								<div class="vocation">
+									<select name="goodType" id="goodType" class="select3">
+										<option value="">男装</option>
+										<option value="">女装</option>
+										<option value="">童装</option>
+										<option value="">其他</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<label>商品单价<b>*</b></label>
+								<input name="unitPrice" id="unitPrice" type="number" class="dfinput" required="required" style="width: 140px;">元
+							</li>
+							<li>
+								<label>团购价<b>*</b></label>
+								<input name="groupPrice" id="groupPrice" type="number" class="dfinput" required="required" style="width: 140px;">元
+							</li>
+							<li>
+								<label>商品数量<b>*</b></label>
+								<input name="goodNumber" id="goodNumber" type="number" class="dfinput" required="required" style="width: 140px;">件
+							</li>
+							<li>
+								<label>发布日期<b>*</b></label>
+								<input name="publishDate" id="publishDate" type="datetime-local" class="dfinput" required="required" style="width: 160px;">
+							</li>
+							<li>
+								<label>是否审核<b>*</b></label>
+								<div class="vacation">
+									<select class="select3" name="isChecked" id="isChecked">
+										<option value="">已审核</option>
+										<option value="">未审核</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<label>商品描述<b>*</b></label>
+								<textarea name="foodDescription" id="content" rows="3" cols=""></textarea>
+							</li>
+							<li>
+								<label>&nbsp;</label>
+								<input type="submit" class="btn" id="btnPublish" value="马上发布"/>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
