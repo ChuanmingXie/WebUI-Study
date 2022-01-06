@@ -1,0 +1,37 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>比较H5文档和非h5文档的li，div标签嵌套图片后的标签高度</title>
+		<style type="text/css">
+			ul,
+			li {
+				list-style: none;
+			}
+		</style>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function height(){
+				var num=$('.h5notdivWithPic').get(0).clientHeight;
+				var num2=$('.h5notliWithPic').get(0).clientHeight;
+				console.log(num);
+				console.log(num2);
+			};
+			window.onload=height;
+		</script>
+	</head>
+
+	<body>
+		<div class="h5notdivWithPic">
+			<img src="../images/banner.jpg">
+		</div>
+		<ul class="h5notliWithPic">
+			<li>
+				<img src="../images/shopshow/dress1.jpg">
+				<p>欧美顶级设计师 时装定制 衬色针织衫大牌蓬蓬裙
+			</li>
+		</ul>
+		<span class="h5notspan">欧美顶级设计师 时装定制 衬色针织衫大牌蓬蓬裙</span>
+	</body>
+</html>

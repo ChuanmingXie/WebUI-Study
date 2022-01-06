@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>比较H5文档和非h5文档的li，div标签嵌套图片后的标签高度</title>
+		<style type="text/css">
+			ul,
+			li {
+				list-style: none;
+			}
+		</style>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function height(){
+				console.log($('.h5divWithPic').get(0).clientHeight);
+				console.log($('.h5liWithPic').get(0).clientHeight);
+				
+			}
+			window.onload=height;
+		</script>
+	</head>
+	<body>
+		<div class="h5divWithPic">
+			<img src="../images/banner.jpg">
+		</div>
+		<!-- <div class="h5liWithPic"> -->
+		<ul class="h5liWithPic">
+			<li>
+				<img src="../images/shopshow/dress1.jpg">
+				<p>欧美顶级设计师 时装定制 衬色针织衫大牌蓬蓬裙
+			</li>
+		</ul>
+		<span class="h5span">欧美顶级设计师 时装定制 衬色针织衫大牌蓬蓬裙</span>
+		<!-- </div> -->
+	</body>
+</html>
