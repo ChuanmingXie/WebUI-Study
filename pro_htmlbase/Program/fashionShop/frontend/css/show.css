@@ -6,7 +6,6 @@ li,ul{list-style: none;}
 a{color: #000;text-decoration: none;}
 a:hover{color:#ce2626;text-decoration: none;}
 img{border: none;}
-.font16{font-size: 16px;font-weight: 700;}
 .clear{clear: both;}
 .float1{float: left;}
 .floatr{float: right;}
@@ -73,3 +72,21 @@ a.white:hover{color: #FF0;text-decoration: none;}
 /* 底部- gotop */
 .gotop{background: url(../images/shopshow/gotop.jpg) no-repeat;min-width: 60px;height: 60px;position: fixed;bottom: 20px;right: 0;}
 
+/* 底部-标题 */
+.footer{width: 100%;background: #efefef;height: 310px;margin-top: 15px;}
+.foot_title{background: #6a6665; width: 100%; height: 40px;padding-top: 8px;}
+.foot_pic{margin: 0 auto;width: 1200px;}
+.foot_pic li{width: 210px;float: left; text-align: center;}
+.foot_list{width: 1100px;margin: 0 auto;padding-top: 20px;}
+.foot_list>li{float: left;width: 170px;}
+.foot_list li ul{padding-left:10px;}
+.overlap{float: left;width: 35px;}
+.redl{background: url(../images/red1.jpg) no-repeat;width: 35px;height: 31px;display: inline-block;}
+.linel{background: url(../images/line1.jpg) no-repeat;width: 20px;height: 100px;display: inline-block;}
+.font16{font-size: 16px;font-weight: 700;}
+.padding-bottom{padding-bottom: 10px;}
+.red2{background: url(../images/red2.jpg) no-repeat;width: 35px;height: 31px;display: inline-block;}
+.red3{background: url(../images/red3.jpg) no-repeat;width: 35px;height: 31px;display: inline-block;}
+
+.padding-top{margin-top: 8px;}
+.foot_line{border-bottom: 1px solid #ccc;font-size: 12px;margin-top: 10px;}
