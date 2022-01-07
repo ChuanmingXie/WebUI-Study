@@ -7,7 +7,7 @@ a{color: #000;text-decoration: none;}
 a:hover{color:#ce2626;text-decoration: none;}
 img{border: none;}
 .clear{clear: both;}
-.float1{float: left;}
+.floatl{float: left;}
 .floatr{float: right;}
 
 /* 头部-导航 */
