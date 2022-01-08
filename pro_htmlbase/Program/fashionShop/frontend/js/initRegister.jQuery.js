@@ -1,7 +1,6 @@
 /* @by chuanmingxie */
 /* 省市区三级菜单 - 封装jQuery插件 */
-;
-(function($, window, document, undefined) {
+;(function($, window, document, undefined) {
 	var defaults = [{
 		"value": "山东省",
 		"text": "山东省",
@@ -215,6 +214,6 @@
 	}
 })(jQuery, window, document);
 
-$(function(){
+$(function() {
 	$(".vacation:first").empty().cascadingMenuPlugins(null);
 });
