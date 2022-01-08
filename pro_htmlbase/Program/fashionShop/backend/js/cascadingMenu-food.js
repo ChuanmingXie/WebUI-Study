@@ -28,5 +28,5 @@ $(function(){
 	/* 自定义菜单 */
 	$(".vocation:first").empty().cascadingMenuPlugins(opts);
 	/* 默认菜单 */
-	//$(".vocation:first").empty().cascadingMenuPlugins();
+	//$(".vocation:first").empty().cascadingMenuPlugins(null);
 });
