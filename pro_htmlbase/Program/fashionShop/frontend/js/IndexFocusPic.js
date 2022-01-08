@@ -8,11 +8,11 @@ function showPic(index) {
 	// 更换轮播图
 	$("#foucsImage").animate({
 		opacity: '0.1'
-	}, 2000).fadeIn(500, function() {
+	}, 1000).fadeIn(100, function() {
 		$(this).get(0).src = imgSrc;
 	}).animate({
 		opacity: '1'
-	}, 2000);
+	}, 1000);
 	// var lis = $('.foucsBox li');
 	var lis = document.getElementsByClassName("focusBox")[0].getElementsByTagName("li");
 	for (var i = 0; i < lis.length; i++) {
