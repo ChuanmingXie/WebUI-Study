@@ -44,52 +44,52 @@ $(function() {
 });
 
 function zoomPicture() {
-	var box=$('#box').get(0);
-	var showGoodsPic=$('#showGoodsPicture').get(0);
-	var canvas=$('#canvas').get(0);
-	var shade=$('#shade').get(0);
-	if(showGoodsPic==null){
+	var box = $('#box').get(0);
+	var showGoodsPic = $('#showGoodsPicture').get(0);
+	var canvas = $('#canvas').get(0);
+	var shade = $('#shade').get(0);
+	if (showGoodsPic == null) {
 		return false;
 	}
-	
-	box.onmouseout=function(){
-		shade.style.display="none";
-		canvas.style.display="none";
-		document.body.style.cursor="default";
+
+	box.onmouseout = function() {
+		shade.style.display = "none";
+		canvas.style.display = "none";
+		document.body.style.cursor = "default";
 	}
-	
-	box.onmousemove=function(e){
+
+	box.onmousemove = function(e) {
 		// 设定鼠标样式
-		document.body.style.cursor="move";
-		var shadeX,shadeY;
-		
-		var box=$('#box').get(0);		
-		var boxX=getLeft(box);
-		var boxY=getTop(box);
-		shadeX=e.pageX-boxX-100;
-		shadeY=e.pageY-boxY-100;
-		
-		if(shadeX<0){
-			shadeX=0;
-		}else if(shadeX>200){
-			shadeX=200;
+		document.body.style.cursor = "move";
+		var shadeX, shadeY;
+
+		var box = $('#box').get(0);
+		var boxX = getLeft(box);
+		var boxY = getTop(box);
+		shadeX = e.pageX - boxX - 100;
+		shadeY = e.pageY - boxY - 100;
+
+		if (shadeX < 0) {
+			shadeX = 0;
+		} else if (shadeX > 200) {
+			shadeX = 200;
 		}
-		if(shadeY<0){
-			shadeY=0;
-		}else if(shadeY>200){
-			shadeY=200;
+		if (shadeY < 0) {
+			shadeY = 0;
+		} else if (shadeY > 200) {
+			shadeY = 200;
 		}
-		
-		var context=canvas.getContext("2d");
-		shade.style.display="block";
-		shade.style.left=shadeX+"px";
-		shade.style.top=shadeY+"px";
-		canvas.style.display="inline";
-		context.clearRect(0,0,400,400);
-		var image=new Image();
-		image.src=showGoodsPic.src;
-		context.drawImage(image,(shade.offsetLeft)*2,(shade.offsetTop)*2,400,400,0,0,400,400);
-	}	
+
+		var context = canvas.getContext("2d");
+		shade.style.display = "block";
+		shade.style.left = shadeX + "px";
+		shade.style.top = shadeY + "px";
+		canvas.style.display = "inline";
+		context.clearRect(0, 0, 400, 400);
+		var image = new Image();
+		image.src = showGoodsPic.src;
+		context.drawImage(image, (shade.offsetLeft) * 2, (shade.offsetTop) * 2, 400, 400, 0, 0, 400, 400);
+	}
 }
 
 function getTop(e) {
@@ -107,4 +107,3 @@ function getLeft(e) {
 	}
 	return offset;
 }
-
