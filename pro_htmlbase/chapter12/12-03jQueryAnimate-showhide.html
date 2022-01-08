@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>12-3jQuery动画-show|hide</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#showDiv {
+				background-color: #FFF38F;
+				border: 1px solid #333;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>12-3jQuery动画-show|hide</h2>
+		<div>
+			<input type="button" value="显示Div" id="showdefaultBtn" />
+			<input type="button" value="隐藏Div" id="hidedefaultBtn" />
+			<input type="button" value="显示Div" id="showdefaultBtns" />
+			<input type="button" value="隐藏Div" id="hidedefaultBtns" />
+			<input type="button" value="显示Div" id="showdefaultBtnss" />
+			<input type="button" value="隐藏Div" id="hidedefaultBtnss" />
+			<br>
+			<input type="button" value="显示Div" id="slideDownBtn" />
+			<input type="button" value="隐藏Div" id="slideUpBtn" />
+			<input type="button" value="显示/隐藏Div" id="showToggleBtn" />
+		</div>
+		<div id="showDiv">
+
+		</div>
+		<script type="text/javascript">
+			$(function(e) {
+				$("#showdefaultBtn").click(function() {
+					$('#showDiv').show();
+				});
+				$("#hidedefaultBtn").click(function() {
+					$('#showDiv').hide();
+				});
+				$("#showdefaultBtns").click(function() {
+					$('#showDiv').show("slow");
+				});
+				$("#hidedefaultBtns").click(function() {
+					$('#showDiv').hide("slow");
+				});
+				$("#showdefaultBtnss").click(function() {
+					$('#showDiv').show("slow", function() {
+						$(this).css("background-color", "#FFF38F");
+					});
+					$('#showDiv').css("background-color", "gray");
+				});
+				$("#hidedefaultBtnss").click(function() {
+					$('#showDiv').hide("slow", function() {
+						alert("hello")
+					});
+				});
+				
+				$("#slideDownBtn").click(function() {
+					$('#showDiv').slideDown("slow");
+				});
+				$("#slideUpBtn").click(function() {
+					$('#showDiv').slideUp("fast");
+				});
+				$("#showToggleBtn").click(function() {
+					$('#showDiv').slideToggle("slow",function(){
+						$('#showDiv').css("background-color", "#000000");
+					});
+					$('#showDiv').css("background-color", "red");
+				});
+			});
+		</script>
+	</body>
+</html>
