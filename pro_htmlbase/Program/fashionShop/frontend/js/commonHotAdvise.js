@@ -1,7 +1,7 @@
 /* @by chuanmingxie */
 var hotGoods={
 	name:"热门推荐",
-	srcPath:"images/shopshow",
+	srcPath:"images/shopshow/",
 	data:[
 		{href:"#",src:"s1.jpg",price:56.00},
 		{href:"#",src:"s2.jpg",price:97.00},
@@ -20,5 +20,43 @@ var hotGoods={
 };
 
 function showHotGoods(){
-	
+	var adviseContent='<h1 class="notice_title">'+hotGoods.name+'</h1><ul class="pic_list3">';
+	var turnShow=getRandomNum(9,0,14);
+	for (var i = 0; i < turnShow.length; i++) {
+		var index= turnShow[i];
+		adviseContent+='<li><a href="'+hotGoods.data[index].href+'"><img src="'
+		+hotGoods.srcPath+hotGoods.data[index].src+'" width="80" height="80" ></a><p class="price2">￥'
+		+hotGoods.data[index].price+'元</p></li>';
+	}
+	adviseContent+='</ul>';
+	$('.right_nav').get(0).innerHTML=adviseContent;
 }
+// 返回num个重复的随机数，范围在minNum~maxNum之间
+function getRandomNum(num,minNum,maxNum){
+	var array=new Array();
+	for (var i = 0; i < num; i++) {
+		do{
+			var randomNum=Math.floor(Math.random()*maxNum+minNum);
+			if(!checkNum(array,randomNum)){
+				array.push(randomNum);
+				break;
+			}
+		}while(true);
+	}
+	return array;
+}
+/* 数组中包含num个数时返回true，否则返回false */
+function checkNum(array,num){
+	for (var i = 0; i < array.length; i++) {
+		if(array[i]==num){
+			return true;
+		}
+	}
+	return false;
+}
+
+$(function(){
+	showHotGoods();
+});
+
+window.setInterval("showHotGoods()",2000);
