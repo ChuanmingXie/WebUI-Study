@@ -28,12 +28,16 @@ a.white{color: #fff;text-decoration:none ;}
 a.white:hover{color: #ff0;text-decoration: none;}
 .nav_active{background:#b12121;padding: 5px 0;height: 30px;}
 
-/* 中间部分 */
+/* 中间部分-左侧导航 */
 .padding-top{padding-top: 8px;}
 .table1 tr th{height: 33px;background: #e5e4e1;font-size: 15px;text-indent: 10px;text-align: left;}
 .table1 tr td{height: 33px;background: #fafafa;font-size: 14px;text-indent: 10px;text-align: left;}
 .red_dot{font-size: 25px;margin-right:10px;background: url(../images/red_dot.gif) no-repeat;width: 8px;height: 8px;display: inline-block;}
-/*右侧公告*/
+/* 中间部分-焦点图 */
+.focusBox{width: 120px;top: 490px;left: 50%;margin-left: -60px;list-style: none;position: absolute;}
+.focusBox li{width: 15px;height: 15px;background: gray;margin-left: 10px;border-radius: 10px;float: left;cursor: pointer;}
+.focusBox li.cur{background: #f60;opacity: 0.6;filter: alpha(opacity=60);}
+/*中间部分-右侧公告*/
 .notice_title{font-size:16px;text-indent:20px;text-align:left}
 .gray_dot{color:#ccc;font-size:25px;margin-right:10px;background:url(../images/gray_dot.gif) no-repeat;width:8px;height:8px;display:inline-block}
 .notice_text{display:block;width:230px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:left}
