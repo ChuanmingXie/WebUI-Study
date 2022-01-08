@@ -6,7 +6,8 @@
 		<title>漫步时尚广场-用户注册</title>
 		<link rel="stylesheet" type="text/css" href="css/register.css"/>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
-		
+		<script src="js/initRegister.jQuery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/initRegister.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 解决部分浏览器不支持H5 -->
 		<!-- [if IE]>
 		<script type="text/javascript">
@@ -101,8 +102,120 @@
 			<!-- 菜单导航 end -->
 			
 			<!-- 注册部分 start-->
-			<section>
-				
+			<section class="content_bg">
+				<div class="content_align">
+					<table width="1000" border="0" cellspacing="0" cellpadding="0" >
+						<tr>
+							<td valign="middle">
+								<div class="title_margin">
+									<h2 align="top">用户注册</h2>
+								</div>
+							</td>
+							<td width="420" rowspan="2" valign="middle">
+								<img src="images/register/zhuce_pic.jpg" align="right">
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<div class="hr_margin">
+									<hr width="524" align="top" color="#ccc">
+								</div>
+								<form action="#" method="post" enctype="multipart/form-data">
+									<table class="reg" width="90%"  border="0" cellspacing="0" cellpadding="0" align="left">
+
+										<tr>
+											<td width="80">用户昵称：</td>
+											<td><input type="text" name="userName" id="userName" value="请输入用户名" /></td>
+										</tr>
+										<tr>
+											<td>邮箱地址：</td>
+											<td><input type="text" name="email" id="email" value="请输入邮箱地址" /></td>
+										</tr>
+										<tr>
+											<td>设置密码：</td>
+											<td><input type="password" name="userPwd" id="userPwd" value="" /></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td class="gray12">6-20个字符，由字母、数字和符号的两种以上组合。&nbsp;</td>
+										</tr>
+										<tr>
+											<td>确认密码：</td>
+											<td><input type="password" name="userRePwd" id="userRePwd" value="" /></td>
+										</tr>
+										<tr>
+											<td>真实姓名：</td>
+											<td><input type="text" name="realName" id="realName" value="请输入真实姓名" /></td>
+										</tr>
+										<tr>
+											<td>您的性别：</td>
+											<td>
+												 <input type="radio" name="sex" value="radio" checked="checked"/> 男
+												 <input type="radio" name="sex" value="radio"/> 女
+											</td>
+										</tr>
+										<tr>
+											<td>上传头像：</td>
+											<td><input type="file" name="headerPic" id="headerPic"/></td>
+										</tr>
+										<tr>
+											<td>您的手机：</td>
+											<td><input type="text" name="mobile" id="mobile" value="请输入您的手机号码" /></td>
+										</tr>
+										<tr>
+											<td>单位名称：</td>
+											<td><input type="text" name="company" id="company" value="请输入单位名称" /></td>
+										</tr>
+										<tr>
+											<td>单位地址：</td>
+											<td>
+												<div class="vacation">
+<!-- 													<select name="province" id="province">
+														<option value="">-请选择省份-</option>
+													</select>
+													<select name="city" id="city">
+														<option value="">-请选择城市-</option>
+													</select>
+													<select name="area" id="area">
+														<option value="">-请选择区-</option>
+													</select> -->
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td><input type="text" name="address" id="address" value="请输入街道地址" /></td>
+										</tr>
+										<tr>
+											<td>您的爱好：</td>
+											<td>
+												<input type="checkbox" name="hobby" value="购物" /> 购物
+												<input type="checkbox" name="hobby" value="影视" /> 影视
+												<input type="checkbox" name="hobby" value="餐饮" /> 餐饮
+											</td>
+										</tr>
+										<tr>
+											<td>协议内容：</td>
+											<td>
+												<textarea rows="3" cols="30"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td><input type="submit" name="button" value="提交" /></td>
+										</tr>
+									</table>
+								</form>
+							</td>
+						</tr>
+					</table>
+					<div class="clear"></div>
+					<div class="bottom_pic">
+						<a href="#"><img src="images/register/shop.jpg" class="bian"></a>
+						<a href="#"><img src="images/register/food.jpg" class="bian"></a>
+						<a href="#"><img src="images/register/movie.jpg" class="bian"></a>						
+					</div>
+				</div>
 			</section>
 			<!-- 注册部分 end -->
 			
