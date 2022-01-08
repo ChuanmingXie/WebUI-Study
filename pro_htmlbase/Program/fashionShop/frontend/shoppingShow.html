@@ -5,6 +5,9 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>漫步时代广场-商品列表</title>
 		<link rel="stylesheet" type="text/css" href="css/show.css" />
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/commonHotAdvise.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/commonShopCart.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!-- 顶部区域 login|register  start -->
@@ -18,34 +21,21 @@
 				<div class="floatr">
 					客户服务<img src="images/arrow.gif">&nbsp;网站导航<img src="images/arrow.gif">&nbsp;
 					<div class="xl">
-						<div class="droparrow"><span class="shopcart"></span>我的购物车<span class="orange">0</span>件<img src="images/arrow.gif"></div>
-						<div class="dropdown">
+						<div class="droparrow" onclick="showCar()"><span class="shopcart"></span>我的购物车<span class="orange">0</span>件<img src="images/arrow.gif"></div>
+						<div class="dropdown" id="dropdown" style="display: none;" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<!-- 
 							<ul class="shop_pic">
-								<li>
-									<a href="#"><img src="images/shopshow/s1.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
-								<li>
-									<a href="#"><img src="images/shopshow/s2.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
-								<li>
-									<a href="#"><img src="images/shopshow/s3.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
-								<li>
-									<a href="#"><img src="images/shopshow/s6.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
-								<li>
-									<a href="#"><img src="images/shopshow/s7.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
-								<li>
-									<a href="#"><img src="images/shopshow/s8.jpg"></a>
-									<p>1件<a href="#"><span class="orange floatr">删除</span></a></p>
-								</li>
+								<li><a href="#"><img src="images/shopshow/s1.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s2.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s3.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s4.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s5.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s6.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s7.jpg" ></a>	<p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s8.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
+								<li><a href="#"><img src="images/shopshow/s9.jpg" ></a><p>1件<a href="#"><span class="orange floatr">删除</span></a></p></li>
 							</ul>
+							 -->
 						</div>
 					</div>
 				</div>
@@ -180,45 +170,20 @@
 
 			<!-- 左侧热门区  Start-->
 			<div class="right_nav">
+				<!-- 
 				<h1 class="notice_title">热门推荐</h1>
 				<ul class="pic_list3">
-					<li>
-						<a href="#"><img src="images/shopshow/s1.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s2.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s3.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s4.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s5.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s6.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s7.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s8.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
-					<li>
-						<a href="#"><img src="images/shopshow/s9.jpg" ></a>
-						<p class="price2">￥56.00</p>
-					</li>
+					<li><a href="#"><img src="images/shopshow/s1.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s2.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s3.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s4.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s5.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s6.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s7.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s8.jpg" ></a><p class="price2">￥56.00</p></li>
+					<li><a href="#"><img src="images/shopshow/s9.jpg" ></a><p class="price2">￥56.00</p></li>
 				</ul>
+			 -->
 			</div>
 			<!-- 左侧热门区 end -->
 		</div>
