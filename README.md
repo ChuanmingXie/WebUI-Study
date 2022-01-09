@@ -5,15 +5,15 @@ pro_Bootstrap 记录了Bootstrap框架的相关知识点示例代码，
 
 	参阅教材为:《Bootstrap Web 项目与开发实战》-清华大学出版社
 
-pro_htmlbase 记录了html,CSS,JS,H5,JQuery相关知识点的示例代码,
+pro_htmlbase 记录了html,CSS,JS,H5,jQuery相关知识点的示例代码,
 
-	主要参阅教材为《Web前端设计与开发-HTML+CSS+JavaScript+HTML5+Jquery》-清华大学出版社
+	主要参阅教材为《Web前端设计与开发-HTML+CSS+JavaScript+HTML5+jQuery》-清华大学出版社
 
-pro_jQuerybase 记录了Jquery框架的相关知识点的示例代码,
+pro_jQuerybase 记录了jQuery框架的相关知识点的示例代码,
 
 	参阅教材为《锋利的jQuery-电子版》
 
-pro_Vuebase 应以记录vue相关知识点的示例代码，
+pro_Vuebase 应以记录Vue.js相关知识点的示例代码，
 	
 	参阅教材为《Vue.js实战-电子版》-尤雨溪著
 
