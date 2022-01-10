@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3-1指令与事件-Demo-v-on</title>
+	</head>
+	<body>
+		<h2>3-1指令与事件-Demo-v-on</h2>
+		<div id="app1">
+			<p v-if="show">这是一段文本</p>
+			<input type="button" v-on:click="handleClose" value="点击隐藏" />
+		</div>
+
+		<h2>3-1指令与事件-v-on-内联语句</h2>
+		<div id="app2">
+			<p v-if="show">这是一段文本</p>
+			<input type="button" v-on:click="show=false" value="点击隐藏" />
+		</div>
+
+		<h2>3-1指令与事件-v-on-methods中的方法定义与引用</h2>
+		<div id="app3">
+			<p v-if="show">这是一段文本</p>
+			<input type="button" v-on:click="handleClose" value="点击隐藏" />
+		</div>
+
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app3 = new Vue({
+				el: '#app3',
+				data: {
+					show: true
+				},
+				methods: {
+					handleClose: function() {
+						this.close();
+					},
+					close: function() {
+						this.show = fasle;
+					}
+				}
+			});
+			
+			var app2 = new Vue({
+				el: '#app2',
+				data: {
+					show: true
+				}
+			});
+
+			var app1 = new Vue({
+				el: '#app1',
+				data: {
+					show: true
+				},
+				methods: {
+					handleClose: function() {
+						this.show = false;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
