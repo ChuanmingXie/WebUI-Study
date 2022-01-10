@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3-1指令与事件-Demo-v-bind</title>
+		<style type="text/css">
+			img{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>语法糖</h2>
+		<div id="app1">
+			<a v-bind:href="url">链接</a>
+			<img v-bind:src="imgUrl" >
+			<!-- 缩写为 -->
+			<a :href="url">链接</a>
+			<img :src="imgUrl" >
+		</div>
+		
+		<div id="app2">
+			<p v-if="show">这是一段文本</p>
+			<button type="button" v-on:click="handleClose">点击隐藏</button>
+			<!-- 缩写为 -->
+			<button type="button" @click="handleClose">点击隐藏</button>
+		</div>
+		
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app1=new Vue({
+				el:'#app1',
+				data:{
+					url:'https://github.com/ChuanmingXie',
+					imgUrl:'https://scpic.chinaz.net/files/pic/pic9/202009/apic27858.jpg'
+				}
+			});
+			var app2 = new Vue({
+				el: '#app2',
+				data: {
+					show: true
+				},
+				methods: {
+					handleClose: function() {
+						this.show = false;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
