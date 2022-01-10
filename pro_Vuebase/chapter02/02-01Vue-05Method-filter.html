@@ -12,9 +12,7 @@
 	<script type="text/javascript">
 		var app = new Vue({
 			el: '#app',
-			data: {
-				date: new Date()
-			},
+			data: { date: new Date() },
 			filters: {
 				formatDate: function(value) {
 					var date = new Date(value);
@@ -39,7 +37,6 @@
 				}
 			}
 		});
-
 		var padDate = function(value) {
 			return value < 10 ? '0' + value : value;
 		};
