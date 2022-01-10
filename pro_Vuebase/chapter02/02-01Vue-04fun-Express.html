@@ -7,16 +7,17 @@
 	<body>
 		<h2>2-1Vue实例与绑定-04运算符属性与表达式</h2>
 		
-		<div id="app1">{{book}}</div>
-		<div id="app2">{{date}}</div>
-		<div id="app3"><span v-html="link"></span></div>
-		<div id="app4"><span v-pre>{{这里的内容不会编译，不会被插值运算符执行}}</span></div>
-		<div id="app5">
+		<div id="app1">{{book}}</div><br>
+		<div id="app2">
 			{{number/10}} <br>
 			{{isOK?'确认':'取消'}}<br>
 			{{text.split(',').reverse().join(',')}}<br>
-		</div>
+		</div><br>
+		<div id="app3"><span v-html="link"></span></div> <br>
+		<div id="app4"><span v-pre>{{这里的内容不会编译，不会被插值运算符执行}}</span></div>
 		
+		<div id="app5">{{date}}</div>
+				
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			/* 插值表达式应用 */
@@ -24,10 +25,23 @@
 				el:'#app1',
 				data:{book:'《Vue.js实战》'}
 			});
-			
-			/* 显示未格式化的时间信息 */
+
+			/* 插值运算符，执行表达式 */
 			var app2=new Vue({
 				el:'#app2',
+				data:{number:100,isOK:false,text:'123,456'}
+			});
+			
+			/* 结合 v-html指令， 可以将数据解释为纯文本 */
+			var app3=new Vue({
+				el:'#app3',				
+				data:{link:'\<a href="#"\>这是一个链接\</a\>'}
+			});			
+			
+			
+			/* 显示未格式化的时间信息 */
+			var app5=new Vue({
+				el:'#app5',
 				data:{date:new Date()},
 				mounted:function(){
 					// 声明一个变量指向Vue实例this,保证作用域一致
@@ -44,18 +58,6 @@
 					}
 				}
 			});
-			
-			/* 结合 v-html指令， 可以将数据解释为纯文本 */
-			var app3=new Vue({
-				el:'#app3',				
-				data:{link:'\<a href="#"\>这是一个链接\</a\>'}
-			});
-			
-			/* 插值运算符，执行表达式 */
-			var app5=new Vue({
-				el:'#app5',
-				data:{number:100,isOK:false,text:'123,456'}
-			})
 		</script>
 	</body>
 </html>
