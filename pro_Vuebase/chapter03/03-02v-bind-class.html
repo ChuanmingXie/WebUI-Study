@@ -5,51 +5,51 @@
 		<title>3-2绑定class的处理方式-对象语法|数组语法|组件方式</title>
 	</head>
 	<body>
-		<h2>1.对象语法</h2>
+		<h2>1.1.对象语法</h2>
 		<h3>对象语法</h3>
 		<div id="app">
 			<div :class="{'active':IsActive}">
 				渲染后的结果&lt;div class="active"&gt;&lt;/div&gt;
 			</div>
 		</div>
-		<h3>传入多个对象</h3>
+		<h3>1.2.传入多个对象</h3>
 		<div id="app2">
 			<div class="static" :class="{'active':isActive,'error':isError}">
 				渲染后的结果&lt;div class="stacic active"&gt;&lt;/div&gt;
 			</div>
 		</div>
-		<h3>对象的表达式较复杂，绑定一个计算属性</h3>
+		<h3>1.3.对象的表达式较复杂，绑定一个计算属性</h3>
 		<div id='app3'>
 			<div :class="classname">
 				渲染后的结果&lt;div class="active"&gt;&lt;/div&gt;
 			</div>
 		</div>
 
-		<h2>2.数组语法</h2>
+		<h2>2.1.数组语法</h2>
 		<h3>数组语法</h3>
 		<div id='app4'>
 			<div :class="[activeCls,errorCls]">
 				渲染后的结果&lt;div class="active error"&gt;&lt;/div&gt;
 			</div>
 		</div>
-		<h3>数组语法中嵌入三元表达式</h3>
+		<h3>2.2.数组语法中嵌入三元表达式</h3>
 		<div id='app5'>
 			<div :class="[isActive?activeCls:'',errorCls]">
 				渲染后的结果&lt;div class="active error"&gt;&lt;/div&gt;
 			</div>
 		</div>
-		<h3>在数组中嵌入对象语法</h3>
+		<h3>2.3.在数组中嵌入对象语法</h3>
 		<div id='app6'>
 			<div :class="[{'active':isActive},errorCls]"></div>
 		</div>
-		<h3>数组表达式如果也比较复杂,可以使用data,coumputed,methods属性</h3>
+		<h3>2.4.数组表达式如果也比较复杂,可以使用data,coumputed,methods属性</h3>
 		<div id='app7'>
 			<button :class="classArry">
 				渲染后的结果为&lt;div class='btn btn-lagrge btn-disabled'&gt;&lt;/div&gt;
 			</button>
 		</div>
 		
-		<h2>3.组件方式</h2>
+		<h2>3.1.组件方式</h2>
 		<!-- 如果直接在组件上使用了class或者:class,样式会直接应用到这个组件的根元素上, -->
 		<!-- 但是这种仅适用于自定义组件的最外层是一个根元素,否则无效.常用的做法是使用组件的props -->
 		<div id='app8'>
