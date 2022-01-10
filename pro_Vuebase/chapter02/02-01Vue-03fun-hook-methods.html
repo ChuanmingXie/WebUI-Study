@@ -5,22 +5,32 @@
 		<title>2-1Vue实例与绑定-03钩子函数-created|mounted|beforeDestory</title>
 	</head>
 	<body>
-		<h2>2-1Vue实例与绑定-钩子函数-created|mounted|beforeDestory</h2>
+		
 		<div id="app">
-			我是app，用于测试钩子函数的div:请查阅控制台
+			<h2>2-1Vue实例与绑定-hook钩子函数-created|mounted|beforeDestory</h2>
+			我是app，用于测试钩子函数的div:请查阅控制台 <br>
+			<h2>2-1Vue实例与绑定-方法属性-methods</h2>
+			<p v-if="show">这是一段文本</p>
+			<button type="button" v-on:click="handleClose">点击隐藏</button>
 		</div>
 		
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var app=new Vue({
 				el:'#app',
-				data:{a:2},
+				data:{a:2,show:true},
+
+				methods:{
+					handleClose:function(){
+						this.show=false;
+					}
+				},
 				created:function(){
 					console.log(this.a);
 				},
 				mounted:function(){
 					console.log(this.$el);
-				}
+				},
 			})
 		</script>
 	</body>
