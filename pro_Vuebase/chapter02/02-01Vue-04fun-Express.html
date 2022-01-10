@@ -11,7 +11,7 @@
 		<div id="app2">{{number/10}} {{isOK?'确认':'取消'}} {{text.split(',').reverse().join(',')}}</div><br>
 		<div id="app3"><span v-html="link"></span></div> <br>
 		<div id="app4"><span v-pre>{{这里的内容不会编译，不会被插值运算符执行}}</span></div><br>
-		<div id="app5">{{date}}</div>				
+		<div id="app5">{{date}}</div>
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			/* 插值表达式应用 */
@@ -52,5 +52,12 @@
 				}
 			});
 		</script>
+		
+		<!--
+		<div id="app">{{message|filerA|filterB}}</div>
+		<div id="app">{{message|filerA('arg1','arg2')}}</div>
+		这里的arg1和arg2是传递个过滤器的第二个和第三个参数，因为第一个参数是数据本身value
+		过滤器应当处理一些简单的格式化或过滤工作,要实现更为复杂的数据变换,应该使用计算属性 
+		-->
 	</body>
 </html>
