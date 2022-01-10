@@ -8,16 +8,10 @@
 		<h2>2-1Vue实例与绑定-04运算符属性与表达式</h2>
 		
 		<div id="app1">{{book}}</div><br>
-		<div id="app2">
-			{{number/10}} <br>
-			{{isOK?'确认':'取消'}}<br>
-			{{text.split(',').reverse().join(',')}}<br>
-		</div><br>
+		<div id="app2">{{number/10}} {{isOK?'确认':'取消'}} {{text.split(',').reverse().join(',')}}</div><br>
 		<div id="app3"><span v-html="link"></span></div> <br>
-		<div id="app4"><span v-pre>{{这里的内容不会编译，不会被插值运算符执行}}</span></div>
-		
-		<div id="app5">{{date}}</div>
-				
+		<div id="app4"><span v-pre>{{这里的内容不会编译，不会被插值运算符执行}}</span></div><br>
+		<div id="app5">{{date}}</div>				
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			/* 插值表达式应用 */
@@ -36,8 +30,7 @@
 			var app3=new Vue({
 				el:'#app3',				
 				data:{link:'\<a href="#"\>这是一个链接\</a\>'}
-			});			
-			
+			});
 			
 			/* 显示未格式化的时间信息 */
 			var app5=new Vue({
