@@ -1,4 +1,21 @@
-第三章 Vue简单应用
-	简单示例举例
-	绑定class与style
-	Vue处理表单
+第三章：内置指令
+
+v-html:
+v-pre:
+
+v-bind:
+v-on:
+
+v-cloak:
+v-once:
+
+v-if/v-else-if/v-else:
+v-show:
+
+v-for:
+
+绑定class与style
+
+简单应用实战
+
+Vue处理表单
