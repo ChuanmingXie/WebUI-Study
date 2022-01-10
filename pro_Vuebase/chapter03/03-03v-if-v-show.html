@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3-3条件渲染指令-v-if|v-else-if|v-else|show</title>
+	</head>
+	<body>
+		<h2>1.1.条件渲染指令-v-if|v-else-if|v-else</h2>
+		<div id="app1">
+			<p v-if="status===1">当status为1时显示该行</p>
+			<p v-else-if="status===2">当status为2时显示该行</p>
+			<p v-else>否则显示该行</p>
+		</div>
+		
+		<h2>1.2.条件渲染指令-一次判断多个元素</h2>
+		<div id="app2">
+			<template v-if="status===1">
+				<p>这是一段文本</p>
+				<p>这是一段文本</p>
+				<p>这是一段文本</p>
+			</template>
+		</div>
+		
+		<h2>1.3.Vue渲染元素的特点-尽可能复用已有元素</h2>
+		<div id="app3">
+			<template v-if="type==='name'">
+				<label>用户名：</label>
+				<input type="text" value="" placeholder="请输入用户名"/>
+			</template>
+			<template v-else>
+				<label>邮　箱：</label>
+				<input type="text" value="" placeholder="输入邮箱"/>
+			</template>
+			<input type="button" @click="handleToggleClick" value="切换输入类型" />
+		</div>
+		
+		<h2>1.4.如果不希望复用-通过key属性,自行决定是否复用元素</h2>
+		<div id="app4">
+			<template v-if="type==='name'">
+				<label>用户名：</label>
+				<input type="text" value="" key="name-input" placeholder="请输入用户名"/>
+			</template>
+			<template v-else>
+				<label>邮　箱：</label>
+				<input type="text" value="" key="mail-input" placeholder="输入邮箱"/>
+			</template>
+			<input type="button" @click="handleToggleClick" value="切换输入类型" />
+		</div>
+		
+		<h2>2.1.v-show</h2>
+		<div id="app5">
+			<p v-show="status===1">当status为1时显示改行</p>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app5=new Vue({
+				el:'#app5',
+				data:{status:2}
+			})
+			var app4=new Vue({
+				el:'#app4',
+				data:{type:'name'},
+				methods:{
+					handleToggleClick:function(){
+						this.type=this.type==='name'?'mail':'name';
+					}
+				}
+			});
+			var app3=new Vue({
+				el:'#app3',
+				data:{type:'name'},
+				methods:{
+					handleToggleClick:function(){
+						this.type=this.type==='name'?'mail':'name';
+					}
+				}
+			});
+			var app2 = new Vue({
+				el: '#app2',
+				data: { status: 1 }
+			});
+			var app1 = new Vue({
+				el: '#app1',
+				data: { status: 1 }
+			});
+		</script>
+	</body>
+</html>
