@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2-1Vue实例与绑定-钩子函数-created|mounted</title>
+	</head>
+	<body>
+		<h2>2-1Vue实例与绑定-钩子函数-created|mounted</h2>
+		<div id="app">
+			我是app，用于测试钩子函数的div:请查阅控制台
+		</div>
+		
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{a:2},
+				created:function(){
+					console.log(this.a);
+				},
+				mounted:function(){
+					console.log(this.$el);
+				}
+			})
+		</script>
+	</body>
+</html>
