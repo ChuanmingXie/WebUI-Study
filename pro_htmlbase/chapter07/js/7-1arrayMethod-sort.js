@@ -76,7 +76,7 @@ const collator = new Intl.Collator('en'); //en:英文；cn:中文
 function SortArray(x, y) {
 	return collator.compare(x.name, y.name);	//有效的排序
 }
-// var objectSort4 = books.sort(SortArray);
-// console.log(objectSort4);
+var objectSort4 = books.sort(SortArray);
+console.log(objectSort4);
 
 
