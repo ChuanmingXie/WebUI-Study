@@ -81,7 +81,6 @@ var app2 = new Vue({
 		isError: false
 	}
 });
-
 var app = new Vue({
 	el: '#app',
 	data: {
