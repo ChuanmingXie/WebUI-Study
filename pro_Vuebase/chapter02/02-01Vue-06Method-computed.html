@@ -5,8 +5,9 @@
 		<title>2-1Vue实例与绑定-05方法-计算属性computed</title>
 	</head>
 	<body>
-		<h2>1.计算属性简介</h2>
-		<div id="app1">{{text.split(',').reverse().join(',')}}</div>		
+		<h2>1.计算属性简介</h2>		
+		<div id="app1">{{text.split(',').reverse().join(',')}}</div>
+		<div id="app">{{reversedText}}</div>
 		
 		<h2>2.计算属性的使用</h2>
 		<div id="app2">总价:{{prices}}</div>
@@ -19,9 +20,10 @@
 		<h2>计算属性的setter</h2>
 		<div id="app5">姓名：{{fullName}}</div>
 		<input type="button" id="btnSetter" v-on:click="handleSetter" value="请测试名称 John Doe" />
-		
+
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">		
+		<script type="text/javascript">
+
 			/* 计算属性的setter */
 			var app5=new Vue({
 				el:'#app5',
@@ -103,6 +105,16 @@
 			var app1=new Vue({
 				el:'#app1',
 				data:{text:'123,456'}
+			});
+			//计算属性处理数据
+			var app=new Vue({
+				el:'#app',
+				data:{text:'123,456'},
+				computed:{
+					reversedText:function(){
+						return this.text.split(',').reverse().join(',');
+					} 
+				}
 			});
 		</script>
 	</body>
