@@ -182,7 +182,7 @@ function DuplicateArray(){
 	const arr = [1, 2, 2, 'abc', 'abc', true, true, false, false, undefined, undefined, NaN, NaN]
 	console.log(arr.join(','));
 	// 1.利用Set()+Array.from()
-	console.log(Array.from(new set(arr)))
+	console.log(Array.from(new Set(arr)));
 	
 	// 2.利用两层循环+数组的splice方法
 	console.log(removeDuplicateSplice(arr));
@@ -203,6 +203,7 @@ function DuplicateArray(){
 	console.log(removeDuplicata(arr));
 }
 
+// 2.利用两层循环+数组的splice方法
 /* 通过两层循环对数组元素进行逐一比较，然后通过splice方法来删除重复的元素。
 此方法对NaN是无法进行去重的，因为进行比较时NaN !== NaN。 */
 function removeDuplicateSplice(arr){
@@ -270,6 +271,7 @@ function removeDuplicateMap(arr){
 	})
 	return newArr;
 }
+
 
 // 7.其实现思想和Map()是差不多的，主要是利用了对象的属性名不可重复这一特性。
 function removeDuplicataObj(arr){
