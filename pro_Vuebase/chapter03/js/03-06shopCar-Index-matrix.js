@@ -73,8 +73,7 @@ var app=new Vue({
 			// 	var indexdel= this.checkItem.findIndex(item=>item===id);
 			// 	this.checkItem.splice(indexdel,1);
 			// }
-		},
-		
+		},		
 		handleSelectAll:function(){
 			// this.checkItem.splice(0,this.checkItem.length);
 			// var that=this;
