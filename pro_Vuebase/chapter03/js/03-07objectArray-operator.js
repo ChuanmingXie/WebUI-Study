@@ -159,6 +159,7 @@ function pushApply(){
 	obj.addElem({});
 	console.log(obj.length);
 }
+
 /* 清空数组的三种方式 */
 function emptyArray(){
 	var a=[];	var b=[];	var c=[];
@@ -275,7 +276,6 @@ function removeDuplicateMap(arr){
 	})
 	return newArr;
 }
-
 
 // 7.其实现思想和Map()是差不多的，主要是利用了对象的属性名不可重复这一特性。
 function removeDuplicataObj(arr){
