@@ -28,6 +28,7 @@ var app=new Vue({
 	}
 });
 
+// v-on监听事件传递元素自身作为参数进行节点信息的获取操作
 var app1=new Vue({
 	el:'#app1',
 	data:{list:[]},
@@ -49,6 +50,8 @@ var app1=new Vue({
 	}
 })
 
+// 头部、尾部、任意位置 添加、删除和修改数组元素和元素值
+// unshift(arg1,arg2)、shift()、push(arg1,arg2)、pop()、splice(index,howmany,item)
 var app2=new Vue({
 	el:'#app2',
 	data:{
@@ -156,7 +159,7 @@ function pushApply(){
 	obj.addElem({});
 	console.log(obj.length);
 }
-
+/* 清空数组的三种方式 */
 function emptyArray(){
 	var a=[];	var b=[];	var c=[];
 	for (var i = 0; i < 100000000; i++) {
@@ -178,6 +181,7 @@ function emptyArray(){
 	console.timeEnd('赋值[]');
 }
 
+// 对数组元素进行去重操作
 function DuplicateArray(){
 	const arr = [1, 2, 2, 'abc', 'abc', true, true, false, false, undefined, undefined, NaN, NaN]
 	console.log(arr.join(','));
