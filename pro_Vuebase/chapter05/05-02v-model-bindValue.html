@@ -2,8 +2,44 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>5-01v-model-绑定值</title>
+		<title>5-01v-model-绑定值-v-bind</title>
 	</head>
 	<body>
+		<h2>5-01v-model-绑定值-v-bind-绑定动态数据</h2>
+		<div id="app">
+			<h3>1.单选按钮</h3>
+			<input type="radio" v-model="picked" :value="value" />
+			<label>单选按钮</label>
+			<p>{{picked}}</p>
+			<p>{{value}}</p>
+			
+			<h3>2.复选框</h3>
+			<input type="checkbox" v-model="checkToggle" 
+				   :true-value="value1" :false-value='value2' />
+			<label>复选框</label>
+			<p>{{checkToggle}}</p>
+			<p>{{value1}}</p>
+			<p>{{value2}}</p>
+			
+			<h3>3.选择列表</h3>
+			<select v-model="selected">
+				<option :value="{number:123}">123</option>
+			</select>
+			{{selected.number}}
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					picked:false,
+					value:123,
+					checkToggle:false,
+					value1:'a',
+					value2:'b',
+					selected:'',					
+				}
+			})
+		</script>
 	</body>
 </html>
