@@ -12,7 +12,9 @@
 			<h4>1.1.响应式显示文本框、域的内容</h4>
 			<input type="text" v-model="message" placeholder="输入...." />
 			<p>输入的内容为:{{message}}</p>
-			<textarea rows="" cols="" v-model="txtContent" placeholder="内容...."></textarea>
+			<textarea rows="" cols="" v-model="txtContent" placeholder="内容....">
+				123124
+			</textarea>
 			<p style="white-space: pre;">输入的内容为:{{txtContent}}</p>
 			
 			<h4>1.2.实时更新输入框使用@input</h4>
@@ -23,9 +25,12 @@
 			<h4>2.1.一个单选框</h4>
 			<input type="radio" :checked="picked"/><label>单选按钮</label>
 			<h4>2.2.一组单选框-设置value</h4>
-			<input type="radio" v-model="pickedG" value="html" id="html" /><label for="html">html</label><br>
-			<input type="radio" v-model="pickedG" value="js" id="js"/><label for="js">JavaScript</label><br>
-			<input type="radio" v-model="pickedG" value="css" id="css"/><label for="css">css</label><br>
+			<input type="radio" v-model="pickedG" value="html" id="html" />
+			<label for="html">html</label><br>
+			<input type="radio" v-model="pickedG" value="js" id="js"/>
+			<label for="js">JavaScript</label><br>
+			<input type="radio" v-model="pickedG" value="css" id="css"/>
+			<label for="css">css</label><br>
 			<p>选中{{pickedG}}</p>
 			
 			<h3>3.复选框</h3>
@@ -58,7 +63,9 @@
 			<p>选择的项是：{{selectedM}}</p>
 			<h4>4.3.列表渲染指令设置下拉项</h4>
 			<select v-model="selectedvfor">
-				<option v-for="option in options" :value="option.value">{{option.text}}</option>
+				<option v-for="option in options" :value="option.value">
+					{{option.text}}
+				</option>
 			</select>
 			<p>选择的项是：{{selectedvfor}}</p>
 		</div>
