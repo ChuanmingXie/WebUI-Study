@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-4-4作用域插槽</title>
+	</head>
+	<body>
+		<h2>7-4-4作用域插槽</h2>
+		<div id="app">
+			<child-component>
+				<template scope="props">
+					<p>来自父组件的内容</p>
+					<p>{{props.msg}}</p>
+				</template>
+			</child-component>
+		</div>
+		<h2>7-4-4作用域插槽-列表组件</h2>
+		<div id="app1">
+			<my-list :books='books'>
+				<template slot="book" scope="props">	<!-- 具名slot -->
+					<li>{{props.bookName}}</li>
+				</template>
+			</my-list>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			Vue.component('my-list',{
+				props:{
+					books:{
+						type:Array,
+						default:function(){return [];}
+					}
+				},
+				template:'\
+				<ul>\
+					<slot name="book" v-for="book in books" :book-name="book.name">\
+					</slot>\
+				</ul>'
+			})
+			var app1=new Vue({
+				el:'#app1',
+				data:{
+					books:[
+						{name:'《Vue.js实战》'},
+						{name:'《C#语言精粹》'},
+						{name:'《JavaScript基础》'}
+					]
+				}
+			})
+		
+			Vue.component('child-component',{
+				template:'\
+				<div class="container">\
+					<slot msg="来自组件的内容"></slot>\
+				</div>'
+			});
+			var app=new Vue({
+				el:'#app'
+			})
+		</script>
+	</body>
+</html>
