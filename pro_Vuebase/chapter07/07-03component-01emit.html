@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-3-1自定义事件</title>
+	</head>
+	<body>
+		<h2>1. 父级组件v-on监听，子组件$emit()提交</h2>
+		<div id="app">
+			<p>总数：{{total}}</p>
+			<my-component @increase="handleGetTotal" @reduce="handleGetTotal">
+			</my-component>
+			<!-- <my-component @click.native="handleClick"></my-component> -->
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			Vue.component('my-component',{
+				template:'\
+				<div>\
+					<button @click="handleIncrease">+1</button>\
+					<button @click="handleReduce">-1</button>\
+				</div>',
+				data:function(){
+					return {counter:0}
+				},
+				methods:{
+					handleIncrease:function(){
+						this.counter++;
+						this.$emit('increase',this.counter);
+					},
+					handleReduce:function(){
+						this.counter--;
+						this.$emit('reduce',this.counter);
+					}
+				}
+			})
+			var app=new Vue({
+				el:'#app',
+				data:{total:0},
+				methods:{
+					handleGetTotal:function(total){
+						this.total=total;
+					},
+					handleClick:function(total){
+						alert('我已经变成'+total);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
