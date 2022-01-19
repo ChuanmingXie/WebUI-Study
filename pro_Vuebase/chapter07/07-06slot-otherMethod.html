@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-6其他slot的用法-手动挂载</title>
+	</head>
+	<body>
+		<h2>1. $nextTick</h2>
+		<div id="app">
+			<div id="div" v-if="showDiv">这是一段文本</div>
+			<button type="button" @click="getText">获取div的内容</button>
+		</div>
+		
+		<h2>2. x-template</h2>
+		<div id="app1">
+			<my-component></my-component>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/x-template" id="my-component">
+			<div>这里是组件的template内容</div>
+		</script>
+		<script type="text/javascript">
+			/* 2. x-template */
+			Vue.component('my-component',{
+				template:'#my-component'
+			});
+			var app1=new Vue({
+				el:'#app1'
+			})
+			/* 1. $nextTick */
+			var app=new Vue({
+				el:'#app',
+				data:{showDiv:false},
+				methods:{
+					getText:function(){
+						this.showDiv=true;
+						this.$nextTick(function(){
+							var text=document.getElementById('div').innerHTML;
+							console.log(text);
+						})
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
