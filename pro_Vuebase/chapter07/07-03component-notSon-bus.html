@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-3-3非父子组件通信-中央事件总线</title>
+	</head>
+	<body>
+		<h2>7-3-3非父子组件通信-中央事件总线</h2>
+		<div id="app">
+			{{message}}
+			<component-a></component-a>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var bus=new Vue();
+			Vue.component('component-a',{
+				template:'<button @click="handleEvent">传递事件</button>',
+				methods:{
+					handleEvent:function(){
+						bus.$emit('on-message','来自组件component-a的内容')
+					}
+				}
+			})
+			var app=new Vue({
+				el:'#app',
+				data:{message:''},
+				mounted:function(){
+					var _this=this;
+					// 在实例化初始时，监听来自bus实例的事件
+					bus.$on('on-message',function(msg){
+						_this.message=msg;
+					})
+				}
+			})
+		</script>
+	</body>
+</html>
