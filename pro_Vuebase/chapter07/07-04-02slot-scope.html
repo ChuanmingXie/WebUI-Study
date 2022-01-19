@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-4-2slot的作用域</title>
+	</head>
+	<body>
+		<h2>1. 数据绑定在父组件上的作用域</h2>
+		<div id="app">
+			<child-component v-show="showChild"></child-component>
+		</div>
+		
+		<h2>2. 数据绑定在子组件上的作用域</h2>
+		<div id="app1">
+			<child-component></child-component>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* 2. 数据绑定在子组件上的作用域 */
+			Vue.component('child-component',{
+				template:'<div v-show="showChild"></div>',
+				data:function(){
+					return {showChild:true}
+				}
+			})
+			var app=new Vue({
+				el:'#app1'
+			})
+			/* 1. 数据绑定在父组件上的作用域 */
+			Vue.component('child-component',{
+				template:'<div>子组件</div>'
+			});
+			var app=new Vue({
+				el:'#app',
+				data:{showChild:true}
+			})
+		</script>
+	</body>
+</html>
