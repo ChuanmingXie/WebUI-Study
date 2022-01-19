@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-3-2使用v-model进行组件数据的双向绑定</title>
+	</head>
+	<body>
+		<h2>7-3-2使用v-model进行组件数据的双向绑定</h2>
+		<div id="app">
+			<p>总数：{{total}}</p>
+			<my-component v-model="total"></my-component>
+			<button @click="handleReduce">-1</button>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			Vue.component('my-component',{
+				props:['value'],
+				template:'<input :value="value" @input="updateValue" />',
+				methods:{
+					updateValue:function(e){
+						this.$emit('input',e.target.value);
+					}
+				}
+			});
+			var app=new Vue({
+				el:'#app',
+				data:{total:0},
+				methods:{
+					handleReduce:function(){
+						this.total--;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
