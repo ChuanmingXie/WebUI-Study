@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-2-2props传递数据-对象数据格式验证</title>
+	</head>
+	<body>
+		<h2>props传递数据-对象数据格式验证</h2>
+		<div id="app1">
+			<my-component :propB="6" :propC="false" :warning-text="['提示信息']"></my-component>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* 7-2-2props数据类型-对象数据格式验证 */
+			Vue.component('my-component',{
+				props:{
+					//限制： 如果是一个数组或对象，则使用函数来返回
+					warningText:{
+						type:Array,
+						default:function(){return [];}
+					},
+					// 限制必须传入一个数字
+					propA:Number,
+					// 限制必须传日字符串或数字
+					propB:[String,Number],
+					// 限制必须为布尔值，默认值为true
+					propC:{type:Boolean,default:true},
+					// 限制必须传入一个必传项，数字
+					propD:{type:Number,required:true},
+					// 自定义一个验证函数
+					propF:{validator:function(value){
+						return value>10;
+					}},
+				},
+				template:'<div>{{warningText}}-{{propC}}-{{propB}}</div>'
+			})
+			var app1=new Vue({
+				el:'#app1'
+			})
+		</script>
+	</body>
+</html>
