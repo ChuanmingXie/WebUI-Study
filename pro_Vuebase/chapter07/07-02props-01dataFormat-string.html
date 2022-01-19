@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-2-1props传递数据-字符串格式</title>
+	</head>
+	<body>
+		<h2>1.props属性内值的命名特点</h2>
+		<div id="app">
+			<my-component message="来自父组件的数据"></my-component>
+		</div>
+		<div id="app1">
+			<my-component warning-text="提示信息"></my-component>
+		</div>
+		
+		<h2>2。使用v-bind来动态绑定父级的props值</h2>
+		<div id="app2">
+			<input type="text" v-model="parentMessage"/>
+			<my-component :message="parentMessage"></my-component>
+		</div>
+		
+		<h2>3。测试v-bind添加与否对判定数据类型的效果</h2>
+		<div id="app3">
+			<my-component message="[1,2,3,4]"></my-component>
+			<my-component :message="[1,2,3,4]"></my-component>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* 3.测试v-bind添加与否的数据长度 */
+			Vue.component('my-component',{
+				props:['message'],
+				template:'<div>{{message}}-长度为：{{message.length}}</div>'
+			})
+			var app3=new Vue({
+				el:'#app3'
+			})
+			/* 2.使用v-bind来动态绑定父级的props值 */
+			Vue.component('my-component',{
+				props:['message'],
+				template:'<div>{{message}}</div>'
+			});
+			var app2=new Vue({
+				el:'#app2',
+				data:{
+					parentMessage:''
+				}
+			})
+			
+			/* 1.props属性内值的命名特点 */
+			Vue.component('my-component',{
+				props:['warningText'],
+				template:'<div>{{warningText}}</div>'
+			})
+			var app1=new Vue({
+				el:'#app1'
+			})
+		
+			Vue.component('my-component',{
+				props:['message'],
+				template:'<div>{{message}}</div>'
+			})
+			var app=new Vue({
+				el:'#app'
+			})
+		</script>
+	</body>
+</html>
