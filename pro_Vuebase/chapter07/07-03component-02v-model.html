@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-3-2使用v-model进行组件间通信</title>
+	</head>
+	<body>
+		<h2>7-3-2使用v-model进行组件通信</h2>
+		<div id="app">
+			<p>总数：{{total}}</p>
+			<my-component v-model="total"></my-component>
+		</div>
+		<h2>7-3-1自定义事件进行通信比较</h2>
+		<div id="app1">
+			<p>总数：{{total}}</p>
+			<my-component @input="handleGetTotal"></my-component>
+		</div>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			Vue.component('my-component',{
+				template:'\
+				<div>\
+					<button @click="handleClick">+1</button>\
+					<button @click="handleClickReduce">-1</button>\
+				</div>',
+				data:function(){
+					return {counter:0}
+				},
+				methods:{
+					handleClick:function(){
+						this.counter++;
+						this.$emit('input',this.counter);
+					},
+					handleClickReduce:function(){
+						this.counter--;
+						this.$emit('input',this.counter);
+					}
+				}
+			});
+			var app1=new Vue({
+				el:'#app1',
+				data:{total:0},
+				methods:{
+					handleGetTotal:function(total){
+						this.total=total;
+					}
+				}
+			})
+			Vue.component('my-component',{
+				template:'\
+				<div>\
+					<button @click="handleClick">+1</button>\
+					<button @click="handleClickReduce">-1</button>\
+				</div>',
+				data:function(){
+					return {counter:0}
+				},
+				methods:{
+					handleClick:function(){
+						this.counter++;
+						this.$emit('input',this.counter);
+					},
+					handleClickReduce:function(){
+						this.counter--;
+						this.$emit('input',this.counter);
+					}
+				}
+			});
+			var app=new Vue({
+				el:'#app',
+				data:{total:0}
+			})
+		</script>
+	</body>
+</html>
