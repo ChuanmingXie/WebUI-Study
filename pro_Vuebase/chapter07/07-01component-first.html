@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-1-1组件-示例(仅作认识使用)|组件注册|组件选项</title>
+	</head>
+	<body>
+		<h2>1.组件示例-仅作认识使用</h2>
+		<Card style="width: 350px;">
+			<p slot="title">与xxx聊天中</p>
+			<a href="#" slot="extra">
+				<Icon type="android-close" size="18"></Icon>
+			</a>
+			<div style="height: 100px;"> </div>
+			<div>
+				<Row :gutter="16">
+					<i-col span="17">
+						<i-input v-model="value" placeholder="请输入..."></i-input>
+					</i-col>
+					<i-col span="4">
+						<i-button type="primary" icon="paper-airplane">发送</i-button>
+					</i-col>
+				</Row>
+			</div>
+		</Card>
+		
+		<h2>2.全局注册</h2>
+		<div id="app">
+			<my-component></my-component>
+		</div>
+		
+		<h2>3.局部注册</h2>
+		<div id="app1">
+			<my-component></my-component>
+		</div>		
+		
+		<h2>4. is 属性挂载组件</h2>
+		<div id="app2">
+			<table>
+				<tbody is="my-component"></tbody>
+			</table>
+		</div>
+		
+		<h2>5.Vue组件的其他选项</h2>
+		<div id="app3">
+			<my-component></my-component>
+		</div>
+		
+		<h2>6.定义各自返回的变量</h2>
+		<a href="07-01component-sharedata.html">定义各自返回的变量</a>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* Vue组件中的其他属性 */
+			Vue.component('my-component',{
+				template:'<div>{{message}}</div>',
+				data:function(){
+					return {message:'组件内容'}
+				}
+			});
+			var app3=new Vue({
+				el:'#app3'
+			})
+			
+			// is属性的使用
+			Vue.component('my-component',{
+				template:'<div>这里是组件的内容</div>'
+			})
+			var app2=new Vue({
+				el:'#app2'
+			})
+			
+			// 局部注册
+			var Child={
+				template:'<div>这里是组件的内容</div>',
+				// components:		组件中还可以再注册
+			}
+			var app1=new Vue({
+				el:'#app1',
+				components:{
+					'my-component':Child
+				}
+			})
+			
+			/* 全局注册 */
+			Vue.component('my-component',{
+				//选项
+				template:'<div>这里是组件的内容</div>'
+			});
+			var app=new Vue({
+				el:'#app'
+			})
+		</script>
+	</body>
+</html>
