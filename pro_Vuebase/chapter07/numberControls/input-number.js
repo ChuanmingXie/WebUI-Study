@@ -6,7 +6,7 @@ function isValueNumber(value) {
 Vue.component('input-number', {
 	template: '\
 		<div class="input-number">\
-			<input type="text" :value="currentValue" @change="handleChange">\
+			<input type="text" @keyup="handleSwitch" :value="currentValue" @change="handleChange">\
 			<button @click="handleDown" :disable="currentValue<=min">-</button>\
 			<button @click="handleUp" :disable="currentValue>=max">+</button>\
 		</div>',
@@ -39,8 +39,7 @@ Vue.component('input-number', {
 			this.$emit('on-change', val);
 		},
 		value: function(val) {
-			this,
-			updateValue(val);
+			this.updateValue(val);
 		}
 	},
 	methods: {
@@ -56,6 +55,17 @@ Vue.component('input-number', {
 		handleUp: function() {
 			if (this.currentValue >= this.max) return;
 			this.currentValue += 1;
+		},
+		handleSwitch:function(e){
+			switch (e.keyCode){
+				case 38:this.handleUp();
+				// e.target.setSelectionRange(0,0);
+					break;
+				case 40:this.handleDown();
+					break;
+				default:
+					break;
+			}
 		},
 		handleChange: function(event) {
 			var val = event.target.value.trim();
