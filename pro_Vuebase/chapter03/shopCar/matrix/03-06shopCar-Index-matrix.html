@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3-06实战练习-购物车结算-二维数组</title>
+		<link rel="stylesheet" type="text/css" href="../03-06shopCar-Index.css" />
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<template v-if='list.length'>
+				<table>
+					<thead>
+						<tr>
+							<th>物品分类</th>
+							<th><input type="button" id="Checkall" @click="handleSelectAll()" value="全选" /></th>
+							<th>排序</th>
+							<th>商品名称</th>
+							<th>商品价格</th>
+							<th>购物数量</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template v-for="(item,indexs) in list">
+							<tr v-for="(shop,index) in item.product">
+								<td v-if="shop.rowspanShow" :rowspan="rowspanNum(indexs)">{{item.type}}</td>
+								<!-- <td>{{item.type}}</td> -->
+								<td><input type="checkbox" @click="AddChecked($event)" value="" /></td>
+								<td>{{index+1}}</td>
+								<td>{{shop.name}}</td>
+								<td>{{shop.price}}</td>
+								<td>
+									<button type="button" @click="handleReduce(indexs,index)" :disabled="shop.count===1">-</button>
+									{{shop.count}}
+									<button type="button" @click="handleAdd(indexs,index,10)">+</button>
+								</td>
+								<td><input type="button" @click="handleRemove(indexs,index)" value="移出" /></td>
+							</tr>
+						</template>
+					</tbody>
+				</table>
+				<div>总价：￥{{totalPrice}}</div>
+				<!-- <div v-if="checkItem.length">总价：￥{{totalPrice}}</div> -->
+				<!-- <div v-else>￥ 0</div> -->
+			</template>
+			<div v-else>购物车为空</div>
+		</div>
+		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="03-06shopCar-Index-matrix.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
