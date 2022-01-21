@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>7-6其他slot的用法-手动挂载</title>
+		<title>7-6组件的其他用法-$nextTick|x-template|手动挂载</title>
 	</head>
 	<body>
 		<h2>1. $nextTick</h2>
@@ -15,11 +15,33 @@
 		<div id="app1">
 			<my-component></my-component>
 		</div>
+		
+		<h2>3. 手动挂载实例</h2>
+		<div id="mount-div">
+			
+		</div>
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/x-template" id="my-component">
 			<div>这里是组件的template内容</div>
 		</script>
 		<script type="text/javascript">
+			/* 手动挂载实例 */
+			var MyComponent=Vue.extend({
+				template:'<div>Hello: {{name}}</div>',
+				data:function(){
+					return {name:'Aresn'}
+				}
+			});
+			//挂载方式1
+			new MyComponent().$mount('#mount-div');
+			//挂载方式2
+			new MyComponent({
+				el:'#mount-div'
+			});
+			//挂载方式3
+			var component=new MyComponent().$mount();
+			document.getElementById('mount-div').appendChild(component.$el);
+			
 			/* 2. x-template */
 			Vue.component('my-component',{
 				template:'#my-component'
