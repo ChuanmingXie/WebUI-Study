@@ -50,11 +50,11 @@ Vue.component('input-number', {
 		},
 		handleDown: function() {
 			if (this.currentValue <= this.min) return;
-			this.currentValue -= 1;
+			this.currentValue -= this.step;
 		},
 		handleUp: function() {
 			if (this.currentValue >= this.max) return;
-			this.currentValue += 1;
+			this.currentValue += this.step;
 		},
 		handleSwitch:function(e){
 			switch (e.keyCode){
@@ -71,6 +71,7 @@ Vue.component('input-number', {
 			var val = event.target.value.trim();
 			var max = this.max;
 			var min = this.min;
+			var step=this.step;
 			if (isValueNumber(val)) {
 				val = Number(val);
 				this.currentValue = val;
