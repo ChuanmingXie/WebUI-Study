@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>7-5组件高级用法-递归组件|内联模板|</title>
+		<title>7-5组件高级用法-递归组件|内联模板|动态组件|异步组件</title>
 		<style type="text/css">
 			.child{
 				height: 260px;
@@ -29,8 +29,27 @@
 			</child-component>
 		</div>
 		
+		<h2>3. 动态组件</h2>
+		<a href="07-05advancedUsage-dynamic.html">动态组件</a>
+		
+		<h2>4. 异步组件</h2>
+		<div id="app2">
+			<child2-component></child2-component>
+		</div>
+		
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			/* 4. 异步组件 */
+			Vue.component('child2-component',function(resolve,reject){
+				window.setTimeout(function(){
+					resolve({
+						template:'<div>我是异步渲染的组件</div>',
+					});
+				},2000);
+			});
+			var app=new Vue({
+				el:'#app2'
+			})
 			/* 2. 内联模板 */
 			Vue.component('child-component',{
 				data:function(){
