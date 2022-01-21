@@ -12,6 +12,7 @@
 				<p>更多分发的内容</p>
 			</child-component>
 		</div>
+		
 		<h2>2. 具名slot</h2>
 		<div id="app1">
 			<child-component>
@@ -23,6 +24,7 @@
 		</div>
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			/* 2. 具名slot */
 			Vue.component('child-component',{
 				template:'\
 				<div class="container">\
@@ -40,6 +42,8 @@
 			var app1 = new Vue({
 				el:'#app1'
 			})
+			
+			/* 1. 单一slot */
 			Vue.component('child-component',{
 				template:'\
 				<div>\
