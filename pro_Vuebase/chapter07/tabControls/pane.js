@@ -1,0 +1,28 @@
+/* 组件2-封装一个Tab标签页控件 */
+Vue.component('pane',{
+	name:'pane',
+	template:'\
+		<div class="pane" v-show="show">\
+			<slot></slot>\
+		</div>',
+	data:function(){
+		return {show:true}
+	},
+	props:{
+		name:{type:String},
+		label:{type:String,default:''}
+	},
+	methods:{
+		updateNav(){
+			this.$parent.updateNav();
+		}
+	},
+	watch:{
+		label(){
+			this.updateNav();
+		}
+	},
+	mounted() {
+		this.updateNav();
+	}
+})
