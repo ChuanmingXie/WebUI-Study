@@ -3,7 +3,33 @@
 	<head>
 		<meta charset="utf-8">
 		<title>组件2-封装一个Tab标签页控件</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 	<body>
+		<h2>Tab标签页控件</h2>
+		<div id="app" v-cloak>
+			<tabs v-model="activeKey">
+				<pane label="标签一" name="1">
+					标签1的内容
+				</pane>
+				<pane label="标签二" name="2">
+					标签2的内容
+				</pane>
+				<pane label="标签三" name="3">
+					标签3的内容
+				</pane>
+			</tabs>
+		</div>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="pane.js" type="text/javascript" charset="utf-8"></script>
+		<script src="tabs.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					activeKey:'1'
+				}
+			})
+		</script>
 	</body>
 </html>
