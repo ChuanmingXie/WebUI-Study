@@ -7,6 +7,10 @@ Vue.component('tabs', {
 					v-for="(item,index) in navList"\
 					@click="handleChange(index)">\
 					{{item.label}}\
+					<span v-show="item.closeable"\
+						:class="closeCls(item.closeable)"\
+						@click="closeTab(index,$event)">\
+					</span>\
 				</div>\
 			</div>\
 			<div class="tabs-content">\
@@ -34,6 +38,11 @@ Vue.component('tabs', {
 				}
 			]
 		},
+		closeCls: function(isClose) {
+			return {
+				'close-icon': isClose===true
+			}
+		},
 		handleChange: function(index) {
 			var nav = this.navList[index];
 			var name = nav.name;
@@ -57,7 +66,8 @@ Vue.component('tabs', {
 			this.getTabs().forEach(function(pane, index) {
 				that.navList.push({
 					label: pane.label,
-					name: pane.name || index
+					name: pane.name || index,
+					closeable: pane.closeable
 				});
 				// 如果没给pane设置name，默认使用它的索引
 				if (!pane.name) pane.name = index;
@@ -66,6 +76,7 @@ Vue.component('tabs', {
 						that.currentValue = pane.name || index;
 					}
 				}
+				if (!pane.closeable) pane.closeable = false;
 			});
 			this.updateStatus();
 		},
@@ -75,6 +86,21 @@ Vue.component('tabs', {
 			tabs.forEach(function(tab) {
 				return tab.show = tab.name === that.currentValue;
 			})
+		},
+		closeTab(index, e) {
+			e.stopPropagation();
+			this.navList.splice(index, 1);
+			var length=this.navList.length;
+			
+			if (index == 0 && length> 0) {
+				this.currentValue = this.navList[0].name;
+			} else if (index > 0 && index < length) {
+				this.currentValue = this.navList[index].name;
+			} else if (index > 0 && index >= length) {
+				this.currentValue = this.navList[index - 1].name;
+			} else {
+				this.currentValue = '';
+			}
 		}
 	},
 	watch: {
