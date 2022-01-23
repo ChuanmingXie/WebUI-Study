@@ -77,9 +77,7 @@ element:active{{property1:value1;...}
 a:active{font-size: 20px; background-color: #FF6;color: red;}
 
 element:focus{{property1:value1;...}
-#userName:focus{
-	border:solid 1px #FF66FF;
-}
+#userName:focus{border:solid 1px #FF66FF;}
 
 element:hover{{property1:value1;...}
 a:hover{font-size: 16px; background-color: #CCC;}
@@ -88,7 +86,10 @@ a:link{{property1:value1;...}
 a:link{font-size: 12px;color:back;text-decoration: none;}
 
 a:visited{{property1:value1;...}
-a:visited{font-size: 12px;color:#036;text-decoration: line-through;}
+a:visited{
+	font-size: 12px;color:#036;
+	text-decoration: line-through;
+}
 
 element:read-only{{property1:value1;...}
 :read-only{border: solid 1px #CC0000;}
@@ -100,8 +101,7 @@ element:disabled{{property1:value1;...}
 :disabled{background-color: #999; font-size: 12px;}
 
 element:enabled{{property1:value1;...}
-#userName:enabled,
-.enanbedButton:enabled{
+#userName:enabled,.enanbedButton:enabled{
 	background-color: #FF9;
 	color: #00F;
 	font-size: 16px;
