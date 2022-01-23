@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8-3综合复习小应用-问卷调查</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<h2>8-3综合复习小应用-问卷调查</h2>
+		<div id="app">
+			<page>
+				<panel title="1.请问你的性别" name="1">
+					<input type="radio" name="sex" id="" value="man" />男
+					<input type="radio" name="sex" id="" value="woman" />女
+					<input type="radio" name="sex" id="" value="sercret" />保密
+				</panel>
+				<panel title="2.请选择您的兴趣爱好" name="2">
+					<input type="checkbox" name="hobby" id="" value="" />看书
+					<input type="checkbox" name="hobby" id="" value="" />游泳
+					<input type="checkbox" name="hobby" id="" value="" />跑步
+					<input type="checkbox" name="hobby" id="" value="" />看电影
+					<input type="checkbox" name="hobby" id="" value="" />听音乐
+				</panel>
+				<panel title="3.介绍一下自己" name="3">
+					<textarea rows="3" cols="30">不少于100字</textarea>
+				</panel>
+			</page>
+		</div>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="panel.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app'
+			})
+		</script>
+	</body>
+</html>
