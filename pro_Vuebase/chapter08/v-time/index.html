@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8-2指令示例2-实时的时间转化指令</title>
+	</head>
+	<body>
+		<h2>8-2指令示例2-实时的时间转化指令</h2>
+		<div id="app" v-cloak>
+			<div v-time="timeNow"></div>
+			<div v-time="timeBefore"></div>
+		</div>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="time.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					timeNow:(new Date()).getTime(),
+					timeBefore:1630939895721
+				}
+			})
+		</script>
+	</body>
+</html>
