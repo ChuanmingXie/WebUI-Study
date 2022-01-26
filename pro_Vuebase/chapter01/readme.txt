@@ -1,4 +1,4 @@
-第一章：认识Vue.js
+Chapter01：认识Vue.js
 
 1. Vue.js和jQuery.js的差别
 
