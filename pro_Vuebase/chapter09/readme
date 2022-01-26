@@ -18,4 +18,4 @@ Chapter09：Render函数
 
 6. 实战
     i. 使用Render函数开发一个可排序的表格组件
-    ii. 使用Render函数开发一个留言列表
+    ii. 使用Render函数开发一个留言列表功能
