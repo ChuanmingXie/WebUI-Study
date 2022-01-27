@@ -2,8 +2,37 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>02-02jQuery的优势</title>
+		<title>2-02jQuery的优势</title>
+		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<h2>1. javaScript没有自动判断空值的能力</h2>
+		<div>test</div>
+		<script type="text/javascript">
+			// 此处会报错
+			document.getElementById("tt").style.color="red";
+			// 需要添加判断是否为空的操作
+			if(document.getElementById("tt")){
+				document.getElementById("tt").style.color="red";
+			}
+		</script>
+		
+		
+		<h2>2. jQuery可以自动处理为空的情况</h2>
+		<div>test</div>
+		<script type="text/javascript">
+			$("tt").css("color","red");
+		</script>
+		
+		<h2>3. jQuery选择器返回的是对象,需使用length属性或索引</h2>
+		<script type="text/javascript">
+			if($("tt").length>0){
+				// do something
+			}
+			if($("tt")[0]){
+				// do something
+			}
+		</script>
+
 	</body>
 </html>
