@@ -13,7 +13,7 @@
 				});
 				$("input[type=button]").click(function(){
 					if($("#isreset").is(":checked")){
-						$("reset").click();
+						$("#reset").click();
 					}
 				});
 				function animateIt(){
@@ -22,16 +22,16 @@
 				animateIt();
 				
 				$('#btn1').click(function(){
-					
+					$("div[class=one] :nth-child(2)").css("background","#bfa");
 				})
 				$('#btn2').click(function(){
-					
+					$("div[class=one] :first-child").css("background","#bfa");
 				})
 				$('#btn3').click(function(){
-					
+					$("div[class=one] :last-child").css("background","#bfa");
 				})
 				$('#btn4').click(function(){
-					
+					$("div[class=one] :only-child").css("background","#bfa");
 				})
 			})
 		</script>
