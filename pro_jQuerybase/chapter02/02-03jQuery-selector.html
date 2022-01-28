@@ -3,6 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>2-03jQuery选择器-回顾js做法的简单示例</title>
+		<style type="text/css">
+			iframe{
+				border: none;
+				border-bottom: solid 1px #bfa;
+			}
+		</style>
 	</head>
 	<body>
 		<h2>1.传统JS方法获取页面元素-为p元素添加onclick事件</h2>
@@ -39,7 +45,7 @@
 			}
 		</script>
 		
-		<h2>2.传统JS方法获取页面元素-输出多选框的选中个数</h2>
+		<h2>3.传统JS方法获取页面元素-输出多选框的选中个数</h2>
 		<input type="checkbox" value="1" name="check" checked="checked" />
 		<input type="checkbox" value="2" name="check" />
 		<input type="checkbox" value="3" name="check" checked="checked" />
@@ -57,5 +63,15 @@
 				alert("选中的个数为:"+arrays.length)
 			}
 		</script>
+		
+		<h2>4.jQuery选择器汇总</h2>
+		<iframe src="02-03jQuery-selector-01basic.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-02cascade.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-01basic.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-02content.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-03visible.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-04attribute.html" width="1200px" height="390px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-05children.html" width="1200px" height="360px"></iframe>
+		<iframe src="02-03jQuery-selector-03filter-06tableattr.html" width="1200px" height="360px"></iframe>
 	</body>
 </html>
