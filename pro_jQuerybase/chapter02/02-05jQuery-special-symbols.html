@@ -2,13 +2,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>2-05jQuery-特殊符号</title>
+		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $id_a  = $('#id.a');//jQuery对象
+				var $id_b  = $('#id#b');//jQuery对象
+				var $id_c =  $('#id[1]'); 	//jQuery对象
+				alert( $id_a.html() +"\n"+  $id_b.html() +"\n"+$id_c.html());//这样会获取不到，输出null
+				//alert( $id_b.html() );//这样会获取不到，输出null
+				//alert( $id_c.html() );//这样会获取不到，输出null
+				
+				var $id_right_a  = $('#id\\.a');//jQuery对象,对特殊字符,我们转义一下
+				var $id_right_b  = $('#id\\#b');//jQuery对象,对特殊字符,我们转义一下
+				var $id_right_c  = $('#id\\[1\\]'); 			//对特殊字符，我们转义一下
+				alert( $id_right_a.html() );//正确输出"aa"
+				alert( $id_right_b.html() );//正确输出"bb"
+				alert( $id_right_c.html() );//正确输出"cc"
+				
+				//注意区分类似这样的选择器
+				//虽然一个空格，却截然不同的效果.
+				 var $t_a = $('.test :hidden');
+				 var $t_b = $('.test:hidden');
+				 var len_a = $t_a.length;
+				 var len_b = $t_b.length;
+				 alert("$('.test :hidden') = "+len_a);  //输出 4 
+				 alert("$('.test:hidden') = "+len_b);  //输出 3
+			});
+		</script>
 	</head>
 	<body>
 		<h2>1. 选择其中含有.,#,{},[],()等特殊符号</h2>
+		<div id="id.a">aa</div>
+		<div id="id#b">bb</div>
+		<div id="id[1]">cc</div>
 		
 		<h2>2. 选择器中的引号问题</h2>
 		
-		<h2>3.选择器中的空各问题</h2>
+		<h2>3.选择器中的空格问题</h2>
+		<div class="test">
+		   <div style="display:none;">aa</div>
+		   <div style="display:none;">bb</div>
+		   <div style="display:none;">cc</div>
+		   <div class="test" style="display:none;">dd</div>
+		</div>
+		<div class="test" style="display:none;">ee</div>
+		<div class="test" style="display:none;">ff</div>
 	</body>
 </html>
