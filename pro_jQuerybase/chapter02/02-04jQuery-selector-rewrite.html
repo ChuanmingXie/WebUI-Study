@@ -3,12 +3,43 @@
 	<head>
 		<meta charset="utf-8">
 		<title>2-04应用jQuery改写示例</title>
+		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("p").click(function(){
+					alert(this.innerHTML);
+				});
+				
+				$("#tb tbody tr:even").css("backgroundColor","#888");
+				
+				$("#btn").click(function(){
+					var length=$("input[type=checkbox]:checked").length;
+					alert("选中的个数为："+length);
+				})
+			})
+		</script>
 	</head>
 	<body>
 		<h2>1. 通过jQuery改写传统JS方法获取页面元素-p元素的click事件</h2>
+		<p>测试1-click事件</p>
+		<p>测试2-click事件</p>
 		
 		<h2>2. 通过jQuery改写传统JS方法获取页面元素-特定表格隔行变色</h2>
+		<table id="tb">
+			<tbody>
+				<tr><td>第一行</td><td>第一行</td></tr>
+				<tr><td>第二行</td><td>第二行</td></tr>
+				<tr><td>第三行</td><td>第三行</td></tr>
+				<tr><td>第四行</td><td>第四行</td></tr>
+				<tr><td>第五行</td><td>第五行</td></tr>
+				<tr><td>第六行</td><td>第六行</td></tr>
+			</tbody>
+		</table>
 		
-		<h2>3. 通过jQuery改写传统JS方法获取页面元素-输出多选框个数</h2>		
+		<h2>3. 通过jQuery改写传统JS方法获取页面元素-输出多选框个数</h2>	
+		<input type="checkbox" name="check" id="" value="1" checked="checked" />
+		<input type="checkbox" name="check" id="" value="2" />
+		<input type="checkbox" name="check" id="" value="3" checked="checked" />
+		<input type="button" value="你选中的个数"  id="btn"/>
 	</body>
 </html>
