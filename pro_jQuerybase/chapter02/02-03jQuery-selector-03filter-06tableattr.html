@@ -5,7 +5,46 @@
 		<title>2-03jQuery选择器-表单属性过滤选择器</title>
 		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			
+			$(function() {
+				// 重置表单元素
+				$(":reset").click(function() {
+					setTimeout(function() {
+						countChecked();
+						$("select").change();
+					}, 0);
+				});
+				// 对表单内可以用input赋值操作
+				$('#btn1').click(function() {
+					$("#form1 input:enabled").val("这里变化了！");
+					return false;
+				});
+
+				// 对表单内不可用的input复制操作
+				$("#btn2").click(function() {
+					$("#form1 input:disabled").val("这里变化了！");
+					return false;
+				});
+
+				// 使用：checked选择器，操作多选框
+				$(":checkbox").click(countChecked);
+
+				function countChecked() {
+					var n = $("input:checked").length;
+					$("div").eq(0).html("<strong>有" + n + "个被选中！</strong>");
+				}
+				// 进入页面就调用
+				countChecked();
+				
+				// 使用：selected选择器，来操作下拉列表
+				$("select").change(function(){
+					var str="";
+					$("select :selected").each(function(){
+						str+=$(this).text()+",";
+					});
+					$("div").eq(1).html("<strong>你选中的是："+str+"</strong>");
+				}).trigger('change');
+				/* trigger('change')在这里的意思是：select加载后，马上执行onchange。也可以用.change()代替 */
+			})
 		</script>
 	</head>
 	<body>
@@ -22,7 +61,7 @@
 			可用元素：<input type="tel" name="che" value="可用文本框" /><br>
 			禁用元素：<input type="text" name="name" disabled="disabled" value="不可用文本框" /><br>
 			<br>
-			
+
 			多选框：<br>
 			<input type="checkbox" name="newselector" checked="checked" id="" value="test1" />test1
 			<input type="checkbox" name="newselector" id="" value="test2" />test2
@@ -31,7 +70,7 @@
 			<input type="checkbox" name="newselector" id="" value="test5" />test5
 			<div></div>
 			<br><br>
-			
+
 			下拉列表1：<br>
 			<select name="test" multiple="multiple" style="height: 120px; width: 200px;">
 				<option value="">浙江</option>
@@ -42,7 +81,7 @@
 				<option value="">湖北</option>
 			</select>
 			<br><br>
-			
+
 			下拉列表2：<br>
 			<select name="testsingle" style="width: 200px;">
 				<option value="">浙江</option>
