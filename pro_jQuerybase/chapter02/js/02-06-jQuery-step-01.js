@@ -1,6 +1,6 @@
 /* 2-06案例研究-网站品牌列表展示操作-隐藏下部品牌 */
 $(function(){
-	var $category=$('ul li;gt(5):not(:last)');
+	var $category=$('ul li:gt(5):not(:last)');
 	$category.hide();		//隐藏上面获取的jQuery对象
 })
 
