@@ -38,7 +38,7 @@ function insertNode(){
 	var newli_1=$('<li title="番茄">番茄</li>');
 	var newli_2=$("<li></li>");
 	var newli_3=$("<li title='玉米'>玉米</li>");
-	$('ul').append(newli_1).append(newli_2);
+	$('ul').append(newli_1).prepend(newli_2);
 	newli_3.insertAfter($("ul li:eq(1)"));
 }
 
