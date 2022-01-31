@@ -4,13 +4,41 @@
 		<meta charset="utf-8">
 		<title>3-02-09样式操作-attr|addClass|removeClass|toggleClass|haClass|is</title>
 		<style type="text/css">
-			.hight{}
-			.another{}
+			.hight{font-weight: bold;color: red;}
+			.another{font-style: italic; color: blue;}
 		</style>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
-				
+				/* 获取样式 */
+				$("input:eq(0)").click(function(){
+					alert($("p").attr("class"));
+				});
+				/* 设置样式 */
+				$("input:eq(0)").click(function(){
+					$("p").attr("high");
+				});
+				/* 追加样式 */
+				$("input:eq(0)").click(function(){
+					$("p").addClass("another");
+				});
+				/* 删除全部样式 */
+				$("input:eq(0)").click(function(){
+					$("p").removeClass();
+				});
+				/* 删除指定样式 */
+				$("input:eq(0)").click(function(){
+					$("p").removeClass("high");
+				});
+				/* 切换样式 */
+				$("input:eq(0)").click(function(){
+					$("p").toggleClass("another");
+				});
+				/* 判断元素是否含有某样式 */
+				$("input:eq(0)").click(function(){
+					alert($("p").hasClass("another"));
+					alert($("p").is(".another"));
+				});
 			})
 		</script>
 	</head>
