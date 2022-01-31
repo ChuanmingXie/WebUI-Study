@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>3-02-01查找节点</title>
+		<title>3-02-01查找节点-元素节点|属性节点</title>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
-				var $para=$("p");			// 获取p节点
+				/* 查找元素节点 */
+				var $para=$("p");			// 获取p节点，查找元素节点
 				var $li=$("ul li:eq(1)");	// 获取地热个li元素节点
+				/* 查找属性节点 */
 				var p_txt=$para.attr("title");	//输出p元素节点title顺序ing
 				var ul_txt=$li.attr("title");	//获取ul里的第二个li元素节点的属性title
-				var li_txt=$li.text();			//输第二个li元素节点的text
-				
+				var li_txt=$li.text();			//输第二个li元素节点的text				
 				alert(ul_txt);
 				alert(li_txt);
 				alert(p_txt);
