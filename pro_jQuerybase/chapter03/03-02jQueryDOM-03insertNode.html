@@ -2,9 +2,46 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>3-02-03插入节点</title>
+		<title>3-02-03插入节点-方法介绍</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $li_1=$("<li title='fruit'>香蕉</li>");
+				var $li_2=$("<li title='fruit'>雪梨</li>");
+				var $li_3=$("<li title='fruit'>其他</li>");
+				
+				var ul_1=$("<ul></ul>");
+				var ul_li_1=$("<li title='water'>泉水</li>");
+				var ul_li_2=$("<li title='water'>井水</li>");
+				var ul_li_3=$("<li title='water'>雨水</li>");
+				
+				var $parent=$("ul");			//获取ul节点，即li的父节点
+				var $two_li=$("ul li:eq(1)");	//获取ul节点中第二个li元素节点
+				
+				/* 插入节点的各种方法 */
+				$parent.append($li_1);		//append方法创建的第一个li元素添加到父元素的后面
+				$parent.prepend($li_2);		//prepend方法创建的第二个li元素添加到父元素的最前面
+				$li_3.insertAfter($two_li);	//insertAfter方法将创建的第三个li元素插入到获取的li之后
+				ul_1.insertAfter("ul");		//insertAfter方法将创建的第二个ul元素外部插入到已存在的ul之后
+				ul_li_1.prependTo(ul_1);	//prependTo方法将新创建的第一个li元素添加到新创建的ul内部最前
+				ul_li_2.appendTo(ul_1);		//appendTo方法将新创建的第二个li元素添加到新创建的ul内部最后
+				ul_li_3.prependTo(ul_1);	//prependTo方法将新创建的第三个li元素添加到新创建的ul内部最前
+				/* 特殊方法-insertBefore */
+				var one_li=$("ul li:eq(1)");	//获取ul节点中的第二个li元素节点
+				var two_li=$("ul li:eq(2)");	//获取ul节点节点中di三个元素节点
+				two_li.insertBefore(one_li);	//交换节点
+			})
+		</script>
 	</head>
 	<body>
 		<h2>3. 插入节点</h2>
+		<p title="选择你喜欢的水果"></p>
+		<div id="test">
+			<ul>
+				<li title='fruit'>苹果</li>
+				<li title='fruit'>橘子</li>
+				<li title='fruit'>菠萝</li>
+			</ul>
+		</div>
 	</body>
 </html>
