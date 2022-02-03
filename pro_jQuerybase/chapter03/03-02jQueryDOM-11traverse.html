@@ -3,8 +3,40 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3-02-11遍历操作</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $body=$("body").children();
+				var $p=$('p').children();
+				var $ul=$('ul').children();
+				alert($body.length);
+				alert($p.length);
+				alert($ul.length);
+				for (var i = 0; i < $ul.length; i++) {
+					alert($ul[i].innerHTML);
+				}
+				
+			
+				var $p1 = $("p").next();
+				alert( $p1.html() );  //  紧邻<p>元素后的同辈元素
+				var $ul = $("ul").prev();
+				alert( $ul.html() );  //  紧邻<ul>元素前的同辈元素
+				var $p2 = $("p").siblings();
+				alert( $p2.html() );  //  紧邻<p>元素的唯一同辈元素
+				
+				$(document).bind('click',function(e){
+					$(e.target).closest("li").css("color","red");
+				})
+			})
+		</script>
 	</head>
 	<body>
 		<h2>11. 遍历操作</h2>
+		<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+		<ul>
+		  <li title='苹果'>苹果</li>
+		  <li title='橘子'>橘子</li>
+		  <li title='菠萝'>菠萝</li>
+		</ul>
 	</body>
 </html>
