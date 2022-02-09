@@ -8,35 +8,38 @@
 			$(function(){
 				/* 获取p元素的color */
 				$("input:eq(0)").click(function(){
-					
+					alert($("p").css("color"));
 				});
 				/* 设置p元素的color */
 				$("input:eq(1)").click(function(){
-					
+					$("p").css("color","red");
 				});
 				/* 设置p元素的fontsize和backgroundColor */
 				$("input:eq(2)").click(function(){
-					
+					$("p").css({"fontSize":"30px","backgroundColor":"#888888"});
 				});
 				/* 设置p的高度*/
 				$("input:eq(3)").click(function(){
-					
+					alert($('p').height());
 				});
 				/* 设置p的高度 */
 				$("input:eq(4)").click(function(){
-					
+					$('p').height("100px");
 				});
 				/* 获取p的宽度 */
 				$("input:eq(5)").click(function(){
-					
+					alert($('p').width());
 				});
 				/* 设置p的宽度 */
 				$("input:eq(6)").click(function(){
-					
+					$('p').width("400px");
 				});
 				/* 获取p元素左边距和上边距 */
 				$("input:eq(7)").click(function(){
-					
+					var offset=$('p').offset();
+					var left=offset.left;
+					var top=offset.top;
+					alert("left："+left+";top："+top);
 				});
 			});
 		</script>
