@@ -36,10 +36,28 @@
 				});
 				/* 获取p元素左边距和上边距 */
 				$("input:eq(7)").click(function(){
+					// offset 方法
 					var offset=$('p').offset();
 					var left=offset.left;
 					var top=offset.top;
 					alert("left："+left+";top："+top);
+					// position 方法
+					var postion=$('p').position();
+					var leftp=postion.left;
+					var topp=postion.top;
+					alert("leftp："+leftp+";topp："+topp);
+					
+				});
+				/*  scrollTop方法和scrollLeft方法-获取元素的滚动条距离上和左的距离 */
+				$("input:eq(8)").click(function(){
+					var scrollTop=$("textarea").scrollTop();
+					var scrollLeft=$("textarea").scrollLeft();
+					alert("scrollLeft："+scrollLeft+";scrollTop："+scrollTop);
+				});
+				/*  scrollTop方法和scrollLeft方法-设置元素滚动条滚动到的位置*/
+				$("input:eq(9)").click(function(){
+					$("textarea").scrollTop(300);
+					$("textarea").scrollLeft(300);
 				});
 			});
 		</script>
@@ -63,6 +81,10 @@
 		
 		<input type="button" value="获取p元素左边距和上边距" />
 		
+		<br>
+		<input type="button" value="获取p元素的滚动条距离顶端和左侧的距离" />
+		<input type="button" value="设置p元素的滚动条距离顶端和左侧的距离" />
+		
 		<p title="选择你最喜欢的水果."><strong>你最喜欢的水果是?</strong></p>
 		<div>
 			<ul>
@@ -71,5 +93,13 @@
 				<li title="pineapple">菠萝</li>
 			</ul>
 		</div>
+		<textarea rows="6" cols="60">
+124137
+1387387	
+124137
+1387387
+124137
+1387387
+		</textarea>
 	</body>
 </html>
