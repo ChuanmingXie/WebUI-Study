@@ -20,27 +20,27 @@
 				});
 				
 				$("input:eq(1)").click(function(){
-					
+					alertt($('p')).text();
 				});
 				
 				$("input:eq(2)").click(function(){
-					
+					$('p').html("<strong>你最喜欢的水果是？</strong>");
 				});
 				
 				$("input:eq(3)").click(function(){
-					
+					$('p').text("你最喜欢的水果是?");
 				});
 				
 				$("input:eq(4)").click(function(){
-					
+					$('p').text("<strong>你最喜欢的水果是</strong>")
 				});
 				
 				$("input:eq(5)").click(function(){
-					
+					alert($(this).val());
 				});
 				
 				$("input:eq(6)").click(function(){
-					
+					$(this).val("我被点击了！")
 				});
 			})
 		</script>
