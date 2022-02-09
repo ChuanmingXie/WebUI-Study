@@ -2,9 +2,71 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>3-02-12CSSDOM操作</title>
+		<title>3-02-11CSSDOM操作</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				/* 获取p元素的color */
+				$("input:eq(0)").click(function(){
+					
+				});
+				/* 设置p元素的color */
+				$("input:eq(1)").click(function(){
+					
+				});
+				/* 设置p元素的fontsize和backgroundColor */
+				$("input:eq(2)").click(function(){
+					
+				});
+				/* 设置p的高度*/
+				$("input:eq(3)").click(function(){
+					
+				});
+				/* 设置p的高度 */
+				$("input:eq(4)").click(function(){
+					
+				});
+				/* 获取p的宽度 */
+				$("input:eq(5)").click(function(){
+					
+				});
+				/* 设置p的宽度 */
+				$("input:eq(6)").click(function(){
+					
+				});
+				/* 获取p元素左边距和上边距 */
+				$("input:eq(7)").click(function(){
+					
+				});
+			});
+		</script>
 	</head>
 	<body>
-		<h2>12. CSSDOM</h2>
+		<h2>11. 遍历操作</h2>
+		<!-- 
+		CSS-DOM技术简单来说就是读取和设置style对象的各种属性
+		直接使用style设置样式虽然快捷，但无法通过它来提取外部css设置的样式信息
+		使用jQuery则较为灵活方便
+		 -->
+		<input type="button" value="获取p元素的color" />
+		<input type="button" value="设置p元素的color" />
+		
+		<input type="button" value="设置p元素的fontsize和backgroundColor" />
+		
+		<input type="button" value="获取p的高度" />
+		<input type="button" value="设置p的高度" />
+		<input type="button" value="获取p的宽度" />
+		<input type="button" value="设置p的宽度" />
+		
+		<input type="button" value="获取p元素左边距和上边距" />
+		
+		<p title="选择你最喜欢的水果."><strong>你最喜欢的水果是?</strong></p>
+		<div>
+			<ul>
+				<li title="apple">苹果</li>
+				<li title="orang">橘子</li>
+				<li title="pineapple">菠萝</li>
+			</ul>
+		</div>
 	</body>
 </html>
