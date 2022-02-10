@@ -13,7 +13,7 @@ p{
 	margin: 0;
 	padding: .5em 0;
 }
-
+/* 文字提示 */
 #tooltip{
 	position: absolute;
 	border: 1px solid #333;
@@ -21,4 +21,18 @@ p{
 	padding: 1px;
 	color: #333;
 	display: none;
+}
+
+/* 图片提示 */
+img{border: none;}
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+	float: left;
+	display: inline;
+	margin-left: 10px;
+	border: 1px solid #AAAAAA;
 }
