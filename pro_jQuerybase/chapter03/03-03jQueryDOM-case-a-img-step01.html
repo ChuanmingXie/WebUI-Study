@@ -9,13 +9,13 @@
 			$(function() {
 				$("a.tooltip").mouseover(function(e) {
 					var tooltip = "<div id='tooltip'>" + this.title + "<\/div>";	//创建div
-					$('body').append(tooltip);
+					$('body').append(tooltip);		//把div追加到文档中
 					$('#tooltip').css({
 						"top": e.pageY + "px",
 						"left": e.pageX + "px"
-					}).show("fast");
+					}).show("fast");				//设置div出现的x和y坐标，和出现方式及速度
 				}).mouseout(function() {
-					$("#tooltip").remove();
+					$("#tooltip").remove();			//鼠标离开时移出div
 				});
 			});
 		</script>
