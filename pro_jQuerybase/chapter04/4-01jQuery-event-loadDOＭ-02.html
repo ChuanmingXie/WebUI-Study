@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
-		<title>4-01加载dom-多次使用DOM加载</title>
+		<title>4-01加载dom-执行的时机</title>
+		<script type="text/javascript">
+			// document.getElementById("panel").onclick=function(){
+			// 	alert("元素已经加载完毕!");
+			// }
+		</script>
 	</head>
 	<body>
+		<div id="panel">
+			click me.
+		</div>
+		<script type="text/javascript">
+			document.getElementById("panel").onclick=function(){
+				alert("元素已经加载完毕!");
+			}
+		</script>
 	</body>
 </html>
