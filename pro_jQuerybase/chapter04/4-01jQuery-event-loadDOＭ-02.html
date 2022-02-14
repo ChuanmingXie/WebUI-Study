@@ -4,10 +4,23 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
 		<title>4-01加载dom-执行的时机</title>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			/* 执行失败 - js的DOM加载需要在DOM元素之后执行 */
 			// document.getElementById("panel").onclick=function(){
 			// 	alert("元素已经加载完毕!");
 			// }
+			/* onload事件 */
+			window.onload=function(){
+				document.getElementById("panel").onclick=function(){
+					alert("onload显示的元素加载完毕!");
+				}
+			}
+			$(document).ready(function(){
+				$('#panel').click(function(){
+					alert("jQuery显示的元素加载完毕！");
+				})
+			})
 		</script>
 	</head>
 	<body>
@@ -15,9 +28,10 @@
 			click me.
 		</div>
 		<script type="text/javascript">
-			document.getElementById("panel").onclick=function(){
-				alert("元素已经加载完毕!");
-			}
+			/* 执行成功 - js的DOM加载需要在DOM元素之后执行 */
+			// document.getElementById("panel").onclick = function() {
+			// 	alert("元素已经加载完毕!");
+			// }
 		</script>
 	</body>
 </html>
