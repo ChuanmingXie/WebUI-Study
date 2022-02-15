@@ -27,14 +27,14 @@
 			
 			/* 鼠标划过 - 将点击事件转化为鼠标滑过事件 */
 			$(function(){
-				$("#panel h5.head").bind("mouseover",function(){
-					$(this).next().show();
-				}).bind("mouseout",function(){
-					$(this).next().hide();
-				})
+				// $("#panel h5.head").bind("mouseover",function(){
+				// 	$(this).next().show();
+				// }).bind("mouseout",function(){
+				// 	$(this).next().hide();
+				// })
 			})
 			
-			/* 绑定方法简写 - 将鼠标划过时间简写 */
+			/* 绑定方法简写 - 以鼠标划过为例进行事件简写 */
 			$(function(){
 				$("#panel h5.head").mouseover(function(){
 					$(this).next().show();
