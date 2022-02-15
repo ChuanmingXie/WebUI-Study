@@ -6,6 +6,15 @@
 		<title>4-02绑定事件-基本效果</title>
 		<link rel="stylesheet" type="text/css" href="css/4-02jQuery-event-bind.css"/>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			/*点击展开1- 通过点击事件展开元素，进而查看详细信息 */
+			$(function(){
+				$("#panel h5.head").bind("click",function(){
+					$(this).next().show();
+				})
+			})
+			
+		</script>
 	</head>
 	<body>
 		<h2>1. 界面的基本元素</h2>
