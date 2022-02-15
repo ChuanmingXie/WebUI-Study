@@ -7,19 +7,29 @@
 		<link rel="stylesheet" type="text/css" href="css/4-02jQuery-event-bind.css"/>
 		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="UTF-8"></script>
 		<script type="text/javascript">
-			/*点击展开1- 通过点击事件展开元素，进而查看详细信息 */
+			/*点击展开1 - 通过点击事件展开元素，进而查看详细信息 */
+			$(function(){
+				// $("#panel h5.head").bind("click",function(){
+				// 	$(this).next().show();
+				// })
+			})
+			/* 点击展开2 - 点击时，通过判断当前元素的可见性进行展开和关闭的切换 */
 			$(function(){
 				$("#panel h5.head").bind("click",function(){
-					$(this).next().show();
+					var $content=$(this).next();
+					if($content.is(":visible")){
+						$content.hide();
+					}else{
+						$content.show();
+					}
 				})
 			})
-			
 		</script>
 	</head>
 	<body>
 		<h2>1. 界面的基本元素</h2>
 		<div id="panel">
-			<h5 class="head">什么是jQuery?</h5>
+			<h5 class="head">什么是jQuery ? </h5>
 			<div class="content">
 				jQuery是继Prototype之后又一个优秀的JS库，他是由John Resig创建于2006年1月的开源项目。
 				jQuery凭借简介的语法和跨平台的兼容性，极大的简化了JS开发人员遍历HTML文档、操作、处理事件、执行动画和开发Ajax。
