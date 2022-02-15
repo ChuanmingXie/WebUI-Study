@@ -15,19 +15,37 @@
 			})
 			/* 点击展开2 - 点击时，通过判断当前元素的可见性进行展开和关闭的切换 */
 			$(function(){
-				$("#panel h5.head").bind("click",function(){
-					var $content=$(this).next();
-					if($content.is(":visible")){
-						$content.hide();
-					}else{
-						$content.show();
-					}
+				// $("#panel h5.head").bind("click",function(){
+				// 	var $content=$(this).next();
+				// 	if($content.is(":visible")){
+				// 		$content.hide();
+				// 	}else{
+				// 		$content.show();
+				// 	}
+				// })
+			})
+			
+			/* 鼠标划过 - 将点击事件转化为鼠标滑过事件 */
+			$(function(){
+				$("#panel h5.head").bind("mouseover",function(){
+					$(this).next().show();
+				}).bind("mouseout",function(){
+					$(this).next().hide();
+				})
+			})
+			
+			/* 绑定方法简写 - 将鼠标划过时间简写 */
+			$(function(){
+				$("#panel h5.head").mouseover(function(){
+					$(this).next().show();
+				}).mouseout(function(){
+					$(this).next().hide();
 				})
 			})
 		</script>
 	</head>
 	<body>
-		<h2>1. 界面的基本元素</h2>
+		<h2>1. 界面的基本元素->2.点击切换->3.鼠标划过->4.bind简写</h2>
 		<div id="panel">
 			<h5 class="head">什么是jQuery ? </h5>
 			<div class="content">
