@@ -2,7 +2,41 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>4-01加载dom-多次使用DOM加载</title>
+		<script type="text/javascript">
+			function one(){
+				alert("one");
+			}
+			function two(){
+				alert("two");
+			}
+			/* 
+			js的DOM加载方法 onload只能执行最后一个执行逻辑 
+			所以下面的方法只能输出two
+			*/
+			window.onload=one;
+			window.onload=two;
+		</script>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function onejQ(){
+				alert("onejQ");
+			}
+			function twojQ(){
+				alert("twojQ");
+			}
+			/* 
+			 jQuery 的 $()加载方法可以执行多次逻辑
+			 */
+			$(document).ready(function(){
+				onejQ();
+			})
+			$(document).ready(function(){
+				twojQ();
+			})
+		</script>
 	</head>
 	<body>
 	</body>
