@@ -19,8 +19,19 @@
 			})
 			/* 方式2 */
 			$(function(){
-				$("#panel h5.head").click(function(){
-					$(this).next().toggle();
+				// $("#panel h5.head").click(function(){
+				// 	$(this).next().toggle();
+				// })
+			})
+			
+			/* 加强效果-addClass */
+			$(function(){
+				$("#panel h5.head").toggle(function(){
+					$(this).addClass("hightlight");
+					$(this).next().show();
+				},function(){
+					$(this).removeClass("hightlight");
+					$(this).next().hide();
 				})
 			})
 		</script>
