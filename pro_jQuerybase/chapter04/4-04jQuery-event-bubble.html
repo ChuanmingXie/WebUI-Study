@@ -17,6 +17,12 @@
 				$('#content').bind("click",function(){
 					var txt=$("#msg").html()+"<p>外层div元素被点击</p>";
 					$("#msg").html(txt);
+				});
+				
+				// 为body绑定click事件
+				$('body').bind('click',function(){
+					var txt=$("#msg").html()+"<p>body元素被点击</p>";
+					$("#msg").html(txt);
 				})
 			})
 		</script>
