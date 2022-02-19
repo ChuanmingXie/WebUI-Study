@@ -2,8 +2,56 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>4-05事件对象的属性</title>
+		<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				/* type */
+				$("a").eq(0).click(function(e){
+					alert(e.type);		//获取事件类型
+					return false;		//阻止默认事件
+				})
+				
+				/* target js方法【】号内的信息与下面的信息相对应*/
+				$("a[href=http://www.cctv.com]").click(function(event){
+					alert(event.target.href);		//获取触发事件的<a>元素的href属性值
+					return false;		//阻止默认事件
+				})
+				
+				/* pageX | pageY */
+				$("a").eq(2).click(function(event) {
+				  alert("Current mouse position: " + event.pageX + ", " + event.pageY );//获取鼠标当前相对于页面的坐标
+				  return false;//阻止链接跳转
+				});
+				
+				/* which */
+				$("a").eq(3).mousedown(function(e){
+					alert(e.which)  // 1 = 鼠标左键 left; 2 = 鼠标中键; 3 = 鼠标右键
+				    return false;//阻止链接跳转
+				})
+				$("input").eq(0).keyup(function(e){
+					alert(e.which);
+				})
+				
+				/* metakey */
+				$("input").eq(1).keyup(function(e){
+					alert(e.metaKey +" "+e.ctrlKey );
+					$(this).blur();
+				})
+			})
+		</script>
 	</head>
 	<body>
+		<h2>1. event对象-type</h2>
+		<a href="http://www.baidu.com">click me</a>
+		<h2>2. event对象-target</h2>
+		<a href="http://www.cctv.com">click me</a>
+		<h2>3. event对象-pageX|pageY</h2>
+		<a href="http://www.baidu.com">click me</a>
+		<h2>4. event对象-which</h2>
+		<a href="http://mail.163.com">login</a> <br>
+		<input />
+		<h2>5. event对象-metkey</h2>
+		<input type="text" value="按住ctrl键，然后再点其他任何键" style="width:200px"/>
 	</body>
 </html>
