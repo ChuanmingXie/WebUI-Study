@@ -1,0 +1,5 @@
+<FileMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.cs>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FileMatch>
