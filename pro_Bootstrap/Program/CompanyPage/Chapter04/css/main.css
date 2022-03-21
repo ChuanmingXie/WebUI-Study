@@ -8285,7 +8285,7 @@ button.close {
 }
 ul.social {
   margin: 0;
-  padding: 0;
+  padding: 24px 0 0;
   width: 100%;
   text-align: center;
 }
@@ -8302,15 +8302,47 @@ ul.social > li > a {
   background-color: #aeaeae;
   color: #fff;
   margin: 0 3px 3px 0;
+  background-color: #7f6f28;
+  color: #bfbfbf;
 }
 ul.social > li > a:hover {
   text-decoration: none;
-  background-color: #ad9736;
+  background-color: #6b5e21;
+  color: #ffffff;
+}
+ul.social + p {
+  text-align: center;
 }
 footer[role="contentinfo"] {
   padding-top: 24px;
   padding-bottom: 36px;
-  text-align: center;
+  font-size: 12px;
+  background-color: #a28d32;
+  color: #bfbfbf;
+}
+footer[role="contentinfo"] a {
+  color: #ededed;
+}
+footer[role="contentinfo"] a:focus,
+footer[role="contentinfo"] a:hover,
+footer[role="contentinfo"] a:active {
+  color: #ffffff;
+}
+footer[role="contentinfo"] a:hover {
+  text-decoration: none;
+}
+footer[role="contentinfo"] .btn-default {
+  color: #a28d32 !important;
+}
+footer[role="contentinfo"] h3 {
+  font-size: 120%;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+footer[role="contentinfo"] ul {
+  list-style: none;
+  padding: 0 ;
+  margin: 0;
 }
 header[role="banner"] .banner-brand {
   padding-top: 0px;
