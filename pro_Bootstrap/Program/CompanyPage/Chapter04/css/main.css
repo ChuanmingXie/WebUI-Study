@@ -8622,7 +8622,6 @@ header[role="banner"] .utility-nav > ul > li > a:hover {
   border-color: #dddddd;
   padding-top: 12px;
   padding-bottom: 24px;
-  max-width: 480px;
 }
 .grid-options > .list-group,
 .grid-options > .panel-collapse > .list-group {
@@ -8831,7 +8830,7 @@ header[role="banner"] .utility-nav > ul > li > a:hover {
   padding-right: 15px;
   padding-left: 15px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .grid-options .options-list li {
     position: relative;
     float: left;
@@ -8951,7 +8950,7 @@ fieldset[disabled] a.grid-options .options-list li a {
   top: 0;
   right: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .options-panel {
     display: block;
   }
