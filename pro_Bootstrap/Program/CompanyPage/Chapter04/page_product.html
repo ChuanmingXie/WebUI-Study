@@ -31,8 +31,8 @@
       </a>
       <div class="utility-nav">
         <ul>
-          <li><a href="#" title="登录与注册"><i class="icon fa fa-user">　成为用户</i></a></li>
-          <li><a href="#" title="购物车"><i class="icon fa fa-shopping-cart">　购物车</i></a></li>
+          <li><a href="#" title="登录与注册"><i class="icon fa fa-user">　<span>成为用户</span></i></a></li>
+          <li><a href="#" title="购物车"><i class="icon fa fa-shopping-cart">　<span>购物车</span></i></a></li>
         </ul>
       </div>
     </div>
@@ -132,13 +132,13 @@
 
   <mian role="main">
 
-    <div class="page-contents container">
+    <div class="container">
       <!-- 面包屑 -->
-      <ol class="breadcrumb">
+      <ul class="breadcrumb">
         <li><a href="#">灾害资讯</a></li>
         <li><a href="#">自然灾害</a></li>
         <li class="active">地震灾害</li>
-      </ol>
+      </ul>
       <!-- 标题 -->
       <div class="page-header">
         <h1>地震的分布<small>　断裂带伴随着地震</small></h1>
@@ -146,106 +146,123 @@
       <!-- 内容 -->
       <div class="row">
         <!-- 左侧菜单 -->
-        <div class="grid-options col-xs-12 col-lg-4">
+        <div class="grid-options col-md-4 col-lg-3">
 
           <h2 class="clearfix">Narrow your selection
-            <button type="button" class="options-panel-toggle btn btn-primary pull-right hidden-md-up"
-              data-toggle="collapse" data-target="#options-panel">
+            <button type="button" class="options-panel-toggle btn btn-primary pull-right" data-toggle="collapse"
+              data-target="#options-panel">
               <span class="icon fa fa-cog fa-2x"></span>
             </button>
           </h2>
 
-          <!-- <div id="options-panel" class="options-panel collapse navbar-toggleable-sm"> -->
-          <a class="btn btn-feature choose-clearance" href="#">
-            <span class="icon fa fa-tag fa-3x"></span>
-            <h3>Clearance Sale</h3>
-            <p>View Clearance items</p>
-          </a>
+          <div id="options-panel" class="options-panel collapse">
+            <a class="btn btn-feature choose-clearance" href="#">
+              <span class="icon fa fa-tag fa-3x"></span>
+              <h3>Clearance Sale</h3>
+              <p>View Clearance items</p>
+            </a>
 
-
-          <h3>知识分类</h3>
-          <ul class="options-list options-categories row">
-            <li class="col-xs-6"><a href="#">Option1</a></li>
-            <li class="col-xs-6"><a href="#">Option1</a></li>
-          </ul>
-          <h3>技术分类</h3>
-          <ul class="options-list options-brands">
-            <li class="col-xs-6"><a href="#">Option1</a></li>
-            <li class="col-xs-6"><a href="#">Option2</a></li>
-          </ul>
-          <h3>其他分类</h3>
-          <ul class="options-list options-other">
-            <li class="col-xs-6"><a href="#">Option1</a></li>
-            <li class="col-xs-6"><a href="#">Option2</a></li>
-          </ul>
-          <!-- </div> -->
-        </div>
-
-        <!-- 右侧列表 -->
-        <div class="products-grid col-xs-12 col-lg-8">
-          <div class="product-item col-xs-6 col-lg-4">
-            <img data-src="js/vendor/holder.js/300x200" class="img-polaroid">
-            <h2>环太平洋地震带</h2>
-            <p>分布于濒临太平洋的大陆边缘与岛屿，全长40,000公里，呈马蹄形。从南美西海岸安第斯山开始，向南经南美洲南端、马尔维纳斯群岛（福克兰群岛）到南乔治亚岛；</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-          <div class="product-item col-xs-6 col-lg-4">
-            <a href="#"><img data-src="js/vendor/holder.js/300x200" alt="sample product" /></a>
-            <h2>欧亚地震带</h2>
-            <p>全球第二大地震活动带；全长2万多公里，基本上与东西向火山带位置相同，但带状特性更加鲜明。带内有许多巨大断裂，是地壳运动强烈的地带，常发生破坏性地震及中、深源地震，
-              地震之频繁仅次于环太平洋地震带，</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-          <div class="product-item col-xs-6 col-lg-4">
-            <img data-src="js/vendor/holder.js/300x200" class="img-polaroid">
-            <h2>海岭地震带</h2>
-            <p>全球性次要地震带。 [6] 此带内地震虽不少，但大多很微弱，释放的能量也较小，且均为浅源地震，震级一般较小。</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-          <div class="product-item col-xs-6 col-lg-4">
-            <img data-src="js/vendor/holder.js/300x200" class="img-polaroid">
-            <h2>青藏高原地震</h2>
-            <p>“青藏高原地震区”包括兴都库什山、西昆仑山、阿尔金山、祁连山、贺兰山－六盘山、龙门山、涉及到青海、西藏、新疆、甘肃、宁夏、四川、云南全部或部分地区，
-              以及原苏联、阿富汗、巴基斯坦、印度、孟加拉、缅甸、老挝等国的部分地区。</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-          <div class="product-item col-xs-6 col-lg-4">
-            <img data-src="js/vendor/holder.js/300x200" class="img-polaroid">
-            <h2>东南沿海</h2>
-            <p>中国东南沿海地震带的分布情况：东南沿海地震带地理上主要包括福建、广东两省及江西、广西邻近的一小部分。
-              这条地震带受与海岸线大致平行的新华夏系北东向活动断裂控制，</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-          <div class="product-item col-xs-6 col-lg-4">
-            <img data-src="js/vendor/holder.js/300x200" class="img-polaroid">
-            <h2>南北地震带</h2>
-            <p>从中国的宁夏，经甘肃东部、四川西部、直至云南，有一条纵贯中国大陆、大致南北方向的地震密集带，
-              被称为中国南北地震带，简称南北地震带。</p>
-            <p><a class="btn btn-primary pull-right">了解详情　<span class="icon fa fa-arrow-circle-o-right"></span></a>
-            </p>
-          </div>
-
-          <!-- 分页栏 -->
-          <div class="col-xs-12 pagination-wrap">
-            <ul class="pagination">
-              <li><a href="#"><span class="fa fa-chevron-left"></span>　上一页</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">下一页　<span class="fa fa-chevron-right"></span></a></li>
+            <h3>知识分类</h3>
+            <ul class="options-list options-categories ">
+              <li class=""><a href="#">Option1</a></li>
+              <li class=""><a href="#">Option2</a></li>
+              <li class=""><a href="#">Option3</a></li>
+              <li class=""><a href="#">Option4</a></li>
+              <li class=""><a href="#">Option5</a></li>
+              <li class=""><a href="#">Option6</a></li>
+              <li class=""><a href="#">Option7</a></li>
+              <li class=""><a href="#">Option8</a></li>
+              <li class=""><a href="#">Option9</a></li>
+              <li class=""><a href="#">Option10</a></li>
+            </ul>
+            <h3>技术分类</h3>
+            <ul class="options-list options-brands">
+              <li class=""><a href="#">Option1</a></li>
+              <li class=""><a href="#">Option2</a></li>
+              <li class=""><a href="#">Option3</a></li>
+              <li class=""><a href="#">Option4</a></li>
+              <li class=""><a href="#">Option5</a></li>
+              <li class=""><a href="#">Option6</a></li>
+              <li class=""><a href="#">Option7</a></li>
+              <li class=""><a href="#">Option8</a></li>
+              <li class=""><a href="#">Option9</a></li>
+              <li class=""><a href="#">Option10</a></li>
+            </ul>
+            <h3>其他分类</h3>
+            <ul class="options-list options-other">
+              <li class=""><a href="#">Option1</a></li>
+              <li class=""><a href="#">Option2</a></li>
+              <li class=""><a href="#">Option3</a></li>
+              <li class=""><a href="#">Option4</a></li>
+              <li class=""><a href="#">Option5</a></li>
+              <li class=""><a href="#">Option6</a></li>
+              <li class=""><a href="#">Option7</a></li>
+              <li class=""><a href="#">Option8</a></li>
+              <li class=""><a href="#">Option9</a></li>
+              <li class=""><a href="#">Option10</a></li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
 
+        <!-- 右侧列表 -->
+        <div class="products-grid col-md-8 col-lg-9">
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product"></a>
+            <h2>环太平洋地震带</h2>
+            <p>分布于濒临太平洋的大陆边缘与岛屿，全长40,000公里，呈马蹄形。从南美西海岸安第斯山开始，向南经南美洲南端、马尔维纳斯群岛（福克兰群岛）到南乔治亚岛；</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product" /></a>
+            <h2>欧亚地震带</h2>
+            <p>全球第二大地震活动带；全长2万多公里，基本上与东西向火山带位置相同，但带状特性更加鲜明。带内有许多巨大断裂，是地壳运动强烈的地带，</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product"></a>
+            <h2>海岭地震带</h2>
+            <p>全球性次要地震带。 [6] 此带内地震虽不少，但大多很微弱，释放的能量也较小，且均为浅源地震，震级一般较小。</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product"></a>
+            <h2>青藏高原地震</h2>
+            <p>“青藏高原地震区”包括兴都库什山、西昆仑山、阿尔金山、祁连山、贺兰山－六盘山、龙门山、涉及到青海、西藏、新疆、甘肃、宁夏、四川、云南全部或部分地区</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product"></a>
+            <h2>东南沿海</h2>
+            <p>中国东南沿海地震带的分布情况：东南沿海地震带地理上主要包括福建、广东两省及江西、广西邻近的一小部分。
+              这条地震带受与海岸线大致平行的新华夏系北东向活动断裂控制，</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+          <div class="product-item col-xs-6 col-md-4">
+            <a href="#"><img data-src="holder.js/300x200?auto=yes" alt="sample product"></a>
+            <h2>南北地震带</h2>
+            <p>从中国的宁夏，经甘肃东部、四川西部、直至云南，有一条纵贯中国大陆、大致南北方向的地震密集带，
+              被称为中国南北地震带，简称南北地震带。</p>
+            <a class="btn btn-sm btn-secondary  pull-right" href="#">了解详情 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!--.products-grid-->
+      </div>
+      <!--.row-->
+    </div>
+    <!--.container-->
+
+
+    <!-- 分页栏 -->
+    <div class="row pagination-wrap">
+      <ul class="pagination">
+        <li><a href="#"><span class="fa fa-chevron-left"></span>　上一页</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">下一页　<span class="fa fa-chevron-right"></span></a></li>
+      </ul>
     </div>
   </mian>
 

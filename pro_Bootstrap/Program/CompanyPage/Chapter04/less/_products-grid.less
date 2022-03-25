@@ -49,54 +49,57 @@
     color: @gray-dark;
   }
 
-}
 
-.options-list {
-  .make-row();
-  list-style-type: none;
-  padding-left: 0;
+  .options-list {
+    .make-row();
+    list-style-type: none;
+    padding-left: 0;
 
-  li {
-    .make-xs-column(6);
-    @media screen and(max-width:@screen-xs-max) {
-      .make-xs-column(4);
-    }
+    li {
+      .make-xs-column(6);
 
-    a {
-      .btn;
-      .btn-sm;
-      padding-left: 0;
-      padding-right: 0;
-      color: @gray;
-
-      &:hover,
-      &:focus,
-      .active& {
-        color: @link-color;
+      @media screen and(max-width:@screen-xs-max) {
+        .make-xs-column(4);
       }
 
-      &:before {
-        display: inline-block;
-        font: normal normal normal @fa-font-size-base/@fa-line-height-base FontAwesome; // shortening font declaration
-        font-size: inherit; // can't have font-size inherit on line above, so need to override
-        text-rendering: auto; // optimizelegibility throws things off #1094
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        // -moz-osx-font-smoothing: grayscale;
+      a {
+        .btn;
+        .btn-sm;
+        padding-left: 0;
+        padding-right: 0;
+        color: @gray;
 
-        content: @fa-var-square-o;
-        width: (18em/14);
-        text-align: center;
-      }
+        &:hover,
+        &:focus,
+        &:active,
+        .active & {
+          color: @link-color;
+        }
 
-      &:hover:before,
-      &:focus:before,
-      &:active:before,
-      .active &::before {
-        content: @fa-var-square-o;
+        &:before {
+          display: inline-block;
+          font: normal normal normal @fa-font-size-base/@fa-line-height-base FontAwesome; // shortening font declaration
+          font-size: inherit; // can't have font-size inherit on line above, so need to override
+          text-rendering: auto; // optimizelegibility throws things off #1094
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          // -moz-osx-font-smoothing: grayscale;
+
+          content: @fa-var-square-o;
+          width: (18em/14);
+          text-align: center;
+        }
+
+        &:hover:before,
+        &:focus:before,
+        &:active:before,
+        .active &::before {
+          content: @fa-var-square-o;
+        }
       }
     }
   }
+
 }
 
 .choose-clearance {
@@ -123,5 +126,14 @@
     position: absolute;
     top: 0;
     right: 2px;
+  }
+}
+
+@media (min-width:@screen-sm-min) {
+  .options-panel{
+    display: block;
+  }
+  .options-panel-toggle{
+    display: none;
   }
 }
