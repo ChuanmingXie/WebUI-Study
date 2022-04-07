@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>4-01加载dom-比较加载用时</title>
+	<link rel="stylesheet" href="../css/layout_breadcrumb.css">
+	<style>
+		.divwidth{
+			width: 33%;
+		}
+	</style>
+	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var startTime = new Date().getTime();
+		$(document).ready(function () {
+			test1();
+		})
+
+		function test1() {
+			var endTime2 = new Date().getTime();
+			var a = endTime2 - startTime;
+			$("<div>jQuery的ready():" + a + "ms</div>").appendTo("body");
+		}
+
+		function test2() {
+			var endTime1 = new Date().getTime();
+			var b = endTime1 - startTime;
+			$("<p>Js的window.onload:" + b + "ms</p>").appendTo("body");
+		}
+	</script>
+</head>
+
+<body onload="test2()">
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+			<li><a href="mainframe/chapter04.html" target="_parent">首页</a></li>
+			<li><a href="#">jQuery的事件</a></li>
+			<li><a href="#">加载DOM</a></li>
+		</ul>
+	</div>
+	<div class="divwidth">
+		<h2>1. 比较加载用时</h2>
+		<img src="../img/demo.jpg" style="width: 200px; height: 200px;">
+	</div>
+	<div class="divwidth">
+		<iframe src="./4-01jQuery-event-loadDOM-02.html" frameborder="0"></iframe>
+	</div>
+	<div class="divwidth">
+		<iframe src="./4-01jQuery-event-loadDOM-03.html" frameborder="0"></iframe>
+	</div>
+</body>
+
+</html>
