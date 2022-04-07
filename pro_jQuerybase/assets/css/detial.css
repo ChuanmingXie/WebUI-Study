@@ -1,0 +1,6 @@
+@charset 'utf-8';
+
+#content{width: 800px; margin: 10px auto; border: 1px solid #AAA;}
+.global_module h3{height: 26px; background: #3B5998;color: #FFF;
+    line-height: 26px; text-indent: 6px;}
+.pro_detail{width: 780px;height: auto;overflow: hidden;padding: 10px;}
