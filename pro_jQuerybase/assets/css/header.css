@@ -3,8 +3,8 @@
 #header{width: 800px;height: 80px;border: 1px solid #AAAAAA;margin: 10px auto; background: #3B5998;}
 
 /* logo */
-#logo{float: left; margin: 0 0 0 10px; color: #fff; font-size: 2em; font-weight: 700; line-height: 80px;}
-#skin{float: right; margin: 10px; padding: 4px; width: 120px;list-style: none; display: inline; border: 1px solid #CCCCCC;background: #fff;}
+#logo{float: left; margin: 0 0 0 10px; color: #fff; font-size: 3em; font-weight: 700; line-height: 80px;}
+#skin{float: right; margin: 10px; padding: 4px; width: 120px;list-style: none;  border: 1px solid #CCCCCC;background: #fff;}
 #skin li{float: left; margin-right: 4px; width: 15px;height: 15px; text-indent: -9999px;overflow: hidden; display: block;cursor: pointer;background-image: url(../img/theme.gif);}
 
 #skin_0{background-position: 0px 0px;}

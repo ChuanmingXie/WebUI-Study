@@ -5,16 +5,19 @@
 /* 左侧导航栏 */
 .content_left{background: #EEEEEE; border: 1px solid #AAAAAA;
      width: 200px; float: left; margin-right: 10px;}
-.content_left.news ul{padding: 5px 0 5px 15px;}
-.content_left.scrollNews{width: 200px; height: 85px; line-height: 20px;
+.content_left .news ul{padding: 5px 0 5px 15px;}
+.content_left .procatalog ul { 
+	padding:5px 0 5px 15px; 
+}
+.content_left .scrollNews{width: 200px; height: 85px; line-height: 20px;
     overflow: hidden;background: #FFFFFF;}
-.content_left.scrollNews li{height: 20px;}
+.content_left .scrollNews li{height: 20px;}
 
 .global_module{position: relative; background: #EEEEEE; 
     padding-bottom: 8px;}
 .global_module h3{height: 26px; background: #3B5998; color: #FFF;
     line-height: 26px; text-indent: 6px;}
-.module_up_down{position: absolute; top:9px;right: 10px; cursor: pointer;}
+.module_up_down{position: absolute; top:4px;right: 10px; cursor: pointer;}
 
 .procatalog .m-treeview{background: #FFFFFF;}
 .procatalog .m-treeview li span{cursor: pointer;}
@@ -24,7 +27,7 @@
     list-style-image: url('../img/treeview-item.gif');
 }
 .procatalog .m-treeview li.m-collapsed{padding-left: 16px; 
-    background:url('../img//treeview-collapsed.gif') no-repeat 0 0;}
+    background:url('../img/treeview-collapsed.gif') no-repeat 0 0;}
 .procatalog .m-treeview li.m-collapsed ul li{display: none;}
 
 /* 右侧内容栏 -banner */
@@ -42,7 +45,7 @@
     font-family: Arial, Helvetica, sans-serif;font-size: 12px;
     cursor: pointer;overflow: hidden;margin: 3px 1px;
     border: 1px solid #FF7300; background-color: #fff;}
-.content_right .num li .on{color: #fff; line-height: 21px; 
+.content_right .num li.on{color: #fff; line-height: 21px; 
     width: 21px;height: 21px; font-size: 21px;margin: 0 1px;
      border: 0; background-color: #FF7300;font-weight: bold;}
 
@@ -56,5 +59,30 @@
 .content_right .prolist ul li{float: left; display: inline; 
     text-align: center;margin-right: 22px;}
 .content_right .prolist ul li span{display: block;overflow: hidden;}
-.content_right .prolist ul li img{display: block; width: 124px;height: 124px;}
+.content_right .prolist ul li img{display: block; width: 124px;height: 124px;background: #EEE;border: 0;}
 .module_left_right{position: absolute; top: 5px; right: 10px; cursor: pointer;}
+
+#tooltip{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:1px;
+	color:#333;
+	display:none;
+}
+
+span.imagemask{
+    background: white;
+    filter: alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity: 0;
+}
+
+span.imageover{
+    background: url(../img/zoom.gif) no-repeat 50% 50%;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity:0.6;
+    opacity: 0.6;
+}
