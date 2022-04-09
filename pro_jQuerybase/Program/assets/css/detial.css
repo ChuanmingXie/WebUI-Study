@@ -63,7 +63,7 @@ ul.rating li.two a {left:16px;}
 ul.rating li.three a {left:32px;}
 ul.rating li.four a {left:48px;}
 ul.rating li.five a {left:64px;}
-/* 只能放到以上内容的后面 */
+/* hover只能放到以上内容的后面 */
 ul.rating li a:hover{width: 80px;height: 16px; left: 0; overflow: hidden;background: url(../img/star-matrix.gif) no-repeat 0 0;z-index:2;}
 
 ul.rating li.one a:hover {background-position:0 -96px;}
