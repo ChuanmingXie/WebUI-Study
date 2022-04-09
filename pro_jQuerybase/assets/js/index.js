@@ -3,6 +3,7 @@ $(function () {
     imageOverMask();
 })
 
+// 产品列表
 function shoplist() {
     var page = 1;
     var i = 4;
@@ -38,6 +39,7 @@ function shoplist() {
     });
 }
 
+// 产品列表遮罩层
 function imageOverMask() {
     $('.content_right .prolist ul li').each(function (index) {
         var position = $(this).position();

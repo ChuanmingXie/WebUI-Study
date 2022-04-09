@@ -42,7 +42,7 @@ select{width: 40px;}
 .pro_detail_right .pro_size ul li span{margin-right: 6px; padding: 1px 12px; display: block; border: 1px solid #AAA; cursor: pointer;}
 .pro_detail_right .pro_size ul li span:hover{background: #CCC;}
 .pro_detail_right .pro_num,
-.pro_detail_right .pro_price
+.pro_detail_right .pro_price,
 .pro_detail_right .pro_rating{width: 380px;font-weight: bold; float: left;display: inline; margin-bottom: 10px;}
 /* 评分 */
 .rating{width: 80px;height: 16px;margin: 0 0 20px 0;padding:0;list-style: none;
@@ -57,19 +57,20 @@ select{width: 40px;}
 
 ul.rating li{float: left;cursor: pointer;text-indent: -999em;}
 ul.rating li a{width: 16px;height: 16px;left: 0;top: 0;text-decoration: none;position: absolute;z-index: 200;}
+
+ul.rating li.one a {left:0}
+ul.rating li.two a {left:16px;}
+ul.rating li.three a {left:32px;}
+ul.rating li.four a {left:48px;}
+ul.rating li.five a {left:64px;}
+/* 只能放到以上内容的后面 */
 ul.rating li a:hover{width: 80px;height: 16px; left: 0; overflow: hidden;background: url(../img/star-matrix.gif) no-repeat 0 0;z-index:2;}
 
-ul.rating li .one a{left:0px;}
-ul.rating li .two a{left:16px;}
-ul.rating li .three a{left:32px;}
-ul.rating li .four a{left:48px;}
-ul.rating li .five a{left:64px;}
-
-ul.rating li.one a:hover{background-position: 0 -96px;}
-ul.rating li.two a:hover{background-position: 0 -112px;}
-ul.rating li.three a:hover{background-position: 0 -128px;}
-ul.rating li.four a:hover{background-position: 0 -144px;}
-ul.rating li.five a:hover{background-position: 0 -160px;}
+ul.rating li.one a:hover {background-position:0 -96px;}
+ul.rating li.two a:hover {background-position:0 -112px;}
+ul.rating li.three a:hover {background-position:0 -128px}
+ul.rating li.four a:hover {background-position:0 -144px}
+ul.rating li.five a:hover {background-position:0 -160px}
 
 /* jqzoom */
 div.zoomdiv{
