@@ -168,7 +168,11 @@ AutoTest.Net/
 src/
 scss/
 bootstrap/
-bootstrap/dist/
+node_modules/
+bower_components/
+test/
+tests/
+assets/
 
 # Installshield output folder
 [Ee]xpress/
