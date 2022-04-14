@@ -3112,6 +3112,20 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
 }
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
 
 .btn-primary {
   color: #fff;
@@ -8985,7 +8999,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .nature {
-  background-image: url("/img/landscape-nature-sunset-trees.jpg");
+  background-image: url("../img/landscape-nature-sunset-trees.jpg");
 }
 
 .navbar {
