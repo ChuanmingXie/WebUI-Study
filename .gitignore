@@ -167,6 +167,7 @@ AutoTest.Net/
 .scss
 src/
 scss/
+less/
 bootstrap/
 node_modules/
 bower_components/
