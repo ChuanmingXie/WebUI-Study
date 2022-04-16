@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写第一个Ajax例子-asp</title>
+    <script language="javascript" type="text/javascript">
+        // 通过这个函数来异步获取信息
+        function ajaxSubmit() {
+            var xmlhttpReq = null;        //声明一个空对象用来装入XMLHttpRequest
+            if (window.ActiveXObject) {   //IE5 IE6是以ActiveXObject的方式引入XMLHttpRequest的
+                xmlhttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else if (window.XMLHttpRequest) {     //除了IE5 IE6以外的浏览器XMLHttpRequest的windows的子对象
+                xmlhttpReq = new XMLHttpRequest();    //实例化一个XMLHttpRequest
+            }
+            if (xmlhttpReq != null) {                   //如果对象实例化成功
+                xmlhttpReq.open("GET", "Server/index.asp", true);         //通过open()方法并采用异步方式
+                xmlhttpReq.onreadystatechange = RequestCallBack;  //设置回调函数
+                xmlhttpReq.send(null);              //因为使用get方式提交，所以可以使用null参数调用
+            }
+
+            function RequestCallBack() {         //一旦readyStatus值改变,将会调用这个函数
+                if (xmlhttpReq.readyState == 4) {
+                    if (xmlhttpReq.status == 200) {
+                        //将XmlHttpReq.responseText的值赋值给ID为resText的元素
+                        document.getElementById("resText").innerHTML = xmlhttpReq.responseText;
+                    }
+                    else if(xmlhttpReq.status==500){
+                        document.getElementById("resText").innerHTML=xmlhttpReq.responseText;
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" id="" value="Ajax提交" onclick="ajaxSubmit();">
+    <div id="resText"></div>
+</body>
+
+</html>

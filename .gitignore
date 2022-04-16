@@ -171,6 +171,7 @@ less/
 bootstrap/
 node_modules/
 bower_components/
+gulp_compents/
 test/
 tests/
 assets/

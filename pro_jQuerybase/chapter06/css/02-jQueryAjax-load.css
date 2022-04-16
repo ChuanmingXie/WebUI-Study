@@ -1,0 +1,8 @@
+@charset 'utf-8';
+
+*{margin: 0;padding: 0;}
+body{font-size: 12px;}
+.comment{margin-top: 10px;padding: 10px;border: 1px solid #ccc; background: #BFB;}
+.comment h6{font-weight: 700;font-size: 14px;}
+.param{margin-top: 5px;text-indent: 2em;background: #DED;}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写第一个Ajax示例-php</title>
+    <script type="text/javascript">
+        function AjaxPHP(){
+            var xmlhttpReq=null;
+            if(window.ActiveXObject){
+                xmlhttpReq=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else if(window.XMLHttpRequest)
+            {
+                xmlhttpReq=new XMLHttpRequest();
+            }
+            if(xmlhttpReq!=null){
+                xmlhttpReq.open('GET',"Server/index.php",true);
+                xmlhttpReq.onreadystatechange=RequestCallback;
+                xmlhttpReq.send(null);
+            }
+            function RequestCallback() {
+                if(xmlhttpReq.readyState==4){
+                    if(xmlhttpReq.status==200){
+                        document.getElementById('resText').innerHTML=xmlhttpReq.responseText;
+                    }
+                    else{
+                        document.getElementById('resText').innerHTML="Error!";
+                    }
+                }
+              }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Ajax提交" onclick="AjaxPHP();">
+    <div id="resText"></div>
+    
+</body>
+</html>
