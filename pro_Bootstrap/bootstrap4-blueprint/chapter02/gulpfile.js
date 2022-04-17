@@ -1,3 +1,7 @@
+// gulp 4.0 版本
+
+'use strict'
+
 var gulp = require('gulp');
 var environments = require('gulp-environments');
 var sass = require('gulp-sass')(require('sass'));
@@ -13,14 +17,16 @@ var validator = require('gulp-html');
 var bootlint = require('gulp-bootlint');
 var concat = require('gulp-concat');
 var scsslint = require('gulp-scss-lint');
+
 var port = process.env.SERVER_PORT || 8080;
 var development = environments.development;
 var production = environments.production;
-var bowerpath = process.env.BOWER_PATH || 'bower_components/';
+var bowerpath = process.env.BOWER_PATH || 'sass/components/';
+
 
 // Watch files for changes
 gulp.task('watch', gulp.series(() => {
-    gulp.watch('scss/**/*', ['compile-sass', browser.reload]);
+    gulp.watch('sass/**/*', ['compile-sass', browser.reload]);
     gulp.watch('html/pages/**/*', ['compile-html']);
     gulp.watch(['html/{layouts,includes,helpers,data}/**/*'], ['compile-html:reset', 'compile-html']);
 }));
@@ -28,11 +34,6 @@ gulp.task('watch', gulp.series(() => {
 // Erases the dist folder
 gulp.task('clean', gulp.series(() => {
     rimraf('_site');
-}));
-
-// Copy assets
-gulp.task('copy', gulp.series(() => {
-    gulp.src(['assets/**/*']).pipe(gulp.dest('_site'));
 }));
 
 
@@ -59,7 +60,7 @@ gulp.task('compile-sass', gulp.series(() => {
             ]
         })
     ];
-    return gulp.src('./scss/app.scss')
+    return gulp.src('./sass/app.scss')
         .pipe(development(sourcemaps.init()))
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(postcss(processors))
@@ -89,16 +90,29 @@ gulp.task('compile-html:reset', gulp.series((done) => {
 }));
 
 gulp.task('compile-js', gulp.series(() => {
-    return gulp.src(['js/jquery-1.11.3.js', 'js/bootstrap.min.js', 'js/main.js'])
+    var bs_dir_str = "gulp_compents/bootstrap/dist/js/";
+    var jQuery_dir_str = "gulp_compents/jquery/dist/";
+    var js_str = [
+        jQuery_dir_str + "jquery.min.js",
+        bs_dir_str + "bootstrap.min.js",
+        "js/main.js"
+    ]
+    return gulp.src(js_str)
         .pipe(concat('app.js'))
+        .pipe(sourcemaps.init())
+        .pipe(development(sourcemaps.write()))
         .pipe(gulp.dest('./_site/js/'));
 }));
 
 gulp.task('scss-lint', gulp.series(() => {
-    return gulp.src('scss/**/*.scss')
-        .pipe(scsslint({ 'config': 'scss/.scss-lint.yml' }));
+    return gulp.src('sass/**/*.scss')
+        .pipe(scsslint({ 'config': 'sass/.scss-lint.yml' }));
 }));
 
+// Copy assets
+gulp.task('copy', gulp.series(() => {
+    gulp.src(['assets/**/*']).pipe(gulp.dest('_site'));
+}));
 
 gulp.task('set-development', development.task);
 gulp.task('set-production', production.task);

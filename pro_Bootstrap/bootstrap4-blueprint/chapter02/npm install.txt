@@ -1,0 +1,22 @@
+npm install gulp gulp-sass sass autoprefixer gulp-scss-lint gulp-rename gulp-concat gulp-sourcemaps gulp-uglify --save-dev
+npm install rimraf --save-dev
+npm install gulp-cssnano --save-dev
+npm install bootlint --save-dev
+npm install gulp-html --save-dev
+npm install browser-sync --save-dev
+
+
+var js_dir_str = "gulp_compents/bootstrap/js/src/";
+//   js_dir_str+"util.js",
+//   js_dir_str+"alert.js",
+//   js_dir_str+"button.js",
+//   js_dir_str+"carousel.js",
+//   js_dir_str+"collapse.js",
+//   js_dir_str+"dropdown.js",
+//   js_dir_str+"modal.js",
+//   js_dir_str+"tools/sanitizer.js",
+//   js_dir_str+"tooltip.js",
+//   js_dir_str+"popover.js",
+//   js_dir_str+"scrollspy.js",
+//   js_dir_str+"tab.js",
+//   js_dir_str+"toast.js",
