@@ -1,11 +1,10 @@
-<%@ language="javascript"%>
+<%@ language="javascript"  CODEPAGE="65001"%>
 <%
-var username=Request.QueryString("username")
-var content=Request.QueryString("content")
-
-
+var username=Request.Form("username")
+var content=Request.Form("content")
 Response.Write("<div class='comment'><h6>" + username +" :</h6><p class='param'>"+ content +" </p></div>")
 Response.Write(username)
+Response.Write("<br>")
 Response.Write(content)
 
 var d=new Date()

@@ -6,27 +6,27 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery-Ajax get 方法</title>
+    <title>jQuery-Ajax post方法</title>
     <link rel="stylesheet" href="../css/02-jQueryAjax-load.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../js/jquery.min-1.11.1.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script type="text/javascript">
         $(function () {
-            $('#sendasphtml').click(function (e) {
+            $('#sendhtmlasp').click(function (e) {
                 e.preventDefault();
                 $("#resTextasp").empty();
-                $.get("Server/get/data-html.asp", { username: $('#username').val(), content: $("#content").val() },
+                $.post("Server/post/data-html.asp", { username: $('#username').val(), content: $("#content").val() },
                     function (data, textStatus) {
                         $('#resTextasp').html(data);
                     }
                 );
             });
 
-            $('#sendaspxml').click(function (e) {
+            $('#sendxmlasp').click(function (e) {
                 e.preventDefault();
                 $('#resTextasp').empty();
-                $.get("Server/get/data-xml.asp", { username: $("#username").val(), content: $("#content").val() },
+                $.post("Server/post/data-xml-js.asp", { username: $("#username").val(), content: $("#content").val() },
                     function (data, textStatus) {
                         var username = $(data).find("comment").attr('username');
                         var content = $(data).find("comment content").text();
@@ -35,16 +35,16 @@
                     });
             });
 
-            $('#sendaspjson').click(function (e) {
+            $('#sendjsonasp').click(function (e) {
                 e.preventDefault();
                 $('#resTextasp').empty();
-                $.get("Server/get/data-json.asp", { username: $('#username').val(), content: $("#content").val() },
+                $.post("Server/post/data-json.asp", { username: $('#username').val(), content: $("#content").val() },
                     function (data, textStatus) {
                         var username = data.username;
                         var content = data.content;
-                        var texthtml = "<div class='comment'><h6>" + username + "</h6><p class='param'>" + content + "</p></div>";
+                        var texthtml = "<div class='comment'><h6>" + username + ":</h6><p class='param'>" + content + "</p></div>";
                         $("#resTextasp").html(texthtml);
-                    },"json");
+                    }, "json");
             });
         })
     </script>
@@ -52,7 +52,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-inverse bg-primary" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -65,6 +65,7 @@
                     </button>
                     <a class="navbar-brand" href="#">jQuery|Ajax</a>
                 </div>
+
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
@@ -79,16 +80,16 @@
                             </div>
                             <button type="submit" class="btn btn-default">确定</button>
                         </form>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="#">关于</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery-Tec<b
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery-Tec <b
                                     class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">jQuery Selector</a></li>
                                 <li><a href="#">jQuery DOM</a></li>
                                 <li><a href="#">jQuery Event</a></li>
                                 <li><a href="#">jQuery Form</a></li>
-                                <li><a href="#">jQuery Plugin</a></li>
+                                <li><a href="#">jQuery Pligin</a></li>
                                 <li><a href="#">jQuery Ajax</a></li>
                                 <li><a href="#">jQuery WebSite</a></li>
                             </ul>
@@ -103,15 +104,16 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class="list-group">
-                        <a href="./01-Ajax-JavaScript.html" class="list-group-item list-group-item-action">JavaScript</a>
-                        <a href="./02-jQueryAjax-load.html" class="list-group-item list-group-item-action">$.load()</a>
-                        <a href="./03-jQueryAjax-get.html" class="list-group-item list-group-item-action active">$.get()</a>
-                        <a href="./04-jQueryAjax-post.html" class="list-group-item list-group-item-action ">$.post()</a>
-                        <a href="#" class="list-group-item list-group-item-action">$.getJSON()</a>
-                        <a href="#" class="list-group-item list-group-item-action">$.getScript()</a>
-                        <a href="#" class="list-group-item list-group-item-action">$.ajax()</a>
+                        <a href="./01-Ajax-JavaScript.html" class="list-group-item ">JavaScript</a>
+                        <a href="./02-jQueryAjax-load.html" class="list-group-item">$.load()</a>
+                        <a href="./03-jQueryAjax-get.html" class="list-group-item">$.get()</a>
+                        <a href="./04-jQueryAjax-post.html" class="list-group-item active">$.post()</a>
+                        <a href="#" class="list-group-item">$.getJSON()</a>
+                        <a href="#" class="list-group-item">$.getScript()</a>
+                        <a href="#" class="list-group-item">$.ajax()</a>
                     </div>
                 </div>
+
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                     <div class="row">
                         <form action="" method="" class="form-horizontal" role="form">
@@ -123,34 +125,36 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="content" class="col-sm-2 control-label">内容:</label>
+                                <label for="username" class="col-sm-2 control-label">内容:</label>
                                 <div class="col-sm-10">
                                     <textarea name="content" id="content" class="form-control" rows="3"
                                         required="required"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="" class="col-sm-2 control-label">操作:</label>
+                                <label for="content" class="col-sm-2 control-label">操作:</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group btn-group-justified" role="group">
                                         <div class="btn-group">
-                                            <button type="submit" id="sendasphtml"
+                                            <button type="button" id="sendhtmlasp"
                                                 class="btn btn-default">data-html</button>
                                         </div>
                                         <div class="btn-group">
-                                            <button type="submit" id="sendaspxml"
+                                            <button type="button" id="sendxmlasp"
                                                 class="btn btn-default">data-xml</button>
                                         </div>
                                         <div class="btn-group">
-                                            <button type="submit" id="sendaspjson"
+                                            <button type="button" id="sendjsonasp"
                                                 class="btn btn-default">data-json</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <div class="comment">已有评论</div>
+                                <label for="result" class="col-sm-2 control-label">结果:</label>
+                                <div class="col-sm-10">
+                                    <div class="comment">已有评论：</div>
                                     <div id="resTextasp"></div>
                                 </div>
                             </div>
@@ -162,8 +166,8 @@
     </main>
     <footer>
         <div class="navbar-inverse text-center navbar-fixed-bottom bg-primary">
-            © 2022 Copyright:
-            <a class="text-muted" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            2022 &COPY; Copyright;
+            <a class="text-muted" href="https://mdbootstrap.com">MDBoostrap.com</a>
         </div>
     </footer>
 </body>
