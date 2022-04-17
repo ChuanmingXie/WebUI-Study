@@ -34,12 +34,12 @@
 	// 2.构造函数方式：
 	// 通过构造函数(constructor function)创建一个JS对象。构造函数名即为类名，使用时通过new运算符和构造函数参数创建
 	// 语法：
-		function ClassName([param1], [param2], ...) {
+/* 		function ClassName([param1], [param2], ...) {
 			this.propertyName = value;
 			// 其他属性
 			this.methodName = functionName | function() {};
 			//其他方法
-		}
+		} */
 	// 示例:
 	// 通过构造函数创建对象
 		function Goods(name, type, price, color) {
@@ -163,14 +163,14 @@
 		goods2.showColor();
 		
 	//5.JSON 方式
-	JavaScript Object Notation是一种基于ECMAScript的轻量级数据交换格式，采用完全独立于语言的文本格式，能够以更加简明的方式创建对象
+/* 	JavaScript Object Notation是一种基于ECMAScript的轻量级数据交换格式，采用完全独立于语言的文本格式，能够以更加简明的方式创建对象
 	JSON对象以{开始，以}结束
 	属性名和属性值之间使用冒号隔开，属性的类型可以是字符串、数值、日期、数组或自定义对象等类型
 	方法部分是由方法名和匿名函数构造，并使用冒号(":")隔开
-	属性或方法之间使用逗号（,）隔开，最后一项不需要逗号
+	属性或方法之间使用逗号（,）隔开，最后一项不需要逗号 */
 	var goods={
-		name:"男士衬衫";
-		type:"男装";
+		name:"男士衬衫",
+		type:"男装",
 		price:200,
 		color:"白色",
 		showInfo: function() {
@@ -204,10 +204,10 @@
 	+",爱好"+customer.enjoy);
 	
 	
-	与XML数据相比，JSON数据格式具有简洁易读、数据的体积小、传输速度快等特点。
+/* 	与XML数据相比，JSON数据格式具有简洁易读、数据的体积小、传输速度快等特点。
 	JSON对象是一种轻量级的数据交换格式，是理想的数据交换格式。
 	在传输过程中，JSON对象往往以字符串的形式进行传输，
-	所以在页面中需要通过JavaScript中的 eval() 方法或者Function对象的方式将字符串解析成JavaScript
+	所以在页面中需要通过JavaScript中的 eval() 方法或者Function对象的方式将字符串解析成JavaScript */
 	
 	// evel()方式 ：将字符串解析为JSON对象
 	var movieStr='{' +
@@ -221,12 +221,13 @@
 	var movie=eval("("+movieStr+")");
 	movie.showInfo();
 	// 注意：
-		alert(typeof(eval("{}")))		//return undefined
+/* 		alert(typeof(eval("{}")))		//return undefined
 		alert(typeof(eval("({})"))		//return object[object]
-		即，进行JSON转换时，要添加一对小括号才能进行正常转化
+		即，进行JSON转换时，要添加一对小括号才能进行正常转化 */
 		
 	// Function对象方式将字符串转换为JSON对象
-	// 在创建Function对象时，第一个参数是一个列表，用于传递数据，第二个参数作为函数的执行体；在执行中使用return返回JSON内容即可
+	/* 在创建Function对象时，第一个参数是一个列表，用于传递数据，第二个参数作为函数的执行体；
+	在执行中使用return返回JSON内容即可 */
 	var movieStr='{' +
 		'name:"长津湖",' +
 		'type:"战争",' +
