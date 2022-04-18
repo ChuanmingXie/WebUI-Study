@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery-Ajax -ajax方法</title>
+    <link rel="stylesheet" href="../css/jQueryAjax.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style rel="stylesheet" type="text/css">
+        .item {
+            height: 400px;
+        }
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">jQuery|Ajax</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">ASP服务端</a></li>
+                        <li><a href="#">PHP服务端</a></li>
+                        <li><a href="#">JSP服务端</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" id="search" class="form-control" placeholder="天空">
+                            </div>
+                            <input type="submit" class="btn btn-default">确定</button>
+                        </form>
+                        <li><a href="#">关于</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery-Tec <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">jQuery Selector</a></li>
+                                <li><a href="#">jQuery DOM</a></li>
+                                <li><a href="#">jQuery Event</a></li>
+                                <li><a href="#">jQuery Form</a></li>
+                                <li><a href="#">jQuery Plugin</a></li>
+                                <li><a href="#">jQuery Ajax</a></li>
+                                <li><a href="#">jQuery Website</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="list-group">
+                        <a href="./01-Ajax-JavaScript.html" class="list-group-item">JavaScript</a>
+                        <a href="./02-jQueryAjax-load.html" class="list-group-item">$.load()</a>
+                        <a href="./03-jQueryAjax-get.html" class="list-group-item">$.get()</a>
+                        <a href="./04-jQueryAjax-post.html" class="list-group-item">$.post()</a>
+                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item">$.getJson</a>
+                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item">$.getScript</a>
+                        <a href="./06-jQueryAjax-ajax.html" class="list-group-item active">$.ajax</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="row">
+                        <div class="col-sm-11 col-sm-offset-1">
+                            <div id="swipper" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#swipper" data-slide-to="0" class="active"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img data-src="holder.js/1600x400?auto=yes" class="img-rounded" />
+                                        <div class="container"></div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#swipper" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                                <a class="right carousel-control" href="#swipper" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">操作:</label>
+                                <div class="col-sm-10">
+                                    <div class="btn-group">
+                                        <button type="button" id="ajaxjs" class="btn btn-default">ajax-get-js</button>
+                                        <button type="button" id="ajaxjson"
+                                            class="btn btn-default">ajax-get-json</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">结果:</label>
+                                <div class="col-sm-10">
+                                    <div id="resTextfile"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="imgList"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="navbar-inverse navbar-fixed-bottom bg-primary text-center">
+            2022 &copy; Copyright
+            <a class="text-muted" href="https://mdbootstrap.com">MDBootstrap.com</a>
+        </div>
+    </footer>
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../js/holder.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function searchAjax(params) {
+            var imgcors = "https://cors.eu.org/http://wallpaper.apc.360.cn/index.php?c=WallPaper&start=1&count=12&from=360chrome&a=search&kw=" + params;
+            var ivsky = "https://www.ivsky.com/get_veer.php?keyword=" + params + "&nums=16&jsoncallback=imglist";
+            var baiduapi = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=detail&logid=10228454235807047048&cl=&lm=&ie=utf-8&oe=utf-8&adpicid=0&lpn=0&st=&word=%E7%BE%8E%E5%A5%B3&z=0&ic=0&hd=&latest=&copyright=&s=&se=&tab=&width=&height=&face=&istype=&qc=&nc=&fr=albumsdetail&simics=&srctype=&bdtype=&rpstart=&rpnum=&cs=3676218341%2C3686214618&catename=&nojc=&album_id=45&album_tab=%E4%BA%BA%E7%89%A9&cardserver=&tabname=&pn=0&rn=30&gsm=0&1650276807983=";
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                url: imgcors,
+                success: function (response) {
+                    // if (response.data.list.length <= 0) {
+                    if (response.data.length < 0) {
+                        // alert("There is nothing picture!");
+                        searchAjax("天空");
+                        return false;
+                    }
+                    // alert(response);
+                    // $.each(response.data.list, function (i, element) {
+                    $.each(response.data, function (i, element) {
+                        var itemli = "<li data-target='#swipper' data-slide-to=" + i + "></li>";
+                        var itemdiv = "<div class='item'></div>";
+                        $(".carousel-inner").append(itemdiv);
+                        $(".carousel-inner .item").first().addClass("active");
+                        $("<img class='img-responsive center-block'>").attr({ "src": element.url_mid, "alt": "banner_img_" + i }).appendTo($('.item').last());
+                        $(".carousel-indicators").append(itemli);
+                        $(".carousel-indicators li").first().addClass("active");
+                        if (i == 16) {
+                            return false;
+                        }
+                    });
+                }
+            });
+        }
+
+        $(function () {
+            /*  $.ajax({
+                 type: "GET",
+                 url: "https://pic.netbian.com/e/search/result/?searchid=16",
+                 dataType: "text/html",
+                 headers: { "Access-Control-Allow-Origin": "*" },
+                 xhrFields: {
+                     withCredentials: true
+                 },
+                 crossDomain: true,
+                 function(response, status, request) {
+                     alert($(this).html()); // dom element                
+                 }
+             }); */
+
+            searchAjax($("#search").attr('placeholder'));
+            $("input[type='submit']").click(function (e) {
+                e.preventDefault();
+                $(".carousel-indicators").find("li:gt(0)").remove();
+                $(".carousel-inner").find(".item:gt(0)").remove();
+                searchAjax($("#search").val());
+            });
+
+            $("#ajaxjs").click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "get",
+                    url: "../assets/file.js",
+                    dataType: "script"
+                });
+            });
+            $("#ajaxjson").click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "GET",
+                    url: "../assets/file.json",
+                    dataType: "json",
+                    success: function (response) {
+                        var texthtml = "";
+                        $("#resTextfile").empty();
+                        $.each(response, function (indexInArray, element) {
+                            texthtml += "<div class='comment'><h6>" + element['username'] + "</h6><p class='param'>" + element['content'] + "</p></div>";
+                        });
+                        $("#resTextfile").html(texthtml);
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>

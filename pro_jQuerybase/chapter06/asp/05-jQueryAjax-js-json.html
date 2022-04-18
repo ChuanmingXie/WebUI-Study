@@ -55,10 +55,10 @@
                         $.each(data.data.list, function (i, element) {
                             var itemdiv = ("<div class='item'></div>");         //创建一个元素节点
                             $(".carousel-inner").append(itemdiv);
+                            $(".carousel-inner .item").first().addClass('active');
                             var itemli = ("<li data-target='#carousel-id' data-slide-to=" + (i) + "></li>"); //创建一个元素节点
                             $(".carousel-indicators").append(itemli);
                             $("<img>").attr("src", element.middle_url).appendTo($(".item").last());
-                            $(".item").first().addClass('active');
                             $(".carousel-indicators li").first().addClass('active');
                             if (i == 16) {
                                 return false;
@@ -69,7 +69,7 @@
             });
             $("#jsonajax").click(function (e) {
                 e.preventDefault();
-                var baiduapi = "https://image.baidu.com/search/index?ct=201326592%2C503316480&z=%2C&s=&tn=baiduimage&ipn=r&word=%E7%BE%8E%E5%A5%B3&pn=&spn=&ie=utf-8&oe=utf-8&lm=6&st=-1&fr=&se=&sme=&width=&height=&face=0&hd=0&latest=0&copyright=0&cs=&os=&objurl=&di=&cg=girl&gsm=1e"
+                var baiduapi = "https://image.baidu.com/search/index?ct=201326592%2C503316480&z=%2C&s=&tn=baiduimage&ipn=r&word=%E7%BE%8E%E5%A5%B3&pn=&spn=&ie=utf-8&oe=utf-8&lm=6&st=-1&fr=&se=&sme=&width=&height=&face=0&hd=0&latest=0&copyright=0&cs=&os=&objurl=&di=&cg=girl&gsm=1e";
                 $.ajax({
                     url: baiduapi,
                     type: 'GET',
@@ -148,9 +148,9 @@
                         <a href="./02-jQueryAjax-load.html" class="list-group-item">$.load()</a>
                         <a href="./03-jQueryAjax-get.html" class="list-group-item">$.get()</a>
                         <a href="./04-jQueryAjax-post.html" class="list-group-item">$.post()</a>
-                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item active">$.getJson</a>
-                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item">$.getScript</a>
-                        <a href="#" class="list-group-item">$.ajax</a>
+                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item">$.getJson</a>
+                        <a href="./05-jQueryAjax-js-json.html" class="list-group-item active">$.getScript</a>
+                        <a href="./06-jQueryAjax-ajax.html" class="list-group-item">$.ajax</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
