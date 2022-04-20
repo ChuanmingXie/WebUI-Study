@@ -2,8 +2,40 @@
 
 *{margin: 0;padding: 0;}
 body{font-size: 12px;}
-.comment{margin-top: 10px;padding: 10px;border: 1px solid #ccc; background: #BFB;}
+.comment {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #BFB;
+    width: 100%;
+    display: inline-table;
+}
+
+.comment:nth-child(even) {
+    float: right;
+    width: 50%;
+    margin-left: 100px;
+}
+.comment:nth-child(odd) {
+    float: left;
+    width: 50%;
+}
 .comment h6{font-weight: 700;font-size: 14px;}
 .param{margin-top: 5px;text-indent: 2em;background: #DED;}
-.block{width:80px;height:80px;background:#DDD;}
-img{height: 400px;}
+.block{width:100%;height:80px;background:#DDD;}
+.item {height: 400px;}
+#loading{
+    width: 208px;
+    height: 110px;
+    background: #e1dda1b5;
+    color: #000;
+    display: none;
+    float: left;
+    left: 200px;
+    padding: 40px;
+    top: -15px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+}

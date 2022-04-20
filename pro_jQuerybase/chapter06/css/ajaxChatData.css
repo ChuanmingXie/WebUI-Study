@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+body{
+    margin: 0;padding: 0;font-size: 12px;
+}
+
+#messageWindow{
+    height: 250px;border: 1px solid; padding:5px; overflow: auto;
+}
+
+#wrapper{
+    margin:auto;
+    width: 438px;
+}

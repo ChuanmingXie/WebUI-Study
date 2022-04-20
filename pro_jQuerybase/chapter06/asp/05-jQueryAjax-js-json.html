@@ -9,12 +9,13 @@
     <title>jQuery-Ajax-getJson|getScript方法</title>
     <link rel="stylesheet" href="../css/jQueryAjax.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
+
     <script src="../js/jquery-1.12.4.js"></script>
-    <!-- <script src="../js/jquery.color-2.2.0.js"></script> -->
+    <script src="../js/holder.js"></script>
     <script src="../js/bootstrap.js"></script>
+    
     <script type="text/javascript">
         $(function () {
-
             $("#jslocal").click(function (e) {
                 e.preventDefault();
                 $("#resTextfile").empty();
@@ -48,46 +49,26 @@
 
             $("#jsonweb").click(function (e) {
                 e.preventDefault();
-                var ivsky = "https://www.ivsky.com/get_veer.php?keyword=泳装&nums=16&jsoncallback=imglist";
+                var ivsky = "https://www.ivsky.com/get_veer.php?keyword=泳装";
                 $.getJSON(ivsky,
                     function (data, textStatus, jqXHR) {
                         $("#resTextfile").empty();
                         $.each(data.data.list, function (i, element) {
+                            var itemli = ("<li data-target='#carousel-id' data-slide-to=" + (i+1) + "></li>"); //创建一个元素节点
+                            $(".carousel-indicators").append(itemli);
                             var itemdiv = ("<div class='item'></div>");         //创建一个元素节点
                             $(".carousel-inner").append(itemdiv);
-                            $(".carousel-inner .item").first().addClass('active');
-                            var itemli = ("<li data-target='#carousel-id' data-slide-to=" + (i) + "></li>"); //创建一个元素节点
-                            $(".carousel-indicators").append(itemli);
                             $("<img>").attr("src", element.middle_url).appendTo($(".item").last());
-                            $(".carousel-indicators li").first().addClass('active');
                             if (i == 16) {
                                 return false;
                             }
                         });
+                        $(".carousel-indicators li").first().addClass('active');
+                        $(".carousel-inner .item").first().addClass('active');
                     }
                 );
-            });
-            $("#jsonajax").click(function (e) {
-                e.preventDefault();
-                var baiduapi = "https://image.baidu.com/search/index?ct=201326592%2C503316480&z=%2C&s=&tn=baiduimage&ipn=r&word=%E7%BE%8E%E5%A5%B3&pn=&spn=&ie=utf-8&oe=utf-8&lm=6&st=-1&fr=&se=&sme=&width=&height=&face=0&hd=0&latest=0&copyright=0&cs=&os=&objurl=&di=&cg=girl&gsm=1e";
-                $.ajax({
-                    url: baiduapi,
-                    type: 'GET',
-                    xhrFields: {
-                        withCredentials: true // 设置运行跨域操作  
-                    },
-                    datatype: 'json',
-                    success: function (data) { alert("Success"); },
-                    error: function (data) { alert('Failed!'); },
-                    beforeSend: setHeader
-                });
-            });
+            }); 
         });
-        xhr = new XMLHttpRequest();
-        function setHeader(xhr) {
-            xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-            xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin,No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With, userId, token");
-        }
     </script>
 </head>
 
@@ -116,14 +97,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <form class="navbar-form navbar-left" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="查询">
+                                <input type="text" class="form-control" placeholder="关键字">
                             </div>
                             <button type="submit" class="btn btn-default">确定</button>
                         </form>
                         <li><a href="#">关于</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery-Tec<b
-                                    class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery-Tec<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">jQuery Selector</a></li>
                                 <li><a href="#">jQuery DOM</a></li>
@@ -188,14 +168,16 @@
                                 <div id="resTextfile"></div>
                                 <div class="block"></div>
                                 <div id="swipper" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators"></ol>
-                                    <div class="carousel-inner"></div>
-                                    <a class="left carousel-control" href="#swipper" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#swipper" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#swipper" data-slide-to="0" class="active"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img data-src="holder.js/1600x400?auto=yes" class="img-rounded" />
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#swipper" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                    <a class="right carousel-control" href="#swipper" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                                 </div>
                             </div>
                         </div>
