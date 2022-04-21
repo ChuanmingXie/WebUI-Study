@@ -7,3 +7,6 @@ chapter 11 : bs响应式表格
 chapter 12 : bs响应式图表
 chapter 13-14 : 移动端UI
 chapter 15 : 帖吧案例
+
+jQuery-plugin文件夹里plugin.js :
+Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi 
