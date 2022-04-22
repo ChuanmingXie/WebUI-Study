@@ -11,6 +11,68 @@
     <!-- Bootstrap CSS -->
     <link href="content/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="content/google-code-prettify/prettify.css">
+    <style type="text/css">
+        pre {
+            padding: 0 3px 2px;
+            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+            font-size: 12px;
+            color: #333;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px
+        }
+
+        code {
+            padding: 2px 4px;
+            color: #d14;
+            white-space: nowrap;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8
+        }
+
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px
+        }
+
+        pre.prettyprint {
+            margin-bottom: 20px
+        }
+
+        pre code {
+            padding: 0;
+            color: inherit;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: transparent;
+            border: 0
+        }
+
+        .pre-scrollable {
+            max-height: 340px;
+            overflow-y: scroll
+        }
+
+        ol.linenums {
+            margin: 0 0 0 -10px;
+        }
+    </style>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,39 +142,532 @@
             <div class="row">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="spy_scroll_affix">
                     <ul class="nav nav-pills nav-stacked" id="affix_ul">
-                        <li class="nav-link"><a href="#div1">item li</a></li>
-                        <li class="nav-link"><a href="#div2">item li</a></li>
-                        <li class="nav-link"><a href="#div3">item li</a></li>
-                        <li class="nav-link"><a href="#div4">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
+                        <li class="nav-link active"><a href="#div1">标题</a></li>
+                        <li class="nav-link"><a href="#div2">段落</a></li>
+                        <li class="nav-link"><a href="#div3">缩略</a></li>
+                        <li class="nav-link"><a href="#div4">地址</a></li>
+                        <li class="nav-link"><a href="#div5">引用</a></li>
+                        <li class="nav-link"><a href="#div6">列表</a></li>
+                        <li class="nav-link"><a href="#div7">描述</a></li>
+                        <li class="nav-link"><a href="#div8">代码</a></li>
+                        <li class="nav-link"><a href="#div9">表格</a></li>
+                        <li class="nav-link"><a href="#div10">按钮</a></li>
+                        <li class="nav-link"><a href="#div11">图片</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                     <div class="jumbotron">
-                            <h3>Hello, Bootstrap - 样式!</h3>
+                        <h3>Hello, Bootstrap - 样式!</h3>
                     </div>
                     <div class="form-horizontal">
                         <div id="div1" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 标题:</label>
                             <div class="col-sm-10">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h1>Bootstrap heading</h1>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h2>Bootstrap heading</h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3>Bootstrap heading</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4>Bootstrap heading</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>Bootstrap heading</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Bootstrap heading</h6>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br>
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h1>Bootstrap Heading <small>副标题</small></h1>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h2>Bootstrap Heading <small>副标题</small></h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3>Bootstrap Heading <small>副标题</small></h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4>Bootstrap Heading <small>副标题</small></h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>Bootstrap Heading <small>副标题</small></h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Bootstrap Heading <small>副标题</small></h6>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div id="div2" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 段落:</label>
                             <div class="col-sm-10">
+                                <p>Bootstrap 框架默认将全局字体设置为14排序，行高设置为20px，段落元素具备0.5倍行高即10px的底部marign, .lead用于突出显示</p>
+                                <p>Bootstrap 框架默认将全局字体设置为14排序，行高设置为20px，段落元素具备0.5倍行高即10px的底部marign, .lead用于突出显示</p>
+                                <p class="lead">通过添加<code>.lead</code>让段落突出显示</p>
+                                <p><strong>通过增加font-weight值的方式加粗强调一段文本</strong></p>
+                                <p><em>还可以使用em标签设置斜体</em></p>
+                                <p><small>对于不需要强调的inline和block类型的文本使用small标签</small></p>
+                                <p><strong>通过对齐方式类设置文本</strong></p>
+                                <p class="text-left">向左对齐文字</p>
+                                <p class="text-center">向中对齐文字</p>
+                                <p class="text-right">向右对齐文字</p>
+                                <p><strong>通过颜色类设置文本</strong></p>
+                                <p class="muted">这段文本通过class muted设置颜色</p>
+                                <p class="text-info">这段文本通过class text-info设置颜色</p>
+                                <p class="text-success">这段文本通过class text-success设置颜色</p>
+                                <p class="text-error">这段文本通过class text-error设置颜色</p>
+                                <p class="text-warning">这段文本通过class text-warning设置颜色</p>
                             </div>
                         </div>
                         <div id="div3" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 缩略:</label>
                             <div class="col-sm-10">
+                                <p>将鼠标悬停在缩略语标签<abbr title="我是abbreviation的缩写">abbr</abbr>上可以看到完整文本内容</p>
                             </div>
                         </div>
                         <div id="div4" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 地址:</label>
                             <div class="col-sm-10">
+                                <address>
+                                    <strong>Bootstrap,inc.</strong><br>
+                                    十元南大街 688号，北京，中国<br>
+                                    <abbr title="Telphone Number">tel:</abbr>（12）234-12413
+                                </address>
+                                <address>
+                                    <strong>姓名：</strong>
+                                    <a href="mailto:#">ajdhwe@outlook.com</a>
+                                </address>
+                            </div>
+                        </div>
+                        <div id="div5" class="form-group">
+                            <label for="" class="col-sm-2 control-label">引用:</label>
+                            <div class="col-sm-10">
+                                <blockquote>
+                                    <p>在标准的引用里，可以简单的改变风格和内容</p>
+                                    <p>添加small标签来注明引用来源，来原名称可以放在cite标签里</p>
+                                    <small>cite in <cite title="Bootstrap inc.">bootstrap.com</cite></small>
+                                </blockquote>
+                                <blockquote class="pull-right">
+                                    <p>在标准的引用里，可以简单的改变风格和内容</p>
+                                    <p>添加small标签来注明引用来源，来原名称可以放在cite标签里</p>
+                                    <small>cite in <cite title="Bootstrap inc.">bootstrap.com</cite></small>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div id="div6" class="form-group">
+                            <label for="" class="col-sm-2 control-label">列表:</label>
+                            <div class="col-sm-10">
+                                <div class="col-sm-4">
+                                    <ul>
+                                        <li>旅行</li>
+                                        <li>运动</li>
+                                        <li>语言
+                                            <ul>
+                                                <li>英语</li>
+                                                <li>俄语</li>
+                                                <li>法语</li>
+                                            </ul>
+                                        </li>
+                                        <li>家务</li>
+                                        <li>音乐</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="list-unstyled">
+                                        <li>旅行</li>
+                                        <li>运动</li>
+                                        <li>语言
+                                            <ul>
+                                                <li>英语</li>
+                                                <li>俄语</li>
+                                                <li>法语</li>
+                                            </ul>
+                                        </li>
+                                        <li>家务</li>
+                                        <li>音乐</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ol>
+                                        <li>旅行</li>
+                                        <li>运动</li>
+                                        <li>语言
+                                            <ul>
+                                                <li>英语</li>
+                                                <li>俄语</li>
+                                                <li>法语</li>
+                                            </ul>
+                                        </li>
+                                        <li>家务</li>
+                                        <li>音乐</li>
+                                    </ol>
+                                </div>
+                                <div class="col-sm-12">
+                                    <ul class="list-inline">
+                                        <li>旅行</li>
+                                        <li>运动</li>
+                                        <li>语言</li>
+                                        <li>家务</li>
+                                        <li>音乐</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="div7" class="form-group">
+                            <label for="" class="col-sm-2 control-label">描述:</label>
+                            <div class="col-sm-10">
+                                <dl>
+                                    <dt>Boostrap</dt>
+                                    <dd>Boostrap是CSS框架</dd>
+                                    <dt>CSS</dt>
+                                    <dd>CSS是层叠样式表</dd>
+                                    <dt>HTML5</dt>
+                                    <dd>Boostrap,CSS,Html5是优秀的web工具</dd>
+                                </dl>
+                                <div class="dl-horizontal">
+                                    <dt>Boostrap</dt>
+                                    <dd>Boostrap是CSS框架</dd>
+                                    <dt>CSS</dt>
+                                    <dd>CSS是层叠样式表</dd>
+                                    <dt>HTML5</dt>
+                                    <dd>Boostrap,CSS,Html5是优秀的web工具</dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="div8" class="form-group">
+                            <label for="" class="col-sm-2 control-label">代码:</label>
+                            <div class="col-sm-10">
+                                inline Code <code>alert('this is inline code')</code>
+                                pre code
+                                <pre>var i=1;<br>var j=2;<br>alert(i+j);<br></pre>
+                                <pre class="prettyprint linenums" style="margin-bottom: 2px;">
+                                    <br>var q=1;<br>var j=3;<br>alert(q+j);
+                                </pre>
+                                <pre class="pre-scrollable">
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                    <br>var j=1;<br>var j=2;<br>alert(j+j);
+                                </pre>
+                            </div>
+                        </div>
+                        <div id="div9" class="form-group">
+                            <label for="" class="col-sm-2 control-label">表格:</label>
+                            <div class="col-sm-10">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>张三</td>
+                                            <td>男</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>李四</td>
+                                            <td>男</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>王五</td>
+                                            <td>男</td>
+                                            <td>20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>张三</td>
+                                            <td>男</td>
+                                            <td>18</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>李四</td>
+                                            <td>男</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>李密</td>
+                                            <td>男</td>
+                                            <td>46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>春泥</td>
+                                            <td>女</td>
+                                            <td>23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>张三</td>
+                                            <td>男</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>里斯</td>
+                                            <td>男</td>
+                                            <td>34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>思文</td>
+                                            <td>女</td>
+                                            <td>39</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-hover table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>张三</td>
+                                            <td>男</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>李四</td>
+                                            <td>女</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>王五</td>
+                                            <td>女</td>
+                                            <td>34</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-bordered">
+                                    <theed>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                        </tr>
+                                    </theed>
+                                    <tbody>
+                                        <tr class="error">
+                                            <td>1</td>
+                                            <td>张三</td>
+                                            <td>男</td>
+                                            <td>128</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>1</td>
+                                            <td>李思思</td>
+                                            <td>男</td>
+                                            <td>128</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>1</td>
+                                            <td>张芳源</td>
+                                            <td>男</td>
+                                            <td>128</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>1</td>
+                                            <td>王广开</td>
+                                            <td>男</td>
+                                            <td>128</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="div10" class="form-group">
+                            <label for="" class="col-sm-2 control-label">按钮:</label>
+                            <div class="col-sm-10">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>按钮外观</th>
+                                            <th>样式Class</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="btn">默认</button></td>
+                                            <td><code>btn</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-primary">主要</button></td>
+                                            <td><code>btn btn-primary</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-info">信息</button></td>
+                                            <td><code>btn btn-info</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-success">成功</button></td>
+                                            <td><code>btn btn-success</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-warning">警告</button></td>
+                                            <td><code>btn btn-waring</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-danger">危险</button></td>
+                                            <td><code>btn btn-danger</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-inverse">方向</button></td>
+                                            <td><code>btn btn-inverse</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-link">链接</button></td>
+                                            <td><code>btn btn-link</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>按钮外观</th>
+                                            <th>样式class</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-mini">Mini button</button></td>
+                                            <td><code>btn btn-mini</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-small">small button</button></td>
+                                            <td><code>btn btn-small</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-primary">Default button</button>
+                                            </td>
+                                            <td><code>btn btn-Default</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-large">large button</button></td>
+                                            <td><code>btn btn-large</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>按钮外观</th>
+                                            <th>样式class</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="btn btn-block">Block level buton</button>
+                                            </td>
+                                            <td><code>btn btn-block</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="btn disabled">disabled buton</button></td>
+                                            <td><code>btn disabled</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="div11" class="form-group">
+                            <label for="" class="col-sm-2 control-label">图片:</label>
+                            <div class="col-sm-10">
+                                <img data-src="holder.js/90x90" class="img-rounded" />
+                                <img data-src="holder.js/90x90" class="img-circle" />
+                                <img data-src="holder.js/90x90" class="img-polaroid" /><br>
+                                <img data-src="holder.js/90x90" class="img-responsive" /><br>
+                                <img data-src="holder.js/90x90" class="img-thumbnail" />
                             </div>
                         </div>
                     </div>
@@ -126,9 +681,12 @@
     <script src="content/jquery/1.11.3/jquery-1.11.3.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="content/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="content/holder/2.0/holder.min.js"></script>
+    <script src="content/google-code-prettify/prettify.js"></script>
+    <script src="content/application.js"></script>
     <script type="text/javascript">
-        $(function(){
-            $("#affix_ul").affix({offset:{top:128}})
+        $(function () {
+            $("#affix_ul").affix({ offset: { top: 128 } })
         })
     </script>
 </body>
