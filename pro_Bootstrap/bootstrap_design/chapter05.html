@@ -22,6 +22,86 @@
     <link rel="apple-touch-icon" sizes="72*72" href="content/bootstrap/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon" sizes="114*114" href="content/bootstrap/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" sizes="144*144" href="content/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <style type="text/css">
+        .bs-example {
+            position: relative;
+            padding: 45px 15px 15px;
+            margin: 0 -15px 15px;
+            border-color: #e5e5e5 #eee #eee;
+            border-style: solid;
+            border-width: 1px 0;
+            -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05)
+        }
+
+        .bs-example:after {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #959595;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            content: "Example"
+        }
+
+        .menuStyle {
+            display: block;
+            position: static;
+            margin-bottom: 5px;
+            *width: 180px;
+        }
+
+        /* 三级菜单 */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu>a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #ccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover>a:after {
+            border-left-color: #fff;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+        .dropdown-submenu.pull-left>.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target="#spy_scroll_affix">
@@ -80,39 +160,507 @@
             <div class="row">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="spy_scroll_affix">
                     <ul class="nav nav-pills nav-stacked" id="affix_ul">
-                        <li class="nav-link"><a href="#div1">item li</a></li>
-                        <li class="nav-link"><a href="#div2">item li</a></li>
-                        <li class="nav-link"><a href="#div3">item li</a></li>
-                        <li class="nav-link"><a href="#div4">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
+                        <li class="nav-link"><a href="#lblbadgediv">标签与徽章</a></li>
+                        <li class="nav-link"><a href="#progressdiv">设置进度条</a></li>
+                        <li class="nav-link"><a href="#paginationdiv">分页类型</a></li>
+                        <li class="nav-link"><a href="#navdiv">导航设置</a></li>
+                        <li class="nav-link"><a href="#navbardiv">导航条设置</a></li>
+                        <li class="nav-link"><a href="#btngroupdiv">按钮组控件</a></li>
+                        <li class="nav-link"><a href="#ulmenudiv">列表下拉菜单</a></li>
+                        <li class="nav-link"><a href="#btnmenudiv">按钮下拉菜单</a></li>
+                        <li class="nav-link"><a href="#glyphicondiv">按钮下拉菜单</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                     <div class="jumbotron">
-                            <h3>Hello, Bootstrap - 组件!</h3>
+                        <h3>Hello, Bootstrap - 组件!</h3>
                     </div>
                     <div class="form-horizontal">
-                        <div id="div1" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                        <div id="lblbadgediv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 标签与徽章:</label>
                             <div class="col-sm-10">
+                                <span>标签:</span>
+                                <span class="label label-default">默认</span>
+                                <span class="label label-success">成功</span>
+                                <span class="label label-warning">警告</span>
+                                <span class="label label-info">信息</span>
+                                <span class="label label-danger">危险</span> <!-- 与重要样式相同 -->
+                                <!--2.3.2样式失效 <span class="label label-important">重要</span> -->
+                                <!--2.3.2样式失效 <span class="label label-inverse">反色</span> -->
+                                <br>
+                                <br>
+                                <span>徽章:</span>
+                                <span class="badge">10</span>
+                                <!-- 链接中展示徽章 -->
+                                <a href="#">消息 <span class="badge">20</span></a>
+                                <!-- 按钮中展示徽章 -->
+                                <button type="button" class="btn btn-default">
+                                    未读消息<span class="badge">1</span>
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    未读消息<span class="badge">2</span>
+                                </button>
+                                <button type="button" class="btn btn-warning">
+                                    未读消息<span class="badge">3</span>
+                                </button>
+                                <button type="button" class="btn btn-info">
+                                    未读消息<span class="badge">4</span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    未读消息<span class="badge">5</span>
+                                </button>
+                                <button type="button" class="btn btn-success">
+                                    未读消息<span class="badge">6</span>
+                                </button>
                             </div>
                         </div>
-                        <div id="div2" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                        <div id="progressdiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 设置进度条:</label>
                             <div class="col-sm-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 20%;">
+                                        <span class="sr-only">显示完成20%</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                        <span class="sr-only"> 20% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="" aria-valuemax="" style="width: 20%;">
+                                        <span class="sr-only"> 20% Complete</span>
+                                    </div>
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="15"
+                                        aria-valuemin="" aria-valuemax="" style="width: 15%;">
+                                        <span class="sr-only"> 15% Complete</span>
+                                    </div>
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65"
+                                        aria-valuemin="" aria-valuemax="" style="width: 65%;">
+                                        <span class="sr-only"> 65% Complete</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div id="div3" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                        <div id="paginationdiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 分页类型:</label>
                             <div class="col-sm-10">
+                                <ul class="pagination">
+                                    <li><a href="#">&laquo;</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                                <ul class="pager">
+                                    <li class="previous"><a href="#">&larr; Older</a></li>
+                                    <li class="next"><a href="#">Newer &rarr;</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div id="div4" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                        <div id="navdiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 导航设置:</label>
                             <div class="col-sm-10">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#">首页</a></li>
+                                    <li><a href="#">新闻</a></li>
+                                    <li><a href="#">财经</a></li>
+                                    <li><a href="#">体育</a></li>
+                                    <li><a href="#">论坛</a></li>
+                                </ul>
+                                <br>
+                                <br>
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#">首页</a></li>
+                                    <li><a href="#">新闻</a></li>
+                                    <li><a href="#">财经</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">体育<b
+                                                class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">足球</a></li>
+                                            <li><a href="#">篮球</a></li>
+                                            <li><a href="#">排球</a></li>
+                                            <li><a href="#">游泳</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">论坛</a></li>
+                                </ul>
+                                <br>
+                                <br>
+                                <div role="tabpanel">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#news" aria-controls="news" role="tab" data-toggle="tab">News</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#finace" aria-controls="finace" role="tab"
+                                                data-toggle="tab">Finace</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#amusement" aria-controls="amusement" role="tab"
+                                                data-toggle="tab">Amusement</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#BBS" aria-controls="BBS" role="tab" data-toggle="tab">BBS</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#sports" aria-controls="sports" role="tab"
+                                                data-toggle="tab">sports</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="news">新闻标签页</div>
+                                        <div role="tabpanel" class="tab-pane" id="finace">财经标签页</div>
+                                        <div role="tabpanel" class="tab-pane" id="amusement">娱乐标签页</div>
+                                        <div role="tabpanel" class="tab-pane" id="BBS">论坛标签页</div>
+                                        <div role="tabpanel" class="tab-pane" id="sports">运动标签页</div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <ul class="nav nav-pills">
+                                        <li class="active"><a href="#">首页</a></li>
+                                        <li><a href="#">新闻</a></li>
+                                        <li><a href="#">财经</a></li>
+                                        <li><a href="#">体育</a></li>
+                                        <li><a href="#">论坛</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="active"><a href="#">首页</a></li>
+                                        <li><a href="#">新闻</a></li>
+                                        <li><a href="#">财经</a></li>
+                                        <li><a href="#">体育</a></li>
+                                        <li><a href="#">论坛</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <ul class="nav nav-list">
+                                        <li class="nav-header">新闻</li>
+                                        <li><a href="#">财经</a></li>
+                                        <li><a href="#">军事</a></li>
+                                        <li><a href="#">农业</a></li>
+                                        <li><a href="#">民生</a></li>
+                                        <li class="nav-header">体育</li>
+                                        <li><a href="#">排球</a></li>
+                                        <li><a href="#">游泳</a></li>
+                                        <li><a href="#">篮球</a></li>
+                                        <li><a href="#">赛事</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="navbardiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 导航条设置:</label>
+                            <div class="col-sm-10">
+                                <div class="navbar bg-info">
+                                    <a class="navbar-brand" href="#">导航条</a>
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"> <a href="#">首页</a></li>
+                                        <li> <a href="#">新闻</a></li>
+                                        <li> <a href="#">财经</a></li>
+                                        <li> <a href="#">体育</a></li>
+                                        <li> <a href="#">论坛</a></li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="navbar navbar-default">
+                                    <a class="navbar-brand" href="#">导航条</a>
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"> <a href="#">首页</a></li>
+                                        <li> <a href="#">新闻</a></li>
+                                        <li> <a href="#">财经</a></li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <form class="navbar-form navbar-left">
+                                            <input type="text" style="width: 200px;">
+                                            <button type="submit" class="btn btn-default">Submit</button>
+                                        </form>
+                                    </ul>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="navbar navbar-default">
+                                    <a class="navbar-brand" href="#">导航条</a>
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"> <a href="#">首页</a></li>
+                                        <li> <a href="#">新闻</a></li>
+                                        <li> <a href="#">财经</a></li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <form class="navbar-form navbar-left" role="search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="关键字">
+                                            </div>
+                                            <button type="submit" class="btn btn-default">确定</button>
+                                        </form>
+                                    </ul>
+                                </div>
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <div class="container-fluid">
+                                        <!-- Brand and toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                                data-target=".navbar-ex1-collapse">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="#">响应式导航条</a>
+                                        </div>
+
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="#">首页</a></li>
+                                                <li><a href="#">导航</a></li>
+                                            </ul>
+                                            <form class="navbar-form navbar-left" role="search">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Search">
+                                                </div>
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            </form>
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="#">关于</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉
+                                                        <b class="caret"></b></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- /.navbar-collapse -->
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div id="btngroupdiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 按钮组控件:</label>
+                            <div class="col-sm-10">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary">Left</button>
+                                    <button type="button" class="btn btn-primary">Middle</button>
+                                    <button type="button" class="btn btn-primary">Right</button>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="btn-group btn-group-justified" role="group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Left</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Middle</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Right</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">TB1-1</button>
+                                        <button type="button" class="btn btn-default">TB1-2</button>
+                                        <button type="button" class="btn btn-default">TB1-3</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">TB2-1</button>
+                                        <button type="button" class="btn btn-default">TB2-2</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">TB3-1</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="btn-group btn-group-vertical">
+                                    <button type="button" class="btn btn-default">button top</button>
+                                    <button type="button" class="btn btn-default">button middle</button>
+                                    <button type="button" class="btn btn-default">button bottom</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ulmenudiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 列表下拉菜单:</label>
+                            <div class="col-sm-10">
+                                <div class="bs-example">
+                                    <div class="dropdown clearfix">
+                                        <ul class="dropdown-menu menuStyle" role="menu" aria-labelledby="dropdownMenu">
+                                            <li><a tabindex="-1" href="#">下拉菜单A</a></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单B</a></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单C</a></li>
+                                            <li class="divider"></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单D</a></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单E</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown clearfix">
+                                        <ul class="dropdown-menu pull-right menuStyle" role="menu"
+                                            aria-labelledby="dropdownMenu">
+                                            <li><a href="#">左对齐下拉菜单A</a></li>
+                                            <li><a href="#">左对齐下拉菜单B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">左对齐下拉菜单C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown clearfix">
+                                        <ul class="dropdown-menu pull-left menuStyle" role="menu"
+                                            aria-labelledby="dropdownMenu">
+                                            <li><a href="#">左对齐下拉菜单A</a></li>
+                                            <li><a href="#">左对齐下拉菜单B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">左对齐下拉菜单C</a></li>
+                                        </ul>
+                                    </div>
+                                    <br>
+                                    <div class="dropdown clearfix">
+                                        <ul class="dropdown-menu menuStyle" role="menu" aria-labelledby="dropdownMenu">
+                                            <li><a tabindex="-1" href="#">下拉菜单</a></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-submenu">
+                                                <a tabindex="-1" href="#" data-toggle="dropdown">弹出子菜单<b
+                                                        class="caret"></b></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+                                                    <li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+                                                    <li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <br>
+                                    <div class="dropup clearfix">
+                                        <ul class="dropdown-menu menuStyle role=" menu" aria-labelledby="dropdownMenu">
+                                            <li><a tabindex="-1" href="#">下拉菜单</a></li>
+                                            <li><a tabindex="-1" href="#">下拉菜单</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-submenu">
+                                                <a tabindex="-1" href="#" data-toggle="dropdown">向上弹出子下拉菜单<b
+                                                        class="caret"></b></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+                                                    <li><a tabindex="-1" href="#">子下拉菜单B</a></li>
+                                                    <li><a tabindex="-1" href="#">子下拉菜单C</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btnmenudiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 按钮下拉菜单:</label>
+                            <div class="col-sm-10">
+                                <div class="btn-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary" data-toggle="dropdown">下拉按钮菜单<b
+                                                class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-success dropdown-toggle"
+                                            data-toggle="dropdown">下拉按钮菜单<b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-danger dropdown-toggle"
+                                            data-toggle="dropdown">下拉按钮菜单<b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-warning dropdown-toggle"
+                                            data-toggle="dropdown">下拉按钮菜单<b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-info dropdown-toggle"
+                                            data-toggle="dropdown">下拉按钮菜单<b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btnfa-inverse dropdown-toggle"
+                                            data-toggle="dropdown">下拉按钮菜单<b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Button Menu A</a></li>
+                                            <li><a href="#">Button Menu B</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Button Menu C</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="glyphicondiv" class="form-group">
+                            <label for="" class="col-sm-2 control-label">图标设置：</label>
+                            <div class="col-sm-10">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <button type="button" class="btn btn-default btn-lg"><span
+                                            class="glyphicon glyphicon-star"></span> Star</button>
+                                    <button type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-star"></span> Star</button>
+                                    <button type="button" class="btn btn-default btn-sm"><span
+                                            class="glyphicon glyphicon-star"></span> Star</button>
+                                    <button type="button" class="btn btn-default btn-xs"><span
+                                            class="glyphicon glyphicon-star"></span> Star</button>
+                                </div>
+                                <br>
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-align-left"></span><span
+                                                class="sr-only">左对齐</span></button>
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-align-center"></span><span
+                                                class="sr-only">中间对齐</span></button>
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-align-right"></span><span
+                                                class="sr-only">右对齐</span></button>
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-align-justify"></span><span
+                                                class="sr-only">两端对齐</span></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,8 +675,8 @@
     <!-- Bootstrap JavaScript -->
     <script src="content/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(function(){
-            $("#affix_ul").affix({offset:{top:128}})
+        $(function () {
+            $("#affix_ul").affix({ offset: { top: 128 } })
         })
     </script>
 </body>
