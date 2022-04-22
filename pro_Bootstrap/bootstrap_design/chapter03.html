@@ -11,6 +11,79 @@
     <!-- Bootstrap CSS -->
     <link href="content/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- <link rel="stylesheet" href="content/bootstrap/2.3.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="content/bootstrap/2.3.2/css/bootstrap-responsive.min.css">
+
+    <!-- <link href="content/assets/css/docs.css" rel="stylesheet" /> -->
+    <style type="text/css">
+        .show-grid {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .row-fluid {
+            width: 100%;
+        }
+
+        .show-grid [class^=col-] {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #eee;
+            background-color: rgba(168, 165, 172, 0.226);
+            border: 1px solid #ddd;
+            border: 1px solid rgba(168, 165, 172, 0.192)
+        }
+
+        /* Mini layout previews -------------------------------------------------- */
+        .mini-layout {
+            border: 1px solid #ddd;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+        }
+
+        .mini-layout,
+        .mini-layout .mini-layout-body,
+        .mini-layout.fluid .mini-layout-sidebar {
+            height: 300px;
+        }
+
+        .mini-layout {
+            margin-bottom: 20px;
+            padding: 9px;
+        }
+
+        .mini-layout div {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .mini-layout .mini-layout-body {
+            background-color: #dceaf4;
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        .mini-layout.fluid .mini-layout-sidebar,
+        .mini-layout.fluid .mini-layout-header,
+        .mini-layout.fluid .mini-layout-body {
+            float: left;
+        }
+
+        .mini-layout.fluid .mini-layout-sidebar {
+            background-color: #bbd8e9;
+            width: 20%;
+        }
+
+        .mini-layout.fluid .mini-layout-body {
+            width: 77.5%;
+            margin-left: 2.5%;
+        }
+    </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,39 +153,222 @@
             <div class="row">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="spy_scroll_affix">
                     <ul class="nav nav-pills nav-stacked" id="affix_ul">
-                        <li class="nav-link"><a href="#div1">item li</a></li>
-                        <li class="nav-link"><a href="#div2">item li</a></li>
-                        <li class="nav-link"><a href="#div3">item li</a></li>
-                        <li class="nav-link"><a href="#div4">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
-                        <li class="nav-link"><a href="#div">item li</a></li>
+                        <li class="nav-link active"><a href="#div1">栅格系统</a></li>
+                        <li class="nav-link"><a href="#div2">默认栅格</a></li>
+                        <li class="nav-link"><a href="#div3">流式栅格</a></li>
+                        <li class="nav-link"><a href="#div4">页面布局</a></li>
+                        <li class="nav-link"><a href="#div5">响应式布局</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                     <div class="jumbotron">
-                            <h3>Hello, Bootstrap - 脚手架!</h3>
+                        <h3>Hello, Bootstrap - 脚手架!</h3>
                     </div>
                     <div class="form-horizontal">
                         <div id="div1" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 栅格系统:</label>
                             <div class="col-sm-10">
+                                <h4> 3.1 Bootstrap全局样式</h4>
+                                <P>
+                                    Scaffolding 翻译为脚手架或继承结构，实际就是网页的整体模板和架构
+                                </P>
+                                <br />
+                                <h4> 3.2 栅格系统</h4>
+                                <P>
+                                    默认的栅格系统为12列，形成一个940px宽的容器，默认不启用响应式。<br />
+                                    如果使用了响应式布局的css文件，上个系统会根据宽度，从724px到1170px自适应的动态调整。<br />
+                                    假如在可视窗口低于767px款的情况下，列将不在固定而是在垂直方向自动堆叠。<br />
+                                </P>
+                                <!-- <div class="bs-docs-grid"> -->
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">2</div>
+                                    <div class="col-sm-3">3</div>
+                                    <div class="col-sm-4">4</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-4">4</div>
+                                    <div class="col-sm-5">5</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-9">9</div>
+                                </div>
+                                <!-- </div> -->
                             </div>
+
                         </div>
                         <div id="div2" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 默认栅格:</label>
                             <div class="col-sm-10">
+                                <h4>3.2.1 默认栅格系统</h4>
+                                <h5>2. 带有基本栅格的HTML代码</h5>
+                                </h2>
+                                <!-- <div class="bs-docs-grid"> -->
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-1">1</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">2</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-4">4</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-8">8</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-12">12</div>
+                                </div>
+                                <!-- </div> -->
+                                <h5>3. 偏移列</h5>
+                                <!-- <div class="bs-docs-grid"> -->
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">span2</div>
+                                    <div class="col-sm-2 col-sm-offset-3">3 offset 3</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">span2</div>
+                                    <div class="col-sm-2 col-sm-offset-3">3 offset 3</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-3 col-sm-offset-3">3 offset 3</div>
+                                    <div class="col-sm-2 col-sm-offset-2">2 offset 3</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-6 col-sm-offset-6">6 offset 6</div>
+                                </div>
+                                <!-- </div> -->
+                                <h5>4. 嵌套列</h5>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-12">
+                                        level 1
+                                        <div class="row-fluid show-grid">
+                                            <div class="col-sm-3">
+                                                level2
+                                            </div>
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                level2
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="div3" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 流式栅格:</label>
                             <div class="col-sm-10">
+                                <h4>3.2.2 流式栅格系统</h4>
+                                流式栅格系统的特点是对每一列的宽度使用百分比而不是像素量，这是其与固定栅格系统的主要区别
+                                <h5>1. 基本的流式栅格系统代码</h5>
+                                <!-- <div class="bs-docs-grid"> -->
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-1">1</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">2</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-4">4</div>
+                                </div>
+                                <!-- </div> -->
+                                <h5>2. 流式栅格偏移</h5>
+                                <!-- <div class="bs-docs-grid"> -->
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                    <div class="col-sm-1">1</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-2">span2</div>
+                                    <div class="col-sm-3 col-sm-offset-3">3 offset 3</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-3 col-sm-offset-3">3 offset 3</div>
+                                    <div class="col-sm-2 col-sm-offset-2">2 offset 2</div>
+                                </div>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-6 col-sm-offset-6">6 offset 6</div>
+                                </div>
+                                <!-- </div> -->
+                                <h5>3. 流式栅格的嵌套</h5>
+                                <div class="row-fluid show-grid">
+                                    <div class="col-sm-12">
+                                        level1
+                                        <div class="row-fluid show-grid">
+                                            <div class="col-sm-3">
+                                                level2
+                                            </div>
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                level2
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-6">Fluid6</div>
+                                                    <div class="col-sm-6">Fluid6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="div4" class="form-group">
-                            <label for="" class="col-sm-2 control-label"> 演示示例:</label>
+                            <label for="" class="col-sm-2 control-label"> 页面布局:</label>
                             <div class="col-sm-10">
+                                <div id="layoutdiv">
+
+                                </div>
+                                <p>Bootstrap设计了流式布局和固定布局两大类</p>
+                                <!-- 固定布局 -->
+                                <div class="mini-layout">
+                                    <div class="mini-layout-body"></div>
+                                </div>
+                                <!-- 流式布局 -->
+                                <div class="mini-layout fluid">
+                                    <div class="mini-layout-sidebar"></div>
+                                    <div class="mini-layout-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="div5" class="form-group">
+                            <label for="" class="col-sm-2 control-label"> 响应式布局:</label>
+                            <div class="col-sm-10">
+                                <p>Bootstrap框架的设计初衷是为了更好的满足响应式设计原理，本小节主要介绍针对Bootstrap如何应用响应式设计的内容</p>
+                                <h4>3.4.1 启用响应式特性</h4>
+                                <p>Bootstrap中是通过引入，responsive.css和设置meta进行启用 其中meta中的 />
+                                    <!-- ‘<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />’ -->
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -126,9 +382,10 @@
     <script src="content/jquery/1.11.3/jquery-1.11.3.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="content/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="content/bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
     <script type="text/javascript">
-        $(function(){
-            $("#affix_ul").affix({offset:{top:128}})
+        $(function () {
+            $("#affix_ul").affix({ offset: { top: 128 } });
         })
     </script>
 </body>
