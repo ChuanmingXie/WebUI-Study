@@ -1,0 +1,18 @@
+npm 安装bootstrap的各个版本
+
+1. 安装 less
+	npm install bootstrap@3.3.7 --save
+2. 安装 sass
+	npm install bootstrap-sass@3.4.1 --save
+3. 安装fontawesome-v5 fontawesome-free
+	npm install --save @fortawesome/fontawesome-free
+4. 安装fontawesome-v4.7 font-awesome
+	npm install font-awesome --save
+
+5. npm 安装gulp编译less的环境
+npm install gulp gulp-less gulp-concat gulp-minify-css gulp-notify gulp-rename gulp-uglify --save-dev
+
+6. npm安装gulp编译sass的环境
+npm install gulp gulp-sass sass gulp-concat gulp-scss-lint gulp-rename gulp-uglify --save-dev
+npm install gulp-sourcemaps gulp-cssnano gulp-html autoprefixer bootlint rimraf browser-sync--save-dev
+
