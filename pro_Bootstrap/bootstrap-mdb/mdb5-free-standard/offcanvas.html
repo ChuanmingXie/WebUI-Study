@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB CSS-->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <a class="nav-link" data-mdb-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <button class="nav-link" type="button" data-mdb-toggle="offcanvas" data-mdb-target="#offcanvasExample"
+                    aria-controls="offcanvasExample">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">Brand</a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left links -->
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <!-- Navbar dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <!-- Search form -->
+                    <form class="d-flex input-group w-auto">
+                        <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+                        <button class="btn btn-outline-primary" type="button" data-ripple-color="dark">
+                            Search
+                        </button>
+                    </form>
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Collapsible offcanvas -->
+                <div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 bg-light" tabindex="-1"
+                    id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 4.5rem;">
+                    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="Icon-only"
+                        data-mdb-toggle="tooltip" data-mdb-placement="right">
+                        <i class="fa-3x fab fa-bootstrap"></i>
+                        <span class="visually-hidden">Icon-only</span>
+                    </a>
+                    <ul class="nav nav-flush flex-column mb-auto text-center">
+                        <li class="nav-item">
+                            <a href="#" class="active nav-link py-3 border-bottom" aria-current="page" title="Home"
+                                data-mdb-toggle="tooltip" data-mdb-placement="right">
+                                <i class="fa-lg fas fa-mosque" aria-label="Home"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 border-bottom" title="Dashboard" data-mdb-toggle="tooltip"
+                                data-mdb-placement="right">
+                                <i class="fa-lg fas fa-tachometer-alt" aria-label="Dashboard"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-mdb-toggle="tooltip"
+                                data-mdb-placement="right">
+                                <i class="fa-lg fas fa-table" aria-label="Orders"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 border-bottom" title="Products" data-mdb-toggle="tooltip"
+                                data-mdb-placement="right">
+                                <i class="fa-lg fas fa-hand-holding-usd" aria-label="Products"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-mdb-toggle="tooltip"
+                                data-mdb-placement="right">
+                                <i class="fa-lg fab fa-product-hunt" aria-label="Customers"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dropdown dropup">
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser3" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="img/cloudwhales.png" alt="cloudwhales" width="24" height="24"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Collapsible offcanvas -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Jumbotron -->
+        <div class="p-5 text-center bg-light">
+            <h1 class="mb-3">Heading</h1>
+            <h4 class="mb-3">Subheading</h4>
+            <a class="btn btn-primary" href="" role="button">Call to action</a>
+        </div>
+        <!-- Jumbotron -->
+    </header>
+</body>
+
+<!-- MDB JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+
+</script>
+
+</html>

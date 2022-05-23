@@ -21,13 +21,21 @@
   <!-- Start your project here-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
+
+      <a class="nav-link" data-mdb-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <i class="fas fa-bars"></i>
+      </a>
+
       <div class="container">
+        <a class="navbar-brand" href="#"><img src="./img/cloudwhales.png" width="120" alt=""></a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo01"
           aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
+
+        <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#"><img src="./img/cloudwhales.png" width="120" alt=""></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">主页</a>
@@ -49,6 +57,65 @@
             </button>
           </form>
         </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Collapsible offcanvas -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="navbar bg-light">
+ 
+              <!-- Links -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 3</a>
+                </li>
+              </ul>
+             
+            </nav>
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like,
+              text, images, lists, etc.
+              <nav class="navbar bg-light">
+                <ul class="nvabar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">bootstrap脚手架</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">bootstrap样式</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">bootstrap组件</a>
+                  </li>                <li class="nav-item">
+                    <a class="nav-link" href="#">bootstrap插件</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-mdb-toggle="dropdown">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Collapsible offcanvas -->
       </div>
     </nav>
   </header>
