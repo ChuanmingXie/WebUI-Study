@@ -378,3 +378,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+pro_Office/Add-in Rubric-Grader/.github/CODEOWNERS
+pro_Office/Add-in Rubric-Grader/.github/ISSUE_TEMPLATE/bug_report.md
+pro_Office/Add-in Rubric-Grader/.azure-devops/build.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/cleanup.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/devcerts.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/edgewebview.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/full-pipeline.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/install.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/lint.yml
+pro_Office/Add-in Rubric-Grader/.azure-devops/test.yml
