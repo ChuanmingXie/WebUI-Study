@@ -8,11 +8,17 @@ npm 安装bootstrap的各个版本
 	npm install --save @fortawesome/fontawesome-free
 4. 安装fontawesome-v4.7 font-awesome
 	npm install font-awesome --save
+	
+5. 安装mdb
+	npm i mdb-ui-kit
+
 
 5. npm 安装gulp编译less的环境
 npm install gulp gulp-less gulp-concat gulp-minify-css gulp-notify gulp-rename gulp-uglify --save-dev
 
 6. npm安装gulp编译sass的环境
 npm install gulp gulp-sass sass gulp-concat gulp-scss-lint gulp-rename gulp-uglify --save-dev
-npm install gulp-sourcemaps gulp-cssnano gulp-html autoprefixer bootlint rimraf browser-sync--save-dev
+npm install autoprefixer gulp-sourcemaps gulp-postcss mq4-hover-shim --save-dev
+npm install gulp-cssnano gulp-environments --save-dev
+npm install gulp-html bootlint rimraf browser-sync --save-dev
 
