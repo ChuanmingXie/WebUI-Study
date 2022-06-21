@@ -16,7 +16,7 @@ body {
 
 .staticStyle {
 	position: static;
-	widthwidth: 60px;
+	width: 60px;
 	border: solid 2px #666666;
 	top: 100px;
 }
