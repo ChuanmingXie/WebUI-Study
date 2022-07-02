@@ -7,12 +7,12 @@ console.log(arraySort);
 
 /* 1.2. 对象排序 */
 var a = [
-	{FirsName:"Ellie", LastName:"Williams"},
-	{FirsName:"Crockford", LastName:"Douglas"},
-	{FirsName:"C.Zakas", LastName:"nicholas"},
-	{FirsName:"C.Zakas", LastName:"aicholas"},
-	{FirsName:"C.Zakas", LastName:"bicholas"},
-	{FirstName:"Lara", LastName : "Croft"}
+	{FirstName:"Ellie", LastName:"Williams"},
+	{FirstName:"Crockford", LastName:"Douglas"},
+	{FirstName:"C.Zakas", LastName:"nicholas"},
+	{FirstName:"C.Zakas", LastName:"aicholas"},
+	{FirstName:"C.Zakas", LastName:"bicholas"},
+	{FirsttName:"Lara", LastName : "Croft"}
 ];
 /* 按字母排序，同时会将大小写字母分开排序，完全按照ASCII */
 function objectSort0(x, y){
