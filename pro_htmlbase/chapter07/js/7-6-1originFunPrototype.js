@@ -6,7 +6,7 @@ goodsUserObject.name = "男士白领衬衫";
 goodsUserObject.type = "男装";
 goodsUserObject.price = "580";
 goodsUserObject.color = "white";
-goodsUserObject.showInfo = function() {
+goodsUserObject.showInfo = function () {
 	alert("我是来原始方式的自用户自定义对象:" +
 		"\n商品名称为：" + goodsUserObject.name +
 		"\n商品类型为：" + goodsUserObject.type +
@@ -25,7 +25,7 @@ function GoodsFun(name, type, price, color) {
 	this.type = type;
 	this.price = price;
 	this.color = color;
-	this.showInfo = function() {
+	this.showInfo = function () {
 		alert("我是来自构造函数的用户自定义对象:" +
 			"\n商品名称为：" + this.name +
 			"\n商品类型为：" + this.type +
@@ -41,12 +41,12 @@ function GoodsFun(name, type, price, color) {
 
 /* 3.原型方式创建用户自定义对象 */
 // 示例1：
-function Goods() {}
+function Goods() { }
 Goods.prototype.name = "耐克运动鞋";
 Goods.prototype.type = "鞋类";
 Goods.prototype.price = 1200;
 Goods.prototype.color = "白色";
-Goods.prototype.showInfo = function() {
+Goods.prototype.showInfo = function () {
 	alert("我是来自原型方式创建的用户自定义对象:" +
 		"\n商品名称为：" + this.name +
 		"\n商品类型为：" + this.type +
@@ -67,7 +67,7 @@ function GoodsMix(name, type, price, color) {
 	this.price = price;
 	this.color = color;
 }
-GoodsMix.prototype.showInfo = function() {
+GoodsMix.prototype.showInfo = function () {
 	alert("我是来自混合方式创建的用户自定义对象:" +
 		"\n商品名称为：" + this.name +
 		"\n商品类型为：" + this.type +
@@ -80,7 +80,7 @@ function showColorMix() {
 }
 
 
-(function() {
+(function () {
 	/* 1.使用原始方式的用户自定义对象 */
 	goodsUserObject.showInfo();
 	goodsUserObject.showColor();
@@ -97,7 +97,7 @@ function showColorMix() {
 	goodsPrototype.showInfo();
 	goodsPrototype.showColors();
 	//对日期对象的测试
-	Date.prototype.showTime = function() {
+	Date.prototype.showTime = function () {
 		var year = this.getFullYear();
 		var month = this.getMonth() + 1;
 		var date = this.getDate();
@@ -107,7 +107,7 @@ function showColorMix() {
 		return year + "年" + month + "月" + date + "日 " + hour + ":" + minute + ":" + second + "<br />";
 	}
 	//对数组对象的测试
-	Array.prototype.count = function(param) {
+	Array.prototype.count = function (param) {
 		var num = 0;
 		for (var i = 0; i < this.length; i++) {
 			if (this[i] == param) {
@@ -116,7 +116,7 @@ function showColorMix() {
 		}
 		return num;
 	}
-	Array.prototype.search = function(param) {
+	Array.prototype.search = function (param) {
 		for (var i = 0; i < this.length; i++) {
 			if (this[i] == param) {
 				return true;
@@ -132,8 +132,8 @@ function showColorMix() {
 	var searchParam = 9;
 	document.write("数组[" + array + "]中包含'" + countParam + "'的个数：" + array.count(countParam) + "<br />");
 	document.write("数组[" + array + "]中" + (array.search(searchParam) ? "" : "不") + "包含元素" + searchParam);
-	
-	/* 4.混合方式使用自定义对象 */	
+
+	/* 4.混合方式使用自定义对象 */
 	// 使用对象
 	var goodsmix1 = new GoodsMix("男士衬衫", "男装", 200, "白色");
 	var goodsmix2 = new GoodsMix("女士花裙", "女装", 700, "红色");

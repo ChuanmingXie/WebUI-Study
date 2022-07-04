@@ -60,7 +60,7 @@ var movieStrFun = '{' +
 // 调用JSON对象
 (function() {
 	goods.showInfo();
-	document.write("用户名：" + customer.name +
+	document.write("<br/>用户名：" + customer.name +
 		",权限" + customer.type +
 		",地区" + customer.adderss.province + " " + customer.adderss.city +
 		",爱好" + customer.enjoy+"<br />");
