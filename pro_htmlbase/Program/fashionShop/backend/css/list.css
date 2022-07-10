@@ -39,7 +39,7 @@ select{height:32px;padding:5px;background:url(../images/inputbg.gif) repeat-x;_b
 .toolbar li{background: url(../images/toolbg.gif) repeat-x;line-height: 33px;height: 33px;border: solid 1px #D3dbde; float: left;padding-right: 10px;margin-right: 5px;border-radius: 3px;cursor: pointer;}
 .toolbar li span{float: left;margin-left: 10px;margin-right: 5px;margin-top: 5px;}
 .timeDiv img{width: 10px;}
-.imgtd{text-indent:0;}/
+.imgtd{text-indent:0;}
 
 .imgtable{width: 100%; border: solid 1px #Cbcbcb;}
 
