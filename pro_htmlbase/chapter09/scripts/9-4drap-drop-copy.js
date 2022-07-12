@@ -13,7 +13,7 @@ function drop (e) {
 	if(e.target.tagName=="DIV"){
 		e.target.appendChild($('#'+data).get(0).cloneNode());
 	}else if(e.target.tagName=="IMG"){
-		e.target.parentNode.appendChild()($('#'+data).get(0).cloneNode());
+		e.target.parentNode.appendChild($('#'+data).get(0).cloneNode());
 	}
 	allowDrop(e)
 }
