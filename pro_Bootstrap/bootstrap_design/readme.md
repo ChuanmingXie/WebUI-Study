@@ -10,4 +10,8 @@
 * chapter 15 : 帖吧案例
 
 jQuery-plugin文件夹里plugin.js :
-Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi 
+* Contains: 
+  * jPreloader, 
+  * jQuery Easing, 
+  * jQuery ScrollTo, j
+  * Query One Page Navi 
