@@ -12,7 +12,7 @@
 				$("a.tooltip").mouseover(function(e) {
 					this.newtitle = this.title;
 					this.title = "";
-					var tooltip = "<div id='tooltip'>" + this.newtitle + "<\/div>";		/创建div
+					var tooltip = "<div id='tooltip'>" + this.newtitle + "<\/div>";		//创建div
 					$("body").append(tooltip);			//追加div到文档中
 					$("#tooltip").css({					//设置div出现的位置和方式
 						"top": (e.pageY + y) + "px",
