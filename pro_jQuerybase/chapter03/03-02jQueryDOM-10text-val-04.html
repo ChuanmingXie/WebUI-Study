@@ -19,12 +19,15 @@
 				});
 				// 设置单/多选复选框
 				$("input:eq(2)").click(function(){
+					$(":checkbox[value=check02]").attr("checked",true);	//设置属性selected
+					$("[value=check03]:checkbox").attr("checked",true);	//设置属性selected
+					$(":radio[value='radio02']").attr("checked",true);	//设置属性selected
+				});
+				$("input:eq(3)").click(function(){
 					$(":checkbox").removeAttr("checked");		//移除属性selected
 					$(":radio").removeAttr("checked");			//移除属性selected
-					$("[value=check02]:checkbox").attr("checked",true);	//设置属性selected
-					$("[value=check03]:checkbox").attr("checked",true);	//设置属性selected
-					$("[value=radio02]:radio").attr("checked",true);	//设置属性selected
-				});
+					/* 取消之后，再次选中则不在生效 */
+				})
 			})
 		</script>
 	</head>
@@ -32,7 +35,8 @@
 		<h2>10. 获取文本和值-attr()</h2>
 		<input type="button" value="设置单选下拉框选中" />
 		<input type="button" value="设置多选下拉框选中" />
-		<input type="button" value="设置单/多选复选框选中" />
+		<input type="button" value="选中单/多选复选框选中" />
+		<input type="button" value="取消单/多选复选框选中" />
 		<br><br>
 		<select id="single">
 			<option value="selected01">选择1号</option>
