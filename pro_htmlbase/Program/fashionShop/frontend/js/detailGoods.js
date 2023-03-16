@@ -57,6 +57,9 @@ function zoomPicture() {
 		canvas.style.display = "none";
 		document.body.style.cursor = "default";
 	}
+	box.onmouseover=function(){
+		shade.style.display = "block";
+	}
 
 	box.onmousemove = function(e) {
 		// 设定鼠标样式
@@ -81,7 +84,6 @@ function zoomPicture() {
 		}
 
 		var context = canvas.getContext("2d");
-		shade.style.display = "block";
 		shade.style.left = shadeX + "px";
 		shade.style.top = shadeY + "px";
 		canvas.style.display = "inline";
