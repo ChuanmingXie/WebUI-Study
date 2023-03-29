@@ -32,16 +32,16 @@
 								<td>
 									<button type="button" @click="handleReduce(indexs,index)" :disabled="shop.count===1">-</button>
 									{{shop.count}}
-									<button type="button" @click="handleAdd(indexs,index,10)">+</button>
+									<button type="button" @click="handleAdd(indexs,index,3)">+</button>
 								</td>
 								<td><input type="button" @click="handleRemove(indexs,index)" value="移出" /></td>
 							</tr>
 						</template>
 					</tbody>
 				</table>
-				<div>总价：￥{{totalPrice}}</div>
-				<!-- <div v-if="checkItem.length">总价：￥{{totalPrice}}</div> -->
-				<!-- <div v-else>￥ 0</div> -->
+				<!-- <div>总价：￥{{totalPrice}}</div> -->
+				<div v-if="checkItem.length">总价：￥{{totalPrice}}</div>
+				<div v-else>￥ 0</div>
 			</template>
 			<div v-else>购物车为空</div>
 		</div>
