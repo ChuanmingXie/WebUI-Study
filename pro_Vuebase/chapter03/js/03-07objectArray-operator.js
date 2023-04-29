@@ -205,7 +205,7 @@ function DuplicateArray(){
 	console.log(removeDuplicateMap(arr));
 	
 	// 7.利用对象
-	console.log(removeDuplicata(arr));
+	console.log(removeDuplicataObj(arr));
 }
 
 // 2.利用两层循环+数组的splice方法
@@ -256,7 +256,7 @@ function removeDuplicateIncludes(arr){
 即arr.indexOf(item) === index返回结果为false。测试如下： */
 function removeDuplicateFilter(arr){
 	return arr.filter((item,index)=>{
-		retrun arr.indexof(item)===index
+		return arr.indexOf(item)===index
 	})
 }
 
